@@ -1,0 +1,16 @@
+數字計時跳動
+jquery.waypoints.js
+jquery.countup.min.js
+
+倒數計時
+jquery.countdown.js
+
+錢幣撒出
+clickspark.min.js
+
+人物滑鼠移動
+js/parallax/jquery-parallax.js
+js/parallax/tweenmax.min.js
+
+頁籤切換(手機)
+jquery.serialscrolling.min.js

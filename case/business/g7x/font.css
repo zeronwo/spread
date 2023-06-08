@@ -1,0 +1,372 @@
+/*WEB FONT*/
+#ac-localnav * { font-size: 1em;}
+.puncuation { letter-spacing: -0.3em; }
+.icon::after, .icon .icon-htc{ top:-1px;}
+.more::after, .more .icon-htc { top: -1px; }
+.more.myriad::after, .more.myriad .icon-htc { top: 0px; }
+
+.centeralign { padding-left: 0.4em; }
+@media only screen and (max-width: 735px) { .centeralign { padding-left: 0; } }
+@media only screen and (max-width: 735px) and (max-device-width: 768px) { .centeralign { padding-left: 0; } }
+
+sup.star{ font-size: 15px !important; }
+sup.star {
+    font-size: .6em;
+    opacity: .8;
+    vertical-align: top;
+    position: relative;
+    bottom: 0em;
+}
+.intro sup.star {
+    font-size: .6em;
+    opacity: .8;
+    vertical-align: top;
+    position: relative;
+    bottom: -.2em;
+}
+
+
+.page-overview .icon::after, .page-overview .icon .icon-htc{top:-1.5px;}
+
+.page-overview span.eyebrow{ font-family: 'MHei', 'Helvetica Neue', 'Helvetica', 'STHeitiTC-Light', 'Arial', sans-serif;}
+
+.page-overview span.eyebrow.myriad {
+	font-family: "Myriad Set Pro",'Helvetica Neue', 'Helvetica', 'STHeitiSC-Light', 'Arial', sans-serif; 
+    font-size: 20px;
+    line-height: 1.2;
+    font-weight: 200;
+    letter-spacing: 0em;
+    margin-top: 6px;
+    margin-bottom: 18px
+}
+
+
+@media only screen and (min-width: 736px) {
+    .page-overview span.eyebrow.myriad {
+    	font-family: "Myriad Set Pro",'Helvetica Neue', 'Helvetica', 'STHeitiSC-Light', 'Arial', sans-serif; 
+        font-size: 28px;
+        line-height: 1.14286;
+        font-weight: 200;
+        letter-spacing: 0em
+    }
+}
+
+@media only screen and (min-width: 1069px) {
+    .page-overview span.eyebrow.myriad {
+    	font-family: "Myriad Set Pro",'Helvetica Neue', 'Helvetica', 'STHeitiSC-Light', 'Arial', sans-serif; 
+        font-size: 32px;
+        line-height: 1.125;
+        font-weight: 200;
+        letter-spacing: 0em
+    }
+}
+
+.page-overview span.badge-small{ font-size: 12px;}
+.page-overview span.badge-small{ font-size: 14px;}
+.page-overview span.size{font-size: 0.3em;}
+.page-overview span.badge-half.kilo{ font-size: 0.5em;}
+.page-overview span.badge-half.kilo {
+    font-size: 0.5em;
+}
+
+
+span.badge-half.badge-half-top{font-size: 0.5em;}
+span.badge-small.myriad {
+    display: block;
+    font-size: 14px;
+    line-height: 1.28571;
+    font-weight: 400;
+    color: #666;
+    color: #666;
+    margin-bottom: 0.28571em;
+    margin-top: -0.07143em
+}
+
+@media only screen and (min-width: 736px) {
+   span.badge-small.myriad {
+        font-size: 14px;
+        line-height: 1.28571;
+        font-weight: 400;
+        color: #666
+    }
+}
+
+@media only screen and (min-width: 1069px) {
+    span.badge-small.myriad {
+        font-size: 16px;
+        line-height: 1.375;
+        font-weight: 400;
+        color: #666
+    }
+}
+
+
+
+span.badge-small.lucida { font-size: 14px; }
+
+.badge-small { font-size: 12px; }
+
+@media only screen and (min-width: 736px) { .badge-small { font-size: 12px; } }
+@media only screen and (min-width: 1069px) { .badge-small { font-size: 14px; } }
+
+@media only screen and (min-width: 736px) { .page-overview .badge .badge-content { width: 110px; } }
+@media only screen and (min-width: 1069px) { .page-overview .badge .badge-content { width: 230px; } }
+
+
+
+.page-overview .overview-headline {
+	font-family: 'MHei', 'Helvetica Neue', 'Helvetica', 'STHeitiTC-Light', 'Arial', sans-serif;
+    font-size: 32px;
+    line-height: 1.125;
+    font-weight: 200;
+    letter-spacing: 0em
+}
+
+
+@media only screen and (min-width: 736px) {
+    .page-overview .overview-headline {
+    	font-family: 'MHei', 'Helvetica Neue', 'Helvetica', 'STHeitiTC-Light', 'Arial', sans-serif;
+        font-size: 48px;
+        line-height: 1.07692;
+        font-weight: 200;
+        letter-spacing: -0.01em
+    }
+}
+
+@media only screen and (min-width: 1069px) {
+    .page-overview .overview-headline {
+    	font-family: 'MHei', 'Helvetica Neue', 'Helvetica', 'STHeitiTC-Light', 'Arial', sans-serif;
+        font-size: 60px;
+        line-height: 1.0625;
+        font-weight: 200;
+        letter-spacing: -0.014em
+    }
+}
+
+
+
+
+
+
+
+/* page-cameras */
+
+
+.page-cameras span.badge-small.badge-normalcase {
+    display: block;
+    font-size: 14px;
+    line-height: 1.28571;
+    font-weight: 400;
+    color: #666;
+    color: #666;
+    margin-bottom: 0.28571em;
+    margin-top: -0.07143em
+}
+
+@media only screen and (min-width: 736px) {
+   .page-cameras span.badge-small.badge-normalcase {
+        font-size: 14px;
+        line-height: 1.28571;
+        font-weight: 400;
+        color: #666
+    }
+}
+
+@media only screen and (min-width: 1069px) {
+  .page-cameras span.badge-small.badge-normalcase {
+        font-size: 16px;
+        line-height: 1.375;
+        font-weight: 400;
+        color: #666
+    }
+}
+
+.page-cameras .section-camera-gallery .gallery-content .section-copy{ font-size: 15px;}
+
+
+
+html[lang=zh-HK] h3.subsection-headline.myriad, html[lang=zh-TW] h3.subsection-headline.myriad {
+	font-family: "Myriad Set Pro",'Helvetica Neue', 'Helvetica', 'STHeitiSC-Light', 'Arial', sans-serif; 
+    font-size: 28px;
+    line-height: 1.14286;
+    font-weight: 200;
+    letter-spacing: 0em;
+    margin-bottom: 16px
+}
+
+@media only screen and (min-width: 736px) {
+   html[lang=zh-HK] h3.subsection-headline.myriad, html[lang=zh-TW] h3.subsection-headline.myriad {
+    	font-family: "Myriad Set Pro",'Helvetica Neue', 'Helvetica', 'STHeitiSC-Light', 'Arial', sans-serif; 
+        font-size: 32px;
+        line-height: 1.125;
+        font-weight: 200;
+        letter-spacing: 0em
+    }
+}
+
+@media only screen and (min-width: 1069px) {
+  html[lang=zh-HK] h3.subsection-headline.myriad, html[lang=zh-TW] h3.subsection-headline.myriad {
+    	font-family: "Myriad Set Pro",'Helvetica Neue', 'Helvetica', 'STHeitiSC-Light', 'Arial', sans-serif; 
+        font-size: 42px;
+        line-height: 1.14286;
+        font-weight: 200;
+        letter-spacing: -0.01em
+    }
+}
+
+.page-cameras .diagram-screen .diagram-screen-layer-4k .diagram-screen-title{font-family: "Myriad Set Pro",'Helvetica Neue', 'Helvetica', 'STHeitiSC-Light', 'Arial', sans-serif; }
+.page-cameras .diagram-screen .diagram-screen-layer-hd .diagram-screen-title{font-family: "Myriad Set Pro",'Helvetica Neue', 'Helvetica', 'STHeitiSC-Light', 'Arial', sans-serif;}
+.page-cameras .diagram-screen .diagram-screen-dimensions {font-family: "Myriad Set Pro",'Helvetica Neue', 'Helvetica', 'STHeitiSC-Light', 'Arial', sans-serif;line-height: 1.45;}
+/* page-technology */
+
+
+.page-technology span.graph-label{font-family: "Myriad Set Pro",'Helvetica Neue', 'Helvetica', 'STHeitiSC-Light', 'Arial', sans-serif; }
+
+html[lang=zh-TW] .page-technology section.section.section-a9.section-lightgray.animated .caption,
+html[lang=zh-HK] .page-technology section.section.section-a9.section-lightgray.animated .caption {
+	font-family: "Myriad Set Pro",'Helvetica Neue', 'Helvetica', 'STHeitiSC-Light', 'Arial', sans-serif; 
+    font-size: 14px;
+    line-height: 1.29286;
+    font-weight: 400;
+    color: #666
+}
+
+@media only screen and (min-width: 736px) {
+	html[lang=zh-TW] .page-technology section.section.section-a9.section-lightgray.animated .caption,
+	html[lang=zh-HK] .page-technology section.section.section-a9.section-lightgray.animated .caption  {
+    	font-family: "Myriad Set Pro",'Helvetica Neue', 'Helvetica', 'STHeitiSC-Light', 'Arial', sans-serif; 
+        font-size: 14px;
+        line-height: 1.29286;
+        font-weight: 400;
+        color: #666
+    }
+}
+
+@media only screen and (min-width: 1069px) {
+   html[lang=zh-TW] .page-technology section.section.section-a9.section-lightgray.animated .caption,
+	html[lang=zh-HK] .page-technology section.section.section-a9.section-lightgray.animated .caption  {
+   		font-family: "Myriad Set Pro",'Helvetica Neue', 'Helvetica', 'STHeitiSC-Light', 'Arial', sans-serif; 
+        font-size: 14px;
+        line-height: 1.29286;
+        font-weight: 400;
+        color: #666
+    }
+}
+
+
+
+.page-technology .description-headline {
+	font-family: 'MHei', 'Helvetica Neue', 'Helvetica', 'STHeitiTC-Light', 'Arial', sans-serif;
+    font-size: 22px;
+    line-height: 1.16667;
+    font-weight: 200;
+    letter-spacing: normal
+}
+
+
+@media only screen and (min-width: 736px) {
+    .page-technology .description-headline {
+    	font-family: 'MHei', 'Helvetica Neue', 'Helvetica', 'STHeitiTC-Light', 'Arial', sans-serif;
+        font-size: 22px;
+        line-height: 1.16667;
+        font-weight: 200;
+        letter-spacing: normal
+    }
+}
+
+@media only screen and (min-width: 1069px) {
+    .page-technology .description-headline {
+    	font-family: 'MHei', 'Helvetica Neue', 'Helvetica', 'STHeitiTC-Light', 'Arial', sans-serif;
+        font-size: 26px;
+        line-height: 1.14286;
+        font-weight: 200;
+        letter-spacing: normal
+    }
+}
+
+@media only screen and (min-width: 736px) { .page-technology .badge-small { font-size: 12px; } }
+@media only screen and (min-width: 1069px) {.page-technology  .badge-small { font-size: 14px; } }
+
+/* page-threedtouch */
+
+
+.page-threedtouch p.gallery-copy,
+.page-threedtouch p.screen-description.gallery-copy{ font-size: 14px; line-height: 1.8;}
+.page-threedtouch h5.description-headline{font-family: 'MHei', 'Helvetica Neue', 'Helvetica', 'STHeitiTC-Light', 'Arial', sans-serif; line-height: 1.2; }
+
+
+
+
+/* page-design */
+
+.page-design span.badge-large span.size{font-size: 0.3em;}
+.page-design span.badge-half.badge-inset{font-size: 0.5em;}
+
+
+/* page-ios9 */
+
+
+
+
+.page-ios .hero-headline span.myriad{
+	font-family: "Myriad Set Pro",'Helvetica Neue', 'Helvetica', 'STHeitiSC-Light', 'Arial', sans-serif; 
+    font-size: 36px;
+    line-height: 1.11111;
+    font-weight: 200;
+    letter-spacing: -0.002em;
+    margin-bottom: 18px
+}
+
+@media only screen and (min-width: 736px) {
+   .page-ios .hero-headline span.myriad{
+   		font-family: "Myriad Set Pro",'Helvetica Neue', 'Helvetica', 'STHeitiSC-Light', 'Arial', sans-serif; 
+        font-size: 52px;
+        line-height: 1.08654;
+        font-weight: 200;
+        letter-spacing: -0.014em
+    }
+}
+
+@media only screen and (min-width: 1069px) {
+   .page-ios .hero-headline span.myriad{
+   		font-family: "Myriad Set Pro",'Helvetica Neue', 'Helvetica', 'STHeitiSC-Light', 'Arial', sans-serif; 
+        font-size: 64px;
+        line-height: 1.0625;
+        font-weight: 200;
+        letter-spacing: -0.02em
+    }
+}
+
+
+
+.page-ios h5.description-headline.features-title{  font-family: 'MHei', 'Helvetica Neue', 'Helvetica', 'STHeitiTC-Light', 'Arial', sans-serif;}
+
+.page-ios h5.description-headline.features-title.myriad{ font-family: "Myriad Set Pro",'Helvetica Neue', 'Helvetica', 'STHeitiSC-Light', 'Arial', sans-serif; }
+
+
+
+
+/* films */
+
+.icon::after, .icon .icon-htc{ top:-1px;}
+.page-films span.icon.icon-play{ font-family: 'Helvetica Neue', 'Helvetica', 'STHeitiSC-Light', 'Arial', sans-serif; font-size: 16px;}
+
+
+/* page-specs */
+
+.page-specs h2.description-headline{  font-family: 'MHei', 'Helvetica Neue', 'Helvetica', 'STHeitiTC-Light', 'Arial', sans-serif;}
+.page-specs .section-built-in-apps .appicons .appicon .caption, .page-specs .section-free-apps-from-apple .appicons .appicon .caption {font-size: 12px;}
+.page-specs .section-built-in-apps .specs-header-copy{font-size: 12px; line-height: 1.5;}
+.page-specs .section-external-buttons-and-connectors .diagram-text,
+.page-specs .section-weight-and-dimensions .diagram-text{ font-size: 12px;}
+
+/*  */
+.page-accessories .colorselector-title {
+    font-size: 14px;}
+ @media only screen and (min-width: 736px){
+.page-accessories .colorselector-title {
+    font-size: 16px;}}
+@media only screen and (min-width: 1069px){
+.page-accessories .colorselector-title {
+    font-size: 16px;}}
+    

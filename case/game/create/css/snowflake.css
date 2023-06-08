@@ -1,0 +1,294 @@
+/* Set the height (in pixels) of the element you want the snowflakes to fall in OR if the parent element has a height already set, @ad-height can be 100% */
+
+.snow {
+    width: 50%;
+    height:calc(100% - 53px);
+    position: absolute;
+    overflow: hidden;
+}
+
+.snowflake {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    -webkit-animation: snowfall 1s linear infinite;
+    -moz-animation: snowfall 1s linear infinite;
+    animation: snowfall 1s linear infinite
+}
+
+.snowflake.fast-fall {
+    -webkit-animation: snowfall 2s linear infinite;
+    -moz-animation: snowfall 2s linear infinite;
+    animation: snowfall 2s linear infinite
+}
+
+.snowflake.med-fall {
+    -webkit-animation: snowfall 3s linear infinite;
+    -moz-animation: snowfall 3s linear infinite;
+    animation: snowfall 3s linear infinite
+}
+
+.snowflake.slow-fall {
+    -webkit-animation: snowfall 4s linear infinite;
+    -moz-animation: snowfall 4s linear infinite;
+    animation: snowfall 4s linear infinite
+}
+
+/* .snowflake .flake{position:absolute;left:0} */
+
+/* .snowflake .flake.fast{-webkit-animation:flake-fs 8s linear infinite;
+    -moz-animation:flake-fs 8s linear infinite;animation:flake-fs 8s linear infinite}
+.snowflake .flake.medium{-webkit-animation:flake-md 10s linear infinite;
+        -moz-animation:flake-md 10s linear infinite;animation:flake-md 10s linear infinite}
+.snowflake .flake.slow{-webkit-animation:flake 15s linear infinite;
+    -moz-animation:flake 15s linear infinite;animation:flake 15s linear infinite} */
+
+@-webkit-keyframes snowfall {
+    0% {
+        top: -20px;
+        -webkit-transform: rotate(0deg)
+    }
+    100% {
+        top: 105%;
+        -webkit-transform: rotate(360deg)
+    }
+}
+
+@-moz-keyframes snowfall {
+    0% {
+        top: -20px;
+        -moz-transform: rotate(0deg)
+    }
+    100% {
+        top: 105%;
+        -moz-transform: rotate(360deg)
+    }
+}
+
+@keyframes snowfall {
+    0% {
+        top: -20px;
+        transform: rotate(0deg)
+    }
+    100% {
+        top: 105%;
+        transform: rotate(360deg)
+    }
+}
+
+@-webkit-keyframes snowfall-sl {
+    0% {
+        top: -15px
+    }
+    100% {
+        top: 125%
+    }
+}
+
+@-moz-keyframes snowfall-sl {
+    0% {
+        top: -15px
+    }
+    100% {
+        top: 125%
+    }
+}
+
+@keyframes snowfall-sl {
+    0% {
+        top: -15px
+    }
+    100% {
+        top: 125%
+    }
+}
+
+@-webkit-keyframes snowfall-md {
+    0% {
+        top: -25px
+    }
+    100% {
+        top: 115%
+    }
+}
+
+@-moz-keyframes snowfall-md {
+    0% {
+        top: -25px
+    }
+    100% {
+        top: 115%
+    }
+}
+
+@keyframes snowfall-md {
+    0% {
+        top: -25px
+    }
+    100% {
+        top: 115%
+    }
+}
+
+@-webkit-keyframes flake {
+    0% {
+        left: 0
+    }
+    25% {
+        left: 25px
+    }
+    50% {
+        left: 0
+    }
+    75% {
+        left: 10px
+    }
+    100% {
+        left: 0
+    }
+}
+
+@-moz-keyframes flake {
+    0% {
+        left: 0
+    }
+    25% {
+        left: 25px
+    }
+    50% {
+        left: 0
+    }
+    75% {
+        left: 10px
+    }
+    100% {
+        left: 0
+    }
+}
+
+@keyframes flake {
+    0% {
+        left: 0
+    }
+    25% {
+        left: 25px
+    }
+    50% {
+        left: 0
+    }
+    75% {
+        left: 10px
+    }
+    100% {
+        left: 0
+    }
+}
+
+@-webkit-keyframes flake-md {
+    0% {
+        left: 0
+    }
+    25% {
+        left: 10px
+    }
+    50% {
+        left: 0
+    }
+    75% {
+        left: 5px
+    }
+    100% {
+        left: 0
+    }
+}
+
+@-moz-keyframes flake-md {
+    0% {
+        left: 0
+    }
+    25% {
+        left: 10px
+    }
+    50% {
+        left: 0
+    }
+    75% {
+        left: 5px
+    }
+    100% {
+        left: 0
+    }
+}
+
+@keyframes flake-md {
+    0% {
+        left: 0
+    }
+    25% {
+        left: 10px
+    }
+    50% {
+        left: 0
+    }
+    75% {
+        left: 5px
+    }
+    100% {
+        left: 0
+    }
+}
+
+@-webkit-keyframes flake-fs {
+    0% {
+        left: 0
+    }
+    25% {
+        left: 5px
+    }
+    50% {
+        left: 0
+    }
+    75% {
+        left: 15px
+    }
+    100% {
+        left: 0
+    }
+}
+
+@-moz-keyframes flake-fs {
+    0% {
+        left: 0
+    }
+    25% {
+        left: 5px
+    }
+    50% {
+        left: 0
+    }
+    75% {
+        left: 15px
+    }
+    100% {
+        left: 0
+    }
+}
+
+@keyframes flake-fs {
+    0% {
+        left: 0
+    }
+    25% {
+        left: 5px
+    }
+    50% {
+        left: 0
+    }
+    75% {
+        left: 15px
+    }
+    100% {
+        left: 0
+    }
+}

@@ -1,0 +1,16 @@
+{
+
+    "liveSassCompile.settings.formats":[
+
+        {
+
+            "savePath": "/css"
+
+        }
+
+    ],
+    "[css]": {
+        "editor.defaultFormatter": "aeschli.vscode-css-formatter"
+    }
+
+}

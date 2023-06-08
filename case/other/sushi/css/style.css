@@ -1,0 +1,62 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+.clearfix {
+  *zoom: 1; /*For IE 6&7 only*/
+}
+
+* { 
+ -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+ -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+ box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+
+
+
+#bg{width:100%;height:100% ;; background-position:center; background-size:cover;display:table; position:relative; }
+#title{position:absolute; top:10%; left:10%; z-index:200}
+.shadow{-webkit-box-shadow: 0 0 15px  #666666;-moz-box-shadow: 0 0 15px #666666;box-shadow: 0 0 15px #666666;}
+
+#topmenu{  max-width:583px; height:164px; margin: auto; padding-top:20px;  position:relative; top:0; z-index:999}
+#menu{ ;width:402px; height:124px; float:left}
+#topmenu #menu ul li{width:35px; height:111px; display:inline-block}
+#topmenu #menu ul li:hover{ background-position: right}
+
+.menu_bth{float:left;width:123px; height:25px; margin-left:25px; overflow:hidden}
+.menu_box{width:123px; height:25px; }
+.menu_box:hover{ background-position:bottom}
+
+h1{font-size:16px; font-family:新細明體; font-weight:bold; color:#000}
+
+.text01{font-family:新細明體;line-height: 30px; font-size:10px; color:#636363}
+.text02{font-family:新細明體;line-height: 30px; font-size:15px; color: #003; font-weight:bold}
+.text03{font-family:Arial;letter-spacing: 2px; font-size:13px; color: #666 }
+
+.main{width:960px; margin:auto;}
+#topimg{width:100%;height: 358px;background-repeat: no-repeat; background-position: 50% 50%;}
+
+#a_down_bg{width:100%;height: 280px;background-repeat: no-repeat; background-position: 50% 50%;}
+
+#a_main2 {}
+#a_main2 > li {display: inline-block;  padding-right: 30px;padding-left: 30px;}
+	
+	
+#news{width:800px; float:left; color:#000}
+.new_tab{margin-bottom:40px}
+.new_tab:hover p{ color: #F00}
+
+
+.news_box{ width:480px;margin:30px 0 0 50px; float:left}
+.news_date{width:95px; height:16px; background-image:url(../images/news_date_bg.png); font-size:13px; color:#FFF; padding-left:3px; margin-bottom:20px}
+
+.menu_bottom{margin-bottom:15px}
+

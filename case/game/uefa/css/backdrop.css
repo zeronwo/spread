@@ -1,0 +1,239 @@
+.scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(100, 100, 100, .4) transparent;
+}
+
+.scrollbar::-webkit-scrollbar {
+    width: .6rem;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+    border-radius: .6rem;
+    background-color: rgba(100, 100, 100, .4)
+}
+
+.site {
+    width: 279px;
+    position: fixed;
+    right: 18px;
+    bottom: 13px;
+    z-index: 999;
+    border-radius: 10px;
+    background-color: rgba(11, 35, 53, 0.8);
+    overflow: hidden;
+    padding: 0 30px;
+}
+
+.wrapper {
+    position: relative;
+    width: auto;
+}
+
+.wrapper.demo1 {
+    margin: 60px auto 0 auto;
+}
+
+.wrapper:not(.demo1) {
+    margin: 0;
+}
+
+.wrapper>h3 {
+    display: inline-block;
+    padding: 0 1rem;
+    margin-bottom: 2rem;
+    border-radius: 1.4rem;
+    background-color: #fff;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: #222;
+}
+
+.wrapper>.container {
+    position: relative;
+    height: 12rem;
+    margin: 0 auto;
+    transform: translate3d(0, 0, 0);
+}
+
+.container>.cards-list {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    overflow: hidden;
+    /* background-color: #f4f4f4; */
+    /* border-radius: 0.3125rem; */
+}
+
+.wrapper.horizontal>.container {
+    width: 75rem;
+}
+
+.wrapper.vertical>.container {
+    width: auto;
+    max-width: none;
+}
+
+.wrapper.horizontal .container .cards-list {
+    width: 20rem;
+    height: 24rem;
+}
+
+.wrapper.horizontal .cards-list .img {
+    height: 12rem;
+}
+
+.wrapper.vertical .cards-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2rem;
+}
+
+.cards-list:before, .cards-list:after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    display: block;
+    position: absolute;
+    top: 5px;
+}
+
+.cards-list:before {
+    background: url(../images/rank_r_money.png) no-repeat;
+    background-size: contain;
+    left: 0;
+}
+
+.cards-list:after {
+    background: url(../images/rank_r_money.png) no-repeat;
+    background-size: contain;
+    right: 0;
+}
+
+.wrapper.vertical .cards-list .img, .wrapper.vertical .cards-list .main-con {
+    height: 100%;
+}
+
+.wrapper.vertical .cards-list .img {
+    width: 18rem;
+}
+
+.wrapper.vertical .cards-list .main-con {
+    width: 22rem;
+}
+
+.cards-list>.img>img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    -webkit-user-drag: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+.cards-list>.main-con {
+    padding: 0 1rem;
+    box-sizing: border-box;
+}
+
+.cards-list>.main-con .name {
+    padding-top: 1rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #424242;
+}
+
+.cards-list>.main-con .content {
+    padding-top: 1rem;
+    height: 4.5rem;
+    font-size: 0.9rem;
+    color: #777;
+    text-align: justify;
+    line-height: 1.4rem;
+}
+
+.cards-list>.main-con .label {
+    font-size: 0.9rem;
+    color: #555;
+    padding: 1rem 0;
+}
+
+.btn-direct {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, .7);
+    opacity: 0;
+    cursor: pointer;
+    z-index: 100;
+    transition: opacity ease 300ms;
+}
+
+.wrapper:hover .btn-direct {
+    opacity: .6;
+}
+
+.btn-direct:hover {
+    opacity: .9!important;
+}
+
+.btn-direct.btn-left {
+    left: 6rem;
+}
+
+.btn-direct.btn-right {
+    right: 6rem;
+}
+
+.btn-direct>span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: .8rem;
+    height: .8rem;
+    margin: auto;
+    border-top: 0.125rem solid #fff;
+    border-left: 0.125rem solid #fff;
+}
+
+.wrapper.horizontal .btn-direct>.shift-left {
+    transform: translate(20%) rotate(-45deg);
+}
+
+.wrapper.horizontal .btn-direct>.shift-right {
+    transform: translate(-20%) rotate(135deg);
+}
+
+.wrapper.vertical .btn-direct>.shift-left {
+    transform: translateY(10%) rotate(45deg);
+}
+
+.wrapper.vertical .btn-direct>.shift-right {
+    transform: translateY(-10%) rotate(-135deg);
+}
+
+.wrapper.demo6 .container {
+    width: 20rem;
+    height: 24rem;
+    overflow: hidden;
+}
+
+@media (max-width: 1300px) {
+    .site {
+        width: 100%;
+        position: static;
+        margin-top: 38px;
+    }
+    .wrapper>.container {
+        height: 2rem;
+    }
+}

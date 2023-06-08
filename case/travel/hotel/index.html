@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ultima Collection</title>
+    <meta name="description" content="Source code generated using layoutit.com">
+
+    <link rel="icon" type="image/png"
+        href="https://www.ultimacollection.com/application/themes/ewm/assets/images/ultima-icon.png">
+
+    <link href="css/font-awesome.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <link href="js/jquery-ui/jquery-ui.min.css" rel="stylesheet" type="text/css">
+    <!-- LOAD-->
+    <link href="../../../js/jqueryIntroLoader/introLoader.min.css" rel="stylesheet" type="text/css">
+
+    <!-- 彈窗-->
+    <link href="../../../js/lity/lity.css" rel="stylesheet" type="text/css">
+
+
+    <script src="../../../js/jquery.min.js"></script>
+    <script src="../../../js/lity/lity.js"></script>
+
+    <link href="../../../js/owlCarousel/owl.carousel.css" rel="stylesheet" type="text/css">
+    <link href="../../../js/owlCarousel/owl.theme.default.css" rel="stylesheet" type="text/css">
+    <script src="../../../js/owlCarousel/owl.carousel.js"></script>
+
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/max.css" rel="stylesheet" type="text/css" />
+
+
+    <script src="js/jquery-ui/jquery-ui.min.js"></script>
+    <script src="js/jquery-ui/datepicker-zh-TW.js"></script><!-- 繁體中文 -->
+    <!-- 檢測瀏覽器的支援性 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <!-- LOAD-->
+    <script src="../../../js/jqueryIntroLoader/jquery.easing.1.3.js"></script>
+    <script src="../../../js/jqueryIntroLoader/spin.min.js"></script>
+    <script src="../../../js/jqueryIntroLoader/jquery.introLoader.min.js"></script>
+    <!-- 視差-->
+    <script src="../../../js/parallax-scroll/jquery.easing.1.3.js"></script>
+    <script src="../../../js/parallax-scroll/jquery.parallax-scroll.js"></script>
+
+    <script src="js/scripts.js"></script>
+
+</head>
+
+<body>
+     <!-- LOAD -->
+     <div id="element" class="introLoading"></div>
+    <!-- 彈窗 活動玩法 -->
+    <div id="m_search" class="lity-hide">
+        <div class="searchInputBox">
+            <input type="search" name="search" id="search" placeholder="請填入您要搜尋的內容">
+            <button type="submit"
+                onclick="if($('#search').val()==''){ alert('請輸入關鍵字...');}else{location.href=encodeURI('https://www.fullon-hotels.com.tw/tw/search/?keyword=' + $('#search').val());}">確認送出</button>
+        </div>
+    </div>
+    <header id="header">
+
+        <!--top_img st -->
+
+        <div id="header_menu">
+            <div class="site-nav">
+
+
+                <!--menu st-->
+                <div id="menu">
+                    <div class="menu_main">
+
+                        <div class="logo">
+                            <a href="index.html">
+                                <svg width="162" height="48" viewBox="0 0 162 48" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M121.059 31.1375C121.059 32.0942 121.629 32.3877 121.629 32.3877V32.4893H114.556V32.3877C114.556 32.3877 115.127 32.1055 115.127 31.1375V9.6577C115.127 9.21433 115.304 8.78908 115.621 8.47531C115.937 8.16154 116.367 7.98488 116.815 7.98414H121.62V8.08574C121.62 8.08574 121.05 8.36796 121.05 9.33597L121.059 31.1375ZM100.505 9.23437C100.332 8.86117 100.054 8.54497 99.7046 8.32335C99.3553 8.10172 98.949 7.98399 98.534 7.98414H92.9728V8.08009C93.5156 8.39546 93.9378 8.8797 94.1734 9.45733L104.925 32.4893H105.022L108.179 25.6737L100.505 9.23437ZM99.9201 32.3934C99.9201 32.3934 98.3515 31.3802 96.3951 29.0349C95.2884 27.7426 94.3459 26.3209 93.5888 24.8016H93.5004V31.1431C93.5004 32.0998 92.93 32.3934 92.93 32.3934V32.495H99.9372L99.9201 32.3934ZM6.49383 25.6455V9.89477C6.49383 9.38803 6.29041 8.90206 5.92833 8.54375C5.56624 8.18543 5.07515 7.98414 4.56308 7.98414H0V8.08574C0 8.08574 0.570385 8.36796 0.570385 9.33597V22.383C0.570385 30.2711 5.55555 32.4893 10.0074 32.4893V32.4159C9.38283 32.4159 6.49383 31.1459 6.49383 25.6455ZM22.6899 7.98414V8.08574C22.6899 8.08574 22.1195 8.36796 22.1195 9.33597V22.383C22.1195 30.2711 17.1315 32.4893 12.6797 32.4893V32.4159C13.3128 32.4159 16.2046 31.1459 16.2046 25.6426V9.89477C16.2046 9.38803 16.4081 8.90206 16.7701 8.54375C17.1322 8.18543 17.6233 7.98414 18.1354 7.98414H22.6899ZM84.0947 31.1262V9.6577C84.0947 9.21433 83.9169 8.78908 83.6004 8.47531C83.2838 8.16154 82.8544 7.98488 82.4064 7.98414H77.6009V8.08574C77.6009 8.08574 78.1713 8.36796 78.1713 9.33597V31.1375C78.1713 32.0942 77.6009 32.3877 77.6009 32.3877V32.4893H84.6737V32.3877C84.6737 32.3877 84.089 32.0942 84.089 31.1375L84.0947 31.1262ZM34.6766 7.98414H29.8739V8.08574C29.8739 8.08574 30.4443 8.36796 30.4443 9.33597V31.1375C30.4443 32.0942 29.8739 32.3877 29.8739 32.3877V32.4893H36.3677V9.6577C36.3677 9.43793 36.324 9.2203 36.239 9.01725C36.154 8.81421 36.0294 8.62972 35.8724 8.47431C35.7154 8.31891 35.5289 8.19563 35.3237 8.11153C35.1186 8.02742 34.8987 7.98414 34.6766 7.98414ZM47.0482 24.796C44.9761 27.8845 42.237 30.4794 39.0286 32.3934V32.4893H45.4625C45.9106 32.4886 46.34 32.3119 46.6565 31.9981C46.9731 31.6844 47.1509 31.2591 47.1509 30.8157V24.796H47.0482ZM63.1559 31.1375V7.99543H57.241V31.1375C57.241 32.0942 56.6706 32.3877 56.6706 32.3877V32.4893H63.7434V32.3877C63.7434 32.3877 63.1559 32.0942 63.1559 31.1375ZM48.631 9.6577V15.6831H48.7251C49.4951 14.1228 50.4809 12.6762 51.6541 11.3849C52.7835 10.1281 54.0706 9.01942 55.4842 8.08574V7.98978H50.3194C49.8723 7.99052 49.4438 8.1664 49.1274 8.47895C48.811 8.79151 48.6325 9.21531 48.631 9.6577ZM69.9463 7.98414H64.7815V8.08009C66.1944 9.0146 67.4815 10.1232 68.6116 11.3792C69.784 12.6732 70.7697 14.1215 71.5405 15.6831H71.6375V9.6577C71.6375 9.21384 71.4593 8.78817 71.1422 8.47431C70.825 8.16046 70.3949 7.98414 69.9463 7.98414ZM131.106 24.796C130.704 24.7963 130.31 24.9066 129.968 25.1149C129.626 25.3231 129.348 25.621 129.167 25.9757L126.6 31.0161C126.067 32.0603 125.431 32.3934 125.431 32.3934V32.4893H131.069C131.471 32.489 131.864 32.3787 132.207 32.1704C132.549 31.9622 132.826 31.6643 133.008 31.3096L135.606 26.2297C135.852 25.6867 136.247 25.2232 136.747 24.8919V24.796H131.106ZM151.68 32.4893H146.033C145.631 32.489 145.237 32.3787 144.895 32.1704C144.553 31.9622 144.275 31.6643 144.094 31.3096L135.267 14.0575L138.495 7.74707H138.592L150.499 31.0161C151.035 32.0603 151.671 32.3934 151.671 32.3934L151.68 32.4893Z"
+                                        fill="#F8F7F7"></path>
+                                    <path
+                                        d="M152.019 10.7159C152.251 10.5886 152.424 10.3756 152.498 10.1232H155.102C155.138 10.2485 155.199 10.3653 155.281 10.4671C155.364 10.5688 155.466 10.6534 155.581 10.7159C155.399 10.8875 155.266 11.1037 155.196 11.3424H152.41C152.336 11.1038 152.202 10.8879 152.019 10.7159ZM151.894 4.77234C152.022 6.49106 152.889 7.1825 153.131 9.25682C152.806 7.91345 151.99 6.1524 150.02 5.58796C146.883 4.70461 144.701 8.02916 146.649 9.84102C147.047 10.2254 147.555 10.4781 148.105 10.564C148.654 10.65 149.216 10.565 149.715 10.3208C148.488 9.91722 148.659 7.78081 150.63 8.10254C151.047 8.20247 151.432 8.40149 151.753 8.68232C152.074 8.96315 152.321 9.3173 152.472 9.71402H153.796V0C153.742 0.0733772 151.68 1.85419 151.894 4.77234ZM152.413 11.7573C152.395 11.8357 152.367 11.9116 152.33 11.9831C151.993 12.6181 151.417 13.1119 150.636 13.0132C149.544 12.8551 149.723 11.9294 149.723 11.9294C148.217 12.5842 148.825 15.1891 151.035 14.7516C152.43 14.4694 152.949 12.8269 153.006 11.7488L152.413 11.7573ZM157.871 11.9294C157.871 11.9294 158.051 12.8551 156.959 13.0132C156.177 13.1261 155.601 12.6181 155.265 11.9831C155.226 11.9121 155.198 11.8361 155.182 11.7573H153.796V17.8222C153.796 17.8222 155.299 17.2832 155.399 16.1063C155.498 14.9294 154.888 14.2888 154.574 12.5193C154.882 13.4817 155.467 14.5513 156.571 14.7601C158.77 15.1891 159.38 12.5786 157.871 11.9294ZM157.572 5.58514C155.356 6.20884 154.774 8.12512 154.569 9.71119H155.122C155.273 9.31448 155.52 8.96033 155.841 8.6795C156.162 8.39867 156.548 8.19965 156.964 8.09972C158.935 7.76952 159.106 9.91439 157.88 10.318C158.378 10.5621 158.941 10.6471 159.49 10.5612C160.039 10.4752 160.548 10.2226 160.946 9.83819C162.891 8.02634 160.717 4.70179 157.572 5.58514Z"
+                                        fill="#B78E35"></path>
+                                    <path
+                                        d="M30.601 43.7217C30.1861 43.3367 29.6462 43.1106 29.0781 43.0839C27.3384 43.0839 27.0817 44.7151 27.0817 45.2541C27.0817 45.7932 27.327 47.4131 29.0781 47.4131C29.6492 47.391 30.1951 47.1747 30.6238 46.8007C30.755 46.9757 30.8691 47.0829 31.0003 47.2635C30.7446 47.5053 30.4431 47.6945 30.1132 47.8205C29.7834 47.9464 29.4315 48.0065 29.0781 47.9973C27.0304 47.9973 26.4258 46.3915 26.4258 45.2541C26.4258 44.1168 27.0304 42.5307 29.0781 42.5307C29.439 42.5167 29.7987 42.5806 30.1321 42.718C30.4655 42.8555 30.7647 43.0631 31.0088 43.3266L30.601 43.7217Z"
+                                        fill="#F8F7F7"></path>
+                                    <path
+                                        d="M42.9044 45.2683C42.9044 46.3972 42.297 47.9974 40.2521 47.9974C38.2073 47.9974 37.5999 46.4057 37.5999 45.2683C37.5999 44.131 38.2073 42.5449 40.2521 42.5449C42.297 42.5449 42.9044 44.162 42.9044 45.2683ZM42.2285 45.2683C42.2285 44.7293 41.9833 43.1376 40.2521 43.1376C38.521 43.1376 38.2558 44.7293 38.2558 45.2683C38.2558 45.8074 38.5011 47.4132 40.2521 47.4132C42.0032 47.4132 42.2285 45.8074 42.2285 45.2683Z"
+                                        fill="#F8F7F7"></path>
+                                    <path d="M50.5304 47.385H52.6379V47.9297H49.8801V42.6211H50.5304V47.385Z"
+                                        fill="#F8F7F7"></path>
+                                    <path d="M60.264 47.385H62.3716V47.9297H59.6138V42.6211H60.264V47.385Z"
+                                        fill="#F8F7F7"></path>
+                                    <path
+                                        d="M70.0005 45.5985V47.3963H72.8182V47.9409H69.3474V42.6211H72.8182V43.1686H70.0005V45.0341H72.205V45.5985H70.0005Z"
+                                        fill="#F8F7F7"></path>
+                                    <path
+                                        d="M83.664 43.7217C83.2491 43.3367 82.7092 43.1106 82.1411 43.0839C80.4014 43.0839 80.1447 44.7151 80.1447 45.2541C80.1447 45.7932 80.39 47.4131 82.1411 47.4131C82.7122 47.391 83.2581 47.1747 83.6868 46.8007C83.818 46.9757 83.9321 47.0829 84.0633 47.2635C83.8076 47.5053 83.5061 47.6945 83.1762 47.8205C82.8463 47.9464 82.4945 48.0065 82.1411 47.9973C80.0934 47.9973 79.4888 46.3915 79.4888 45.2541C79.4888 44.1168 80.0934 42.5307 82.1411 42.5307C82.502 42.5167 82.8617 42.5806 83.1951 42.718C83.5285 42.8555 83.8277 43.0631 84.0718 43.3266L83.664 43.7217Z"
+                                        fill="#F8F7F7"></path>
+                                    <path
+                                        d="M92.2257 43.1686H90.6257V42.6211H94.5043V43.1686H92.8873V47.9297H92.2257V43.1686Z"
+                                        fill="#F8F7F7"></path>
+                                    <path d="M102.016 47.9297H101.363V42.6211H102.016V47.9297Z" fill="#F8F7F7"></path>
+                                    <path
+                                        d="M114.294 45.2683C114.294 46.3972 113.686 47.9974 111.642 47.9974C109.597 47.9974 108.989 46.4057 108.989 45.2683C108.989 44.131 109.597 42.5449 111.642 42.5449C113.686 42.5449 114.294 44.162 114.294 45.2683ZM113.618 45.2683C113.618 44.7293 113.373 43.1376 111.642 43.1376C109.91 43.1376 109.645 44.7293 109.645 45.2683C109.645 45.8074 109.89 47.4132 111.642 47.4132C113.393 47.4132 113.618 45.8074 113.618 45.2683Z"
+                                        fill="#F8F7F7"></path>
+                                    <path
+                                        d="M121.27 47.9292V42.6066L121.347 42.584L124.931 46.329V42.6207H125.585V47.9377L125.522 47.9518L121.934 44.1447V47.9292H121.27Z"
+                                        fill="#F8F7F7"></path>
+                                </svg>
+                            </a>
+                        </div>
+
+                        <ul>
+                            <li>
+                                <a href="1-1.html">住房介紹</a>
+                            </li>
+                            <li>
+                                <a href="2-1.html">新訊優惠</a>
+                            </li>
+                            <li>
+                                <a href="3-1.html">客房介紹</a>
+                            </li>
+                            <li>
+                                <a href="4-1.html">餐飲美饌</a>
+                            </li>
+                            <li>
+                                <a href="4-1.html">婚宴服務</a>
+                            </li>
+                            <li>
+                                <a href="4-1.html">設施信息</a>
+                            </li>
+
+                        </ul>
+                        <div class="menu_main_right">
+                            <span class="menu_rwd_toggle">
+                                <button class="menu_button">
+                                    <span class="menuicon"></span>
+                                </button>
+
+                            </span>
+                            <div class="language">
+                                <a class="menu_btn " href="javascript:;">
+                                    <span>Language</span>
+                                </a>
+                                <ul class="">
+                                    <li><a href="">繁體中文</a></li>
+                                    <li><a href="en">English</a></li>
+                                    <li><a href="jp">日本語</a></li>
+                                    <li><a href="kr">한국어</a></li>
+                                </ul>
+                            </div>
+
+                            <a class="menu_btn search_btn" href="#m_search" data-lity>
+                                <i class="fa fa-search" aria-hidden="true"></i>
+                            </a>
+                            <a href="" class="m_reservation">線上訂房</a>
+                        </div>
+                    </div>
+
+                </div>
+                <!--menu end-->
+                <div class="menu_search" style="display:none;">
+                    <form action="/search/index.html" method="get">
+                        <div class="menu_search_main">
+                            <input type="text" name="query" id="header-search-input" placeholder="Search for">
+                            <input type="submit" id="header-search-btn" value="Search">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!--top_img end -->
+
+    </header>
+    <!-- 副選單 -->
+    <div class="sidemenu">
+        <div class="main">
+            <!-- PC -->
+            <ul class="menu">
+                <!--01-->
+                <li>
+                    <a href="javascript:;">住房介紹</a>
+                    <ul>
+                        <li>
+                            <a href="#">住宿計劃</a>
+                        </li>
+                        <li>
+                            <a href="#">房間信息</a>
+                        </li>
+                        <li>
+                            <a href="#">價目單價目表</a>
+                        </li>
+                        <li>
+                            <a href="#">早餐客房服務</a>
+                        </li>
+                    </ul>
+                </li>
+                <!--02-->
+                <li>
+                    <a href="javascript:;">新訊優惠</a>
+                    <ul>
+                        <li>
+                            <a href="#">飯店公告</a>
+                        </li>
+                        <li>
+                            <a href="#">住房優惠</a>
+                        </li>
+                        <li>
+                            <a href="#">其他優惠</a>
+                        </li>
+
+                    </ul>
+                </li>
+                <!--03-->
+                <li>
+                    <a href="javascript:;">客房介紹</a>
+                    <ul>
+                        <li>
+                            <a href="#">房間清單</a>
+                        </li>
+                        <li>
+                            <a href="#">客房樓層一覽</a>
+                        </li>
+                        <li>
+                            <a href="#">主樓標準層</a>
+                        </li>
+                        <li>
+                            <a href="#">本館高級樓層</a>
+                        </li>
+                        <li>
+                            <a href="#">客房服務</a>
+                        </li>
+                        <li>
+                            <a href="#">便利設施清單</a>
+                        </li>
+                    </ul>
+                </li>
+                <!--04-->
+                <li>
+                    <a href="javascript:;">餐飲美饌</a>
+                    <ul>
+                        <li>
+                            <a href="#">餐廳列表</a>
+                        </li>
+                        <li>
+                            <a href="#">菜單搜索</a>
+                        </li>
+                        <li>
+                            <a href="#">包房信息</a>
+                        </li>
+                        <li>
+                            <a href="#">下午茶</a>
+                        </li>
+                    </ul>
+                </li>
+                <!--05-->
+                <li>
+                    <a href="javascript:;">婚禮會議</a>
+                    <ul>
+                        <li>
+                            <a href="#">宴會廳清單</a>
+                        </li>
+                        <li>
+                            <a href="#">宴會方案</a>
+                        </li>
+                        <li>
+                            <a href="#">面積/容量列表</a>
+                        </li>
+                        <li>
+                            <a href="#">樓層地圖</a>
+                        </li>
+                    </ul>
+                </li>
+                <!--06-->
+                <li>
+                    <a href="javascript:;">設施信息</a>
+                    <ul>
+                        <li>
+                            <a href="#">周邊觀光</a>
+                        </li>
+                        <li>
+                            <a href="#">使用權</a>
+                        </li>
+                        <li>
+                            <a href="#">官方博客</a>
+                        </li>
+
+                    </ul>
+                </li>
+            </ul>
+            <!-- phone -->
+            <div class="menu_rwd">
+                <ul class="menu_rwd_menu menu">
+                    <!--01-->
+                    <li>
+                        <a href="javascript:;">住房介紹</a>
+                        <ul>
+                            <li>
+                                <a href="#">住宿計劃</a>
+                            </li>
+                            <li>
+                                <a href="#">房間信息</a>
+                            </li>
+                            <li>
+                                <a href="#">價目單價目表</a>
+                            </li>
+                            <li>
+                                <a href="#">早餐客房服務</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!--02-->
+                    <li>
+                        <a href="javascript:;">新訊優惠</a>
+                        <ul>
+                            <li>
+                                <a href="#">飯店公告</a>
+                            </li>
+                            <li>
+                                <a href="#">住房優惠</a>
+                            </li>
+                            <li>
+                                <a href="#">其他優惠</a>
+                            </li>
+
+                        </ul>
+                    </li>
+                    <!--03-->
+                    <li>
+                        <a href="javascript:;">客房介紹</a>
+                        <ul>
+                            <li>
+                                <a href="#">房間清單</a>
+                            </li>
+                            <li>
+                                <a href="#">客房樓層一覽</a>
+                            </li>
+                            <li>
+                                <a href="#">主樓標準層</a>
+                            </li>
+                            <li>
+                                <a href="#">本館高級樓層</a>
+                            </li>
+                            <li>
+                                <a href="#">客房服務</a>
+                            </li>
+                            <li>
+                                <a href="#">便利設施清單</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!--04-->
+                    <li>
+                        <a href="javascript:;">餐飲美饌</a>
+                        <ul>
+                            <li>
+                                <a href="#">餐廳列表</a>
+                            </li>
+                            <li>
+                                <a href="#">菜單搜索</a>
+                            </li>
+                            <li>
+                                <a href="#">包房信息</a>
+                            </li>
+                            <li>
+                                <a href="#">下午茶</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!--05-->
+                    <li>
+                        <a href="javascript:;">婚禮會議</a>
+                        <ul>
+                            <li>
+                                <a href="#">宴會廳清單</a>
+                            </li>
+                            <li>
+                                <a href="#">宴會方案</a>
+                            </li>
+                            <li>
+                                <a href="#">面積/容量列表</a>
+                            </li>
+                            <li>
+                                <a href="#">樓層地圖</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!--06-->
+                    <li>
+                        <a href="javascript:;">設施信息</a>
+                        <ul>
+                            <li>
+                                <a href="#">周邊觀光</a>
+                            </li>
+                            <li>
+                                <a href="#">使用權</a>
+                            </li>
+                            <li>
+                                <a href="#">官方博客</a>
+                            </li>
+
+                        </ul>
+                    </li>
+                </ul>
+                <div class="menu_rwd_box">
+
+                    <ul class="language">
+                        <li><a href="">繁體中文</a></li>
+                        <li><a href="en">English</a></li>
+                        <li><a href="jp">日本語</a></li>
+                        <li><a href="kr">한국어</a></li>
+                    </ul>
+                    <a href="" class="m_reservation">線上訂房</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 首頁輪播圖 -->
+    <div class="top_big">
+        <a class="main-visual-scroll" href="javascript:;"><span>SCROLL</span></a>
+        <ul class="top_big_slide owl-carousel owl-theme">
+            <li>
+                <img src="images/top_slide_01@2x.jpg" alt="">
+            </li>
+            <li>
+                <img src="images/top_slide_02@2x.jpg" alt="">
+            </li>
+            <li>
+                <img src="images/top_slide_03@2x.jpg" alt="">
+            </li>
+            <li>
+                <img src="images/top_slide_04@2x.jpg" alt="">
+            </li>
+        </ul>
+    </div>
+    <main>
+
+        <!-- 預約旅館 -->
+        <div class="reservation m_90">
+            <div class="reserv_main">
+                <div class="reservation_form">
+                    <div class="reservation_tt">
+                        <h2>BEST RATE</h2>
+                        <p>從官方網站預訂是最划算的</p>
+                    </div>
+                    <form action="">
+                        <div class="reservation_search">
+                            <div class="outer_date box">
+                                <label>ARRIVAL</label>
+                                <input type="text" class="datepicker" name="dt"
+                                    class="js-checkinn flatpickr flatpickr-input" value="2021/07/22"
+                                    readonly="readonly">
+                            </div>
+
+                            <div class="outer_people box">
+                                <div class="item">
+                                    <label>DAY</label>
+                                    <select>
+                                        <option value="1" selected="selected">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                </div>
+                                <div class="item">
+                                    <label>GUESTS</label>
+                                    <select>
+                                        <option value="1" selected="selected">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                </div>
+
+                            </div>
+                        </div>
+                        <button class="reservation_btn">
+                            <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                            <span class="r2020-run-btn__label">空室検索</span>
+                        </button>
+
+
+                    </form>
+
+                </div>
+                <!-- <ul class="reservation_link">
+                    <li>
+                        <a href="">預訂確認</a>
+                    </li>
+                    <li>
+                        <a href="">會員登錄</a>
+                    </li>
+                    <li>
+                        <a href="">團體登錄</a>
+                    </li>
+                    <li>
+                        <a href="">企業登錄</a>
+                    </li>
+
+                </ul> -->
+
+            </div>
+
+        </div>
+
+        <section  class="texts m_60" data-scroll-container>
+            <div class="container">
+                <div class="row">
+                    <div class="img" data-parallax='{"y":20}'>
+                        <img src="images/texts-01.jpg" alt="">
+                    </div>
+                    <div class="txt" >
+                        <h2>到采爾馬特的神奇之地</h2>
+                        <p>米拉博酒店坐落在寧靜的地方，離采爾馬特主火車站<br>
+                            和著名的Gornergrat車站只有幾分鐘的步行路程。</p>
+                        <p>作為一個傳統的家庭度假村，它由朱倫家族的第二代擁有，<br>第三代管理。
+                            Le Mirabeau以 "生活的藝術 "或 "美好的生活方式
+                            "而聞名；<br>它提供廣泛的美食，包括幾家餐廳和酒吧；
+                        </p>
+
+                        <p>以及一流的健康設施，並輔以馬特宏峰的壯麗景色。</p>
+                        <a href="">
+                            <span>查看更多</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="row ">
+                    <div class="txt">
+                        <h2>為您提供終極度假勝地</h2>
+                        <p>在這個世界裡，現代奢華展現出超出預期的範圍，<br>並融入任何純粹和線性的慶祝活動。自然而真實。
+                            永恆、熱情和熟悉。</p>
+                        <p>一個向任何只有大自然才能創造的獨特事物鞠躬的世界，就像黑天鵝一樣，<br>英俊出奇，充滿優雅和美麗。ELIVI HOTELS
+                            採用黑天鵝的元素來提醒他們他們的起點、他們的靈感和他們的目的地。
+                        </p>
+
+                        <p>以及一流的健康設施，並輔以馬特宏峰的壯麗景色。</p>
+                        <a href="">
+                            <span>查看更多</span>
+                        </a>
+                    </div>
+                    <div class="img" data-parallax='{"y":20}'>
+                        <img src="images/texts-02.jpg" alt="">
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <div class="txt t-align-center">
+                    <h2>奢華體驗所需的一切</h2>
+                    <p>在泳池邊享用清爽的時令果汁和最完整的自助餐，開始新的一天，預訂瑜伽課程，<br>練習高爾夫球，打網球，在我們的田園詩般的花園中漫步。</p>
+                    <p>在我們的任何一家餐廳的菜單上品嚐多汁的晚餐餐廳，探索我們豐富的藝術收藏品，<br>並在我們屢獲殊榮的著名水療中心東方水療花園盡情享受。
+                    </p>
+
+                </div>
+            </div>
+            <div class="galleria">
+                <div class="galleria__inner owl-carousel owl-theme">
+                    <div class="galleria__item">
+                        <a href="images/galleria-01.jpg" class="galleria__item-inner" data-lity>
+                            <img src="images/galleria-01.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="galleria__item">
+                         <a href="images/galleria-02.jpg" class="galleria__item-inner" data-lity>
+                            <img src="images/galleria-02.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="galleria__item">
+                         <a href="images/galleria-03.jpg" class="galleria__item-inner" data-lity>
+                            <img src="images/galleria-03.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="galleria__item">
+                         <a href="images/galleria-04.jpg" class="galleria__item-inner" data-lity>
+                            <img src="images/galleria-04.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="galleria__item">
+                         <a href="images/galleria-05.jpg" class="galleria__item-inner" data-lity>
+                            <img src="images/galleria-05.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="galleria__item">
+                         <a href="images/galleria-06.jpg" class="galleria__item-inner" data-lity>
+                            <img src="images/galleria-06.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="galleria__item">
+                         <a href="images/galleria-07.jpg" class="galleria__item-inner" data-lity>
+                            <img src="images/galleria-07.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="galleria__item">
+                         <a href="images/galleria-08.jpg" class="galleria__item-inner" data-lity>
+                            <img src="images/galleria-08.jpg" alt="">
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section class="billboard ">
+            <ul class="billboard_list">
+                <li>
+                    <a href="">
+                        <div class="line"></div>
+                        <span>Casitas & Suites</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <div class="line"></div>
+                        <span>Villas</span>
+
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <div class="line"></div>
+                        <span>Oceanfront Villa</span>
+
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+
+                        <span>Haciendas</span>
+                    </a>
+                </li>
+            </ul>
+            <ul class="billboard_img">
+                <li><img src="images/billboard_img-01.jpg" alt=""></li>
+                <li><img src="images/billboard_img-02.jpg" alt=""></li>
+                <li><img src="images/billboard_img-03.jpg" alt=""></li>
+                <li><img src="images/billboard_img-04.jpg" alt=""></li>
+            </ul>
+
+            <video aria-label="" autoplay="" class="asset__video -object-fit" data-load="objectFit" loop="" muted=""
+                poster="https://dreffui1gbt6t.cloudfront.net/images/esp/esp-home-hero-mobile-gardenspacasita-1.jpg"
+                preload="">
+                <source data-src="https://dreffui1gbt6t.cloudfront.net/images/esp/esp-stayhero1.mp4" type="video/mp4"
+                    src="https://dreffui1gbt6t.cloudfront.net/images/esp/esp-stayhero1.mp4">
+                <source data-src="https://dreffui1gbt6t.cloudfront.net/images/esp/esp-stayhero1.webm" type="video/webm"
+                    src="https://dreffui1gbt6t.cloudfront.net/images/esp/esp-stayhero1.webm">
+            </video>
+        </section>
+    </main>
+    <footer>
+        <div class="footer_go-top">
+            <button>
+                <span class="footer__arrow"></span>
+            </button>
+        </div>
+        <div class="container">
+
+            <div class="row">
+                <div class="logo">
+                    <a href="index.html">
+                        <svg width="162" height="48" viewBox="0 0 162 48" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M121.059 31.1375C121.059 32.0942 121.629 32.3877 121.629 32.3877V32.4893H114.556V32.3877C114.556 32.3877 115.127 32.1055 115.127 31.1375V9.6577C115.127 9.21433 115.304 8.78908 115.621 8.47531C115.937 8.16154 116.367 7.98488 116.815 7.98414H121.62V8.08574C121.62 8.08574 121.05 8.36796 121.05 9.33597L121.059 31.1375ZM100.505 9.23437C100.332 8.86117 100.054 8.54497 99.7046 8.32335C99.3553 8.10172 98.949 7.98399 98.534 7.98414H92.9728V8.08009C93.5156 8.39546 93.9378 8.8797 94.1734 9.45733L104.925 32.4893H105.022L108.179 25.6737L100.505 9.23437ZM99.9201 32.3934C99.9201 32.3934 98.3515 31.3802 96.3951 29.0349C95.2884 27.7426 94.3459 26.3209 93.5888 24.8016H93.5004V31.1431C93.5004 32.0998 92.93 32.3934 92.93 32.3934V32.495H99.9372L99.9201 32.3934ZM6.49383 25.6455V9.89477C6.49383 9.38803 6.29041 8.90206 5.92833 8.54375C5.56624 8.18543 5.07515 7.98414 4.56308 7.98414H0V8.08574C0 8.08574 0.570385 8.36796 0.570385 9.33597V22.383C0.570385 30.2711 5.55555 32.4893 10.0074 32.4893V32.4159C9.38283 32.4159 6.49383 31.1459 6.49383 25.6455ZM22.6899 7.98414V8.08574C22.6899 8.08574 22.1195 8.36796 22.1195 9.33597V22.383C22.1195 30.2711 17.1315 32.4893 12.6797 32.4893V32.4159C13.3128 32.4159 16.2046 31.1459 16.2046 25.6426V9.89477C16.2046 9.38803 16.4081 8.90206 16.7701 8.54375C17.1322 8.18543 17.6233 7.98414 18.1354 7.98414H22.6899ZM84.0947 31.1262V9.6577C84.0947 9.21433 83.9169 8.78908 83.6004 8.47531C83.2838 8.16154 82.8544 7.98488 82.4064 7.98414H77.6009V8.08574C77.6009 8.08574 78.1713 8.36796 78.1713 9.33597V31.1375C78.1713 32.0942 77.6009 32.3877 77.6009 32.3877V32.4893H84.6737V32.3877C84.6737 32.3877 84.089 32.0942 84.089 31.1375L84.0947 31.1262ZM34.6766 7.98414H29.8739V8.08574C29.8739 8.08574 30.4443 8.36796 30.4443 9.33597V31.1375C30.4443 32.0942 29.8739 32.3877 29.8739 32.3877V32.4893H36.3677V9.6577C36.3677 9.43793 36.324 9.2203 36.239 9.01725C36.154 8.81421 36.0294 8.62972 35.8724 8.47431C35.7154 8.31891 35.5289 8.19563 35.3237 8.11153C35.1186 8.02742 34.8987 7.98414 34.6766 7.98414ZM47.0482 24.796C44.9761 27.8845 42.237 30.4794 39.0286 32.3934V32.4893H45.4625C45.9106 32.4886 46.34 32.3119 46.6565 31.9981C46.9731 31.6844 47.1509 31.2591 47.1509 30.8157V24.796H47.0482ZM63.1559 31.1375V7.99543H57.241V31.1375C57.241 32.0942 56.6706 32.3877 56.6706 32.3877V32.4893H63.7434V32.3877C63.7434 32.3877 63.1559 32.0942 63.1559 31.1375ZM48.631 9.6577V15.6831H48.7251C49.4951 14.1228 50.4809 12.6762 51.6541 11.3849C52.7835 10.1281 54.0706 9.01942 55.4842 8.08574V7.98978H50.3194C49.8723 7.99052 49.4438 8.1664 49.1274 8.47895C48.811 8.79151 48.6325 9.21531 48.631 9.6577ZM69.9463 7.98414H64.7815V8.08009C66.1944 9.0146 67.4815 10.1232 68.6116 11.3792C69.784 12.6732 70.7697 14.1215 71.5405 15.6831H71.6375V9.6577C71.6375 9.21384 71.4593 8.78817 71.1422 8.47431C70.825 8.16046 70.3949 7.98414 69.9463 7.98414ZM131.106 24.796C130.704 24.7963 130.31 24.9066 129.968 25.1149C129.626 25.3231 129.348 25.621 129.167 25.9757L126.6 31.0161C126.067 32.0603 125.431 32.3934 125.431 32.3934V32.4893H131.069C131.471 32.489 131.864 32.3787 132.207 32.1704C132.549 31.9622 132.826 31.6643 133.008 31.3096L135.606 26.2297C135.852 25.6867 136.247 25.2232 136.747 24.8919V24.796H131.106ZM151.68 32.4893H146.033C145.631 32.489 145.237 32.3787 144.895 32.1704C144.553 31.9622 144.275 31.6643 144.094 31.3096L135.267 14.0575L138.495 7.74707H138.592L150.499 31.0161C151.035 32.0603 151.671 32.3934 151.671 32.3934L151.68 32.4893Z"
+                                fill="#F8F7F7"></path>
+                            <path
+                                d="M152.019 10.7159C152.251 10.5886 152.424 10.3756 152.498 10.1232H155.102C155.138 10.2485 155.199 10.3653 155.281 10.4671C155.364 10.5688 155.466 10.6534 155.581 10.7159C155.399 10.8875 155.266 11.1037 155.196 11.3424H152.41C152.336 11.1038 152.202 10.8879 152.019 10.7159ZM151.894 4.77234C152.022 6.49106 152.889 7.1825 153.131 9.25682C152.806 7.91345 151.99 6.1524 150.02 5.58796C146.883 4.70461 144.701 8.02916 146.649 9.84102C147.047 10.2254 147.555 10.4781 148.105 10.564C148.654 10.65 149.216 10.565 149.715 10.3208C148.488 9.91722 148.659 7.78081 150.63 8.10254C151.047 8.20247 151.432 8.40149 151.753 8.68232C152.074 8.96315 152.321 9.3173 152.472 9.71402H153.796V0C153.742 0.0733772 151.68 1.85419 151.894 4.77234ZM152.413 11.7573C152.395 11.8357 152.367 11.9116 152.33 11.9831C151.993 12.6181 151.417 13.1119 150.636 13.0132C149.544 12.8551 149.723 11.9294 149.723 11.9294C148.217 12.5842 148.825 15.1891 151.035 14.7516C152.43 14.4694 152.949 12.8269 153.006 11.7488L152.413 11.7573ZM157.871 11.9294C157.871 11.9294 158.051 12.8551 156.959 13.0132C156.177 13.1261 155.601 12.6181 155.265 11.9831C155.226 11.9121 155.198 11.8361 155.182 11.7573H153.796V17.8222C153.796 17.8222 155.299 17.2832 155.399 16.1063C155.498 14.9294 154.888 14.2888 154.574 12.5193C154.882 13.4817 155.467 14.5513 156.571 14.7601C158.77 15.1891 159.38 12.5786 157.871 11.9294ZM157.572 5.58514C155.356 6.20884 154.774 8.12512 154.569 9.71119H155.122C155.273 9.31448 155.52 8.96033 155.841 8.6795C156.162 8.39867 156.548 8.19965 156.964 8.09972C158.935 7.76952 159.106 9.91439 157.88 10.318C158.378 10.5621 158.941 10.6471 159.49 10.5612C160.039 10.4752 160.548 10.2226 160.946 9.83819C162.891 8.02634 160.717 4.70179 157.572 5.58514Z"
+                                fill="#B78E35"></path>
+                            <path
+                                d="M30.601 43.7217C30.1861 43.3367 29.6462 43.1106 29.0781 43.0839C27.3384 43.0839 27.0817 44.7151 27.0817 45.2541C27.0817 45.7932 27.327 47.4131 29.0781 47.4131C29.6492 47.391 30.1951 47.1747 30.6238 46.8007C30.755 46.9757 30.8691 47.0829 31.0003 47.2635C30.7446 47.5053 30.4431 47.6945 30.1132 47.8205C29.7834 47.9464 29.4315 48.0065 29.0781 47.9973C27.0304 47.9973 26.4258 46.3915 26.4258 45.2541C26.4258 44.1168 27.0304 42.5307 29.0781 42.5307C29.439 42.5167 29.7987 42.5806 30.1321 42.718C30.4655 42.8555 30.7647 43.0631 31.0088 43.3266L30.601 43.7217Z"
+                                fill="#F8F7F7"></path>
+                            <path
+                                d="M42.9044 45.2683C42.9044 46.3972 42.297 47.9974 40.2521 47.9974C38.2073 47.9974 37.5999 46.4057 37.5999 45.2683C37.5999 44.131 38.2073 42.5449 40.2521 42.5449C42.297 42.5449 42.9044 44.162 42.9044 45.2683ZM42.2285 45.2683C42.2285 44.7293 41.9833 43.1376 40.2521 43.1376C38.521 43.1376 38.2558 44.7293 38.2558 45.2683C38.2558 45.8074 38.5011 47.4132 40.2521 47.4132C42.0032 47.4132 42.2285 45.8074 42.2285 45.2683Z"
+                                fill="#F8F7F7"></path>
+                            <path d="M50.5304 47.385H52.6379V47.9297H49.8801V42.6211H50.5304V47.385Z" fill="#F8F7F7">
+                            </path>
+                            <path d="M60.264 47.385H62.3716V47.9297H59.6138V42.6211H60.264V47.385Z" fill="#F8F7F7">
+                            </path>
+                            <path
+                                d="M70.0005 45.5985V47.3963H72.8182V47.9409H69.3474V42.6211H72.8182V43.1686H70.0005V45.0341H72.205V45.5985H70.0005Z"
+                                fill="#F8F7F7"></path>
+                            <path
+                                d="M83.664 43.7217C83.2491 43.3367 82.7092 43.1106 82.1411 43.0839C80.4014 43.0839 80.1447 44.7151 80.1447 45.2541C80.1447 45.7932 80.39 47.4131 82.1411 47.4131C82.7122 47.391 83.2581 47.1747 83.6868 46.8007C83.818 46.9757 83.9321 47.0829 84.0633 47.2635C83.8076 47.5053 83.5061 47.6945 83.1762 47.8205C82.8463 47.9464 82.4945 48.0065 82.1411 47.9973C80.0934 47.9973 79.4888 46.3915 79.4888 45.2541C79.4888 44.1168 80.0934 42.5307 82.1411 42.5307C82.502 42.5167 82.8617 42.5806 83.1951 42.718C83.5285 42.8555 83.8277 43.0631 84.0718 43.3266L83.664 43.7217Z"
+                                fill="#F8F7F7"></path>
+                            <path d="M92.2257 43.1686H90.6257V42.6211H94.5043V43.1686H92.8873V47.9297H92.2257V43.1686Z"
+                                fill="#F8F7F7"></path>
+                            <path d="M102.016 47.9297H101.363V42.6211H102.016V47.9297Z" fill="#F8F7F7"></path>
+                            <path
+                                d="M114.294 45.2683C114.294 46.3972 113.686 47.9974 111.642 47.9974C109.597 47.9974 108.989 46.4057 108.989 45.2683C108.989 44.131 109.597 42.5449 111.642 42.5449C113.686 42.5449 114.294 44.162 114.294 45.2683ZM113.618 45.2683C113.618 44.7293 113.373 43.1376 111.642 43.1376C109.91 43.1376 109.645 44.7293 109.645 45.2683C109.645 45.8074 109.89 47.4132 111.642 47.4132C113.393 47.4132 113.618 45.8074 113.618 45.2683Z"
+                                fill="#F8F7F7"></path>
+                            <path
+                                d="M121.27 47.9292V42.6066L121.347 42.584L124.931 46.329V42.6207H125.585V47.9377L125.522 47.9518L121.934 44.1447V47.9292H121.27Z"
+                                fill="#F8F7F7"></path>
+                        </svg>
+                    </a>
+                </div>
+                <ul class="footer_menu">
+                    <li>
+                        <a href="1-1.html">住房介紹</a>
+                    </li>
+                    <li>
+                        <a href="2-1.html">新訊優惠</a>
+                    </li>
+                    <li>
+                        <a href="3-1.html">客房介紹</a>
+                    </li>
+                    <li>
+                        <a href="4-1.html">餐飲美饌</a>
+                    </li>
+                    <li>
+                        <a href="4-1.html">婚宴服務</a>
+                    </li>
+                    <li>
+                        <a href="4-1.html">設施信息</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="row">
+                <div class="footer_contact">
+                    <div class="footer_contact-left">
+                        <h2>通訊註冊</h2>
+                        <form action="">
+                            <div class="field">
+                                <div class="field_box">
+                                    <div class="field_box-item">
+                                        <input type="text" id="firstName" name="firstNameTextField">
+                                        <label for="firstName">First Name</label>
+                                    </div>
+                                    <div class="field_box-item">
+                                        <input type="text" id="lastName" name="lastNameTextField">
+                                        <label for="lastName">Last Name</label>
+                                    </div>
+                                </div>
+                                <div class="field_box ">
+                                    <div class="field_box-item w100">
+                                        <input type="text" id="email" name="emailTextField">
+                                        <label for="email">Email</label>
+                                    </div>
+                                    <div class="field_box_btn">
+                                        <button>
+                                            <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                                            <span>Subscribe</span>
+                                        </button>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="footer_contact-right">
+                        <h2>聯繫我們</h2>
+                        <div class="item">
+                            <a href="tel:+41227793333" class="tel">+41 22 779 33 33</a>
+                        </div>
+                        <div class="item">
+                            <a href="mailto:info@ultimacollection.com" class="mail">info@ultimacollection.com</a>
+                        </div>
+                        <div class="item">
+                            <ul>
+                                <li>
+                                    <a href="">
+                                        <i class="fa fa-instagram fa-lg" aria-hidden="true"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <i class="fa fa-linkedin-square fa-lg" aria-hidden="true"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <i class="fa fa-youtube-play fa-lg" aria-hidden="true"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>

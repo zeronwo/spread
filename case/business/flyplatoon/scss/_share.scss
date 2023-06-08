@@ -1,0 +1,224 @@
+.wrapper {
+  margin: auto;
+  max-width: 1400px;
+  padding: 0 16px;
+  width: 100%;
+}
+
+.tt {
+  color: #bbb0a1;
+  font-size: 12px;
+}
+
+h2 {
+  line-height: 0.95;
+  font-size: clamp(35px, 3vw, 64px);
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 400;
+  margin: 0.3em 0;
+}
+
+
+.page {
+  position: relative;
+  height: 100vh;
+}
+
+.button-solid {
+  background-color: #280a0b;
+  border-radius: 9999px;
+  border: none;
+  color: #fff8ed;
+  cursor: pointer;
+  font-family: "neuzeit-grotesk", sans-serif;
+  font-weight: 700;
+  display: inline-block;
+  text-decoration: none;
+  padding: 16px 32px;
+  position: relative;
+  overflow: hidden;
+  line-height: 1;
+  transition: background-color 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+footer {
+  background: #280a0b;
+  ul {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 21.3333333333px;
+    li {
+      display: flex;
+      flex-direction: column;
+      padding: 16px 0;
+      color: $txt;
+      a {
+        color: $txt;
+      }
+    }
+  }
+}
+
+.movel {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 9;
+  pointer-events: none;
+}
+
+.txt_module {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  @media (min-width: 1200px) {
+    padding: 0 48px 48px;
+  }
+  &_top,
+  &_bottom {
+    opacity: 0;
+    transform: translate3d(0, 40px, 0);
+    transition: all 1s cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  &_top {
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  &_bottom {
+    p {
+      font-size: clamp(16px, 3vw, 21px);
+      font-weight: 300;
+      margin-bottom: 30px;
+    }
+    a {
+      background-color: #280a0b;
+      border-radius: 9999px;
+      border: none;
+      color: #fff8ed;
+      cursor: pointer;
+      font-family: "neuzeit-grotesk", sans-serif;
+      font-weight: 700;
+      display: inline-block;
+      text-decoration: none;
+      padding: 16px 32px;
+      position: relative;
+      overflow: hidden;
+      line-height: 1;
+      transition: background-color 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+      &:hover {
+        background-color: #a82326;
+      }
+    }
+  }
+  @media (max-width: 1200px) {
+    &{
+      padding: 0 15px;
+    }
+  }
+}
+
+.txt_img {
+  height: 100vh;
+  .main {
+    height: 100vh;
+    display: grid;
+    .img {
+      display: flex;
+      align-items: end;
+      position: relative;
+      z-index: 9;
+      transition: all 1s;
+      picture {
+        display: block;
+        position: relative;
+        width: 100%;
+        height: 100%;
+
+        img {
+          position: absolute;
+          top: 0px;
+          left: 0px;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: 0% center;
+        }
+      }
+    }
+    .txt {
+      padding: 0 48px 48px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+  }
+    .txt.right {
+      //width: 40%;
+      height: 100vh;
+     //position: fixed;
+      right: 0;
+      top: 0;
+      opacity: 0;
+      grid-column: 2 / span 1;
+      grid-row: 1 / span 1;
+      transition: all 1s cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+  }
+  &.in {
+    opacity: 1;
+    .main {
+      pointer-events: auto;
+      .txt {
+        .txt_module_top,
+        .txt_module_bottom {
+          opacity: 1;
+          transition-duration: 0.6s;
+          transition-delay: 0.3s;
+          transform: translateZ(0);
+        }
+      }
+      .img {
+        picture {
+          &.left {
+            transform: translateZ(0);
+            transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+            transition: all 1s;
+          }
+          &.right {
+            transform: translate3d(0, 0, 0);
+            transition: all 0.6s;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+@mixin fix_hide {
+  clip-path: inset(0 0 0 0);
+  .main{
+    overflow: hidden;
+  }
+}
+
+@mixin  pe_none {
+  pointer-events: none;
+  opacity: 0;
+  &.in{
+    pointer-events: auto;
+    opacity: 1;
+  }
+}
+
+@mixin  img_absolute {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 0% center;
+}

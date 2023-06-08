@@ -1,0 +1,476 @@
+@charset "utf-8";
+/* CSS Document */
+
+@import "reset.scss";
+@import "basic.scss";
+@import "mix.scss";
+
+body a {
+  @include animation;
+}
+
+body {
+  color: $color1;
+  @include bg-box();
+  background-image: url(../images/bg.jpg);
+  background-attachment: fixed;
+  background-color: #15131e;
+  font-family: 微軟正黑體;
+  font-size: 100%;
+  position: relative;
+  overflow-x: hidden;
+}
+body a:hover {
+  transition: all 0.4s;
+}
+
+.inner-wrapper {
+  max-width: 1200px;
+  height: 100%;
+  margin: auto;
+  position: relative;
+  padding: 0 1em;
+}
+
+header {
+  position: relative;
+  @include bg-box();
+  background-image: url(../images/top-mob-img.jpg);
+  video {
+    max-width: 100%;
+    height: auto;
+  }
+}
+nav {
+  width: 42px;
+  ul {
+    position: fixed;
+    top: 50%;
+    right: 1%;
+    z-index: 99;
+    margin-top: -182px;
+    li {
+      a {
+        display: block;
+        color: $color2;
+        font-size: 0.9em;
+        text-align: center;
+        img:last-of-type{display: none}
+        p {
+          padding: 10px 0;
+        }
+        &:hover {
+          color: $color1;
+          img:last-of-type{display: inline-block}
+          img:first-of-type{display: none}
+        }
+      }
+    }
+  }
+}
+
+.role {
+  .role_main {
+    @include flex;
+    li {
+      width: calc(100% / 4 - 20px);
+      a {
+        display: block;
+
+        img {
+          transform: rotateY(0deg);
+          transition: all 0.6s;
+          position: relative;
+          text-align: center;
+          opacity: 0.4;
+          -webkit-filter: grayscale(1);
+        }
+        &:hover img {
+          transform: rotateY(180deg);
+          transform: translate(0, -5%) rotateY(180deg);
+          opacity: 1;
+          -webkit-filter: grayscale(0);
+        }
+      }
+      p {
+        color: $color2;
+        font-size: 1.25em;
+        font-weight: bolder;
+        text-align: center;
+        padding: 0.5em 0;
+      }
+    }
+  }
+}
+
+.slill_type {
+  @include bg-box;
+  background-image: url(../images/bg_01.jpg);
+  background-size: contain;
+  .slill_main {
+    width: 570px;
+    display: inline-block;
+    padding-top: 185px;
+    .slill_title {
+      text-align: center;
+      strong {
+        display: block;
+        @include flex-center;
+        @include title;
+        text-align: center;
+      }
+      p {
+        color: $color3;
+        font-size: 1.125em;
+        padding: 15px 0;
+      }
+    }
+  }
+  &.type2,
+  &.type4 {
+    background-image: url(../images/bg_02.jpg);
+    background-position: center top -43px;
+    text-align: right;
+  }
+  &.type3 {
+    background-image: url(../images/bg_03.jpg);
+  }
+  &.type4 {
+    background-image: url(../images/bg_04.jpg);
+  }
+}
+.slill_skin {
+  text-align: center;
+  .slill_skin_tt {
+    width: 509px;
+    height: 41px;
+    color: $color2;
+    font-size: 1.125em;
+    font-weight: bolder;
+    line-height: 41px;
+    background: url(../images/slill_txt_bg.png) center no-repeat;
+    text-align: center;
+  }
+  .slill_skin_icon {
+    @include flex;
+
+    padding: 0 25px;
+    margin: 25px 0;
+
+    li {
+    }
+  }
+  .slill_skin_bth {
+    width: 252px;
+    height: 117px;
+    background: url(../images/slill_bth.png) center no-repeat;
+    color: $color2;
+    display: inline-block;
+    font-size: 1.25em;
+    font-weight: bolder;
+    padding-top: 20px;
+    opacity: 0.8;
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.slill_move {
+  @include flex-center;
+  flex-direction: column;
+  .slill_move_title {
+    @include title;
+    font-size: 2.5em;
+    strong {
+      font-weight: lighter;
+    }
+  }
+  ul {
+    width: 100%;
+    @include bg-box;
+    background-image: url(../images/slill_move_bg.png);
+    @include flex;
+    padding: 25px 0;
+    li {
+      width: calc(100% / 5);
+      height: 162px;
+      padding: 0 30px;
+      background: url(../images/slill_move_frame.png) center no-repeat;
+      background-size: contain;
+      @include flex-center;
+      flex-direction: column;
+      text-align: center;
+      figure {
+        margin-bottom: 10px;
+        img {
+          border: 1px $color2 solid;
+        }
+      }
+      .slill_move_frame {
+        width: 142px;
+        height: 27px;
+        color: $color2;
+        line-height: 27px;
+        background: url(../images/slill_move_frame2.png) center;
+        text-align: center;
+        margin-bottom: 5px;
+      }
+      p {
+        color: #aeaeae;
+        font-size: 0.8em;
+      }
+    }
+  }
+}
+
+.activity {
+  @include bg-box;
+  background-image: url(../images/bg_05.jpg);
+  background-size: auto;
+  padding-top: 185px;
+  .activity_photo {
+    padding-bottom: 85px;
+
+    a {
+      color: $color1;
+      display: inline-block;
+      text-align: center;
+      padding-top: 25px;
+      &:before {
+        content: "";
+        width: 746px;
+        height: 295px;
+        background: url(../images/activity_frame.png) no-repeat center top;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        z-index: 99;
+      }
+    }
+    img {
+      width: auto;
+      max-height: 256px;
+      display: inline-block;
+    }
+    span {
+      display: block;
+      margin-top: 20px;
+    }
+  }
+}
+
+.activity_photo .owl-prev,
+.activity_photo .owl-next {
+  width: 26px;
+  height: 52px;
+  background-image: url(../images/activity_next.png) !important;
+  background-color: transparent !important;
+  font-size: 0 !important;
+  margin: 0 !important;
+}
+
+.activity_photo .owl-prev {
+  background: url(../images/activity_right.png) !important;
+}
+
+.owl-carousel .owl-stage-outer {
+}
+/*輪播圖垂直置中*/
+
+.owl-carousel .owl-stage {
+}
+
+.owl-carousel .owl-item {
+  display: inline-block;
+  float: none;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.owl-carousel .owl-item > a {
+  text-align: center;
+}
+
+/*輪播圖垂直置中*/
+
+/*箭頭垂直置中*/
+
+.owl-theme .owl-nav {
+  margin: 0;
+}
+
+.owl-prev {
+  position: absolute;
+  top: 40%;
+  transform: translate(0%, -50%);
+  left: 80px;
+}
+
+.owl-next {
+  position: absolute;
+  top: 40%;
+  transform: translate(0%, -50%);
+  right: 80px;
+}
+
+/*箭頭垂直置中*/
+
+.owl-carousel .owl-item img {
+  width: auto;
+  display: inline-block;
+}
+
+footer {
+  margin-top: -26px;
+  .footer_line {
+    width: 100%;
+    height: 74px;
+    @include bg-box;
+    background-image: url(../images/footer_line.png);
+    z-index: 9;
+  }
+
+  p {
+    background-color: #000;
+    display: block;
+    margin-top: -40px;
+    padding: 50px 0 30px;
+    text-align: center;
+  }
+}
+
+/*彈出*/
+.lity-container {
+  height: 70%;
+  padding: 0 1em;
+  .lity-content {
+    height: 100%;
+    #inline {
+      width: 900px;
+      max-width: 100%;
+      height: 100%;
+      max-height: 812px;
+      border-radius: 6px;
+      background: rgb(255, 199, 168);
+      border: 2px solid rgb(255, 255, 4);
+      color: rgb(0, 0, 0);
+      max-height: 708px;
+      margin: 5px 0px;
+      line-height: 30px;
+      overflow: auto;
+      padding: 20px;
+      .focus {
+        background: $color3;
+        color: $color2;
+        font-weight: bold;
+      }
+      table {
+        @include table();
+      }
+    }
+  }
+}
+/* scroll */
+::-webkit-scrollbar {
+  width: 8px;
+  max-height: 100%;
+  background-color: $color5;
+  opacity: 0.2;
+  border-radius: 50px;
+  display: block;
+}
+::-webkit-scrollbar-track {
+  background-color: $color5;
+} /* the new scrollbar will have a flat appearance with the set background color */
+::-webkit-scrollbar-thumb {
+  background-color: $color3;
+  border-radius: 50px;
+} /* this will style the thumb, ignoring the track */
+::-webkit-scrollbar-corner {
+  background-color: black;
+}
+
+/*RWD*/
+@media (min-width: 1025px) {
+  .b_main {
+    display: none;
+  }
+  .nav-bth {
+    display: block !important;
+  }
+}
+
+@media (max-width: 1024px) {
+  .slill .slill_type {
+    background: none;
+    margin-bottom: 20px;
+    .inner-wrapper {
+      text-align: center;
+      .slill_main {
+        padding-top: 0;
+      }
+    }
+  }
+  .slill_move ul {
+    @include flex-center;
+    justify-content: space-around;
+    li {
+      border: 1px solid $color2;
+      border-radius: 1em;
+      width: calc(100% / 2 - 10px);
+      height: auto;
+      background: none;
+      padding: 15px;
+      margin-bottom: 15px;
+    }
+  }
+  .activity {
+    background: none;
+    padding-top: 0;
+  }
+}
+@media (max-width: 500px) {
+  nav ul li a img{
+    max-height: 30px;
+  }
+  .role .role_main li p{font-size: 16px;}
+  .slill_type .slill_main,
+  .slill_skin .slill_skin_tt {
+    width: 100%;
+    .slill_title {
+      strong {
+        display: block;
+      }
+    }
+  }
+  .slill_type .slill_main .slill_title strong:before,
+  .slill_type .slill_main .slill_title strong:after,
+  .slill_move .slill_move_title:before,
+  .slill_move .slill_move_title:after,
+  .activity .activity_photo a:before {
+    display: none;
+  }
+  .slill_move ul,
+  .role .role_main {
+    align-items: normal;
+  }
+  .slill_skin .slill_skin_icon {
+    padding: 0;
+    li {
+      width: calc(100% / 3 - 10px);
+    }
+  }
+  .activity .activity_photo a{padding-top: 0}
+  .activity .activity_photo{padding-bottom: 30px;}
+  .owl-carousel .owl-item img{
+    border: 1px solid $color2;
+    border-radius: 10px;
+  }
+  .activity .m_60,.role.m_50{
+    margin-bottom: 20px;
+  }
+}

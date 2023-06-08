@@ -1,0 +1,129 @@
+@charset "utf-8";
+/* CSS Document */
+@media (max-width: 1400px) {
+    .inner_txt.top{
+        position: absolute;
+        top: 0;
+        z-index: 999;
+        color: #fff;
+        }
+}
+
+
+@media (max-width: 1200px) {
+  header {
+    height: auto;
+  }
+  header .inner {
+    width: 100%;
+    padding: 5px 1em;
+  }
+  .top_img {
+    position: static;
+    margin-bottom: 1em;
+  }
+  header h1 img {
+    max-height: 38px;
+  }
+  .top_img .item {
+    padding-bottom: 78%;
+  }
+  .b_main {
+    display: block;
+  }
+  main,
+  .bottom {
+    background: none;
+  }
+  .city_left p br,
+  .about_main_bottom .box p br,
+  .inner_txt.top,
+  .bottom_bg img,
+  header ul {
+    display: none;
+  }
+  .inner_txt,
+  .bottom_main {
+    padding: 0;
+  }
+  .about_main {
+    align-items: center;
+  }
+  .about_main_bottom .box,
+  .bottom_left strong {
+    color: black;
+    margin: 0;
+  }
+  .inner_txt,
+  .about_main h2 {
+    font-size: 2.36rem;
+  }
+  .about_main_bottom {
+    margin-top: 0;
+  }
+  .about_main_bottom a {
+    background: #428bca;
+    color: #fff;
+  }
+  .city_main,
+  .bottom_main,
+  .about_main_bottom {
+    width: 100%;
+    flex-direction: column;
+  }
+  .next {
+    margin-bottom: 1em;
+  }
+  .bottom_left,
+  .bottom_right {
+    width: 100%;
+  }
+  .bottom_right li:nth-of-type(1),
+  .bottom_right li:nth-of-type(2),
+  .bottom_right li:last-of-type {
+    padding: 0;
+  }
+  .city_right ul .item {
+    width: calc(100% / 4 - 5px);
+    margin: 0;
+  }
+  .city_right ul li {
+    justify-content: center;
+    justify-content: space-between;
+  }
+  .city_right ul li:nth-of-type(1) .item:nth-of-type(1),
+  .city_right ul li:nth-of-type(3) .item:nth-of-type(1),
+  .city_right ul li:nth-of-type(4) .item:nth-of-type(1) {
+    margin: 0;
+  }
+  .city_right ul li:nth-of-type(1),
+  .city_right ul li:nth-of-type(4) {
+    justify-content: center;
+  }
+  .city_left,
+  .city,
+  .about {
+    margin-bottom: 1em;
+  }
+  .bottom_bg,
+  .bottom_bg strong,
+  .city_left strong,
+  .about_main_bottom .box strong {
+    position: static;
+    text-align: center;
+  }
+  .bottom_bg strong {
+    color: black;
+  }
+}
+@media (max-width: 767px) {
+}
+@media (max-width: 500px) {
+}
+@media (min-width: 991px) {
+}
+@media (min-width: 1201px) {
+  .menu2 {
+    display: none !important;
+  }
+}

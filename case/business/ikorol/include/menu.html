@@ -1,0 +1,134 @@
+<div id="header_menu">
+    <div class="site-nav">
+
+
+        <!--menu st-->
+        <div id="menu">
+            <div class="menu_main">
+                <span class="menu_rwd_toggle">
+                    <button class="gloval-navi-sp-open">
+                        <i class="gloval-navi-sp-open-line"></i>
+                        <i class="gloval-navi-sp-open-line"></i>
+                    </button>
+
+                </span>
+                <div class="logo"><a href="index.html"><img src="imgs/index_logo.png"></a></div>
+
+                <ul>
+                    <li>
+                        <a href="1-1.html">ABOUT</a>
+                    </li>
+                    <li>
+                        <a href="2-1.html">LOOKBOOK</a>
+                    </li>
+                    <li>
+                        <a href="3-1.html">SHOWROOM</a>
+                    </li>
+                    <li>
+                        <a href="4-1.html">NEWS & TOPICS</a>
+                    </li>
+                    <li>
+                        <a href="5-1.html">CONTACT</a>
+                    </li>
+                    <li>
+
+
+                    </li>
+                </ul>
+                <div class="menu_main_right">
+
+                    <a class="menu_btn login_btn" href="javascript:;">
+                        <i class="fa fa-user" aria-hidden="true"></i><span>Login</span>
+                    </a>
+                    <a class="menu_btn" href="">
+                        <i class="fa fa-shopping-cart" aria-hidden="true"></i><span>Cart</span>
+                    </a>
+                    <a class="menu_btn search_btn" href="javascript:;">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        <!--menu end-->
+        <div class="menu_search" style="display:none;">
+            <form action="/search/index.html" method="get">
+                <div class="menu_search_main">
+                    <input type="text" name="query" id="header-search-input" placeholder="Search for">
+                    <input type="submit" id="header-search-btn" value="Search">
+                </div>
+            </form>
+        </div>
+
+        <!--menu st-->
+        <div id="menu_rwd">
+
+            <ul class=" mm">
+                <li>
+                    <div class="menu_search">
+                        <form action="/search/index.html" method="get">
+                            <div class="menu_search_main">
+                                <input type="text" name="query" id="header-search-input" placeholder="Search for">
+                                <input type="submit" id="header-search-btn" value="Search">
+                            </div>
+                        </form>
+                    </div>
+                </li>
+                <li>
+                    <a href="index.html">
+                        <span>HOME</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="1-1.html">
+                        <span>ABOUT</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="2-1.html">
+                        <span>LOOKBOOK</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="3-1.html">
+                        <span>SHOWROOM</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="4-1.html">
+                        <span>NEWS & TOPICS</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="5-1.html">
+                        <span>CONTACT</span>
+                    </a>
+                </li>
+
+                <li class="social">
+                    <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                    <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                    <a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                    <a href=""><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+                </li>
+
+            </ul>
+            <div class="menu_rwd_bg">
+
+            </div>
+        </div>
+        <!--menu end-->
+    </div>
+</div>
+
+<script>
+        //手機選單
+        $(".menu_rwd_toggle").click(function () {
+        $("#header_menu").toggleClass("active");
+        $("body").toggleClass("menu-open");
+
+    });
+    $(".search_btn").click(function () {
+        $(".menu_search").slideToggle();
+    });
+</script>

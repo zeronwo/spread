@@ -1,0 +1,891 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="icon" href="https://img.uefa.com/imgml/favicon/comp/ucl.ico">
+    <link href="css/font-awesome.css" rel="stylesheet" type="text/css">
+    <!-- 彈窗-->
+    <link href="js/lity/lity.css" rel="stylesheet" type="text/css">
+    <link href="css/loading.min.css" rel="stylesheet" type="text/css">
+
+    <!-- LOAD-->
+    <link href="../../../js/jqueryIntroLoader/introLoader.min.css" rel="stylesheet" type="text/css">
+    <link href="js/slick/slick.css" rel="stylesheet" type="text/css" />
+    <link href="js/slick/slick-theme.css" rel="stylesheet" type="text/css" />
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <!-- jQuery library -->
+    <script src="js/jquery.min.js"></script>
+    <!-- LOAD-->
+    <script src="../../../js/jqueryIntroLoader/jquery.easing.1.3.js"></script>
+    <script src="../../../js/jqueryIntroLoader/spin.min.js"></script>
+    <script src="../../../js/jqueryIntroLoader/jquery.introLoader.min.js"></script>
+
+    <script src="js/lity/lity.js"></script>
+
+    <script src="js/slick/slick.js"></script>
+    <!-- top img -->
+    <script src="js/universal-tilt.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js"></script>
+
+    <script src="js/app.js"></script>
+    <script src="js/internal.js"></script>
+    <title>UEFA Champions League</title>
+</head>
+
+<body>
+    <!-- LOAD -->
+    <div id="element" class="introLoading"></div>
+    <!-- gotop -->
+    <div class="gotop">
+        <a href="javascript:;"><i class="fa fa-angle-up fa-2x" aria-hidden="true"></i></a>
+    </div>
+
+
+    <nav class="menu_mob">
+        <div class="menu_mob_main">
+            <div class="menu_mob_img">
+                <img src="images/menu_mob_img01.jpg" alt="">
+            </div>
+            <ul>
+                <li class="ma">
+                    <a href="javascript:;">
+                        <p>TOP</p>
+                        <strong>首頁</strong>
+                    </a>
+                </li>
+                <li class="mb">
+                    <a href="javascript:;">
+                        <p>LATEST NEWS</p>
+                        <strong>最新消息</strong>
+                    </a>
+                </li>
+                <li class="mc">
+                    <a href="javascript:;">
+                        <p>STANDINGS</p>
+                        <strong>積分榜</strong>
+                    </a>
+                </li>
+                <li class="md">
+                    <a href="javascript:;">
+                        <p>ALL STATS</p>
+                        <strong>比賽統計</strong>
+                    </a>
+                </li>
+                <li class="me">
+                    <a href="javascript:;">
+                        <p>LATEST VIDEOS</p>
+                        <strong>最新影片</strong>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="md-overlay"></div>
+
+
+    <!-- 上方選單 -->
+    <header id="header">
+        <div class="container">
+            <!-- logo -->
+            <h1>
+                <a href="" target="_blank">
+                    <img src="images/logo.png" alt="">
+                </a>
+            </h1>
+            <!-- 手機漢堡 -->
+            <a href="javascript:;" class="menu_button">
+                <strong>MENU</strong>
+                <div class="menuicon">
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                </div>
+            </a>
+
+        </div>
+
+
+    </header>
+
+    <main id="app">
+        <!-- top -->
+        <section class="bg_01 top m_50">
+            <div class="container">
+                <div class="top_left">
+                    <div class="top_left_slogan">
+                        <img src="images/slogan.png" alt="">
+                    </div>
+                    <div class="top_left_img">
+                        <div class="top_left_img_box slick">
+                            <div class="item slick-slide">
+                                <img src="images/top_news_img.jpg" alt="">
+                                <p>歐冠G組第5比賽日一場焦點戰在普斯卡什球場<br>
+                                    展開爭奪，巴塞羅那客場3比0完胜費倫茨瓦羅斯。
+                                </p>
+                            </div>
+                            <div class="item slick-slide">
+                                <img src="images/top_news_img.jpg" alt="">
+                                <p>歐冠G組第5比賽日一場焦點戰在普斯卡什球場<br>
+                                    展開爭奪，巴塞羅那客場3比0完胜費倫茨瓦羅斯。
+                                </p>
+                            </div>
+                        </div>
+                        <div class="more_btn">
+                            <a href="" class="">更多新聞和視頻</a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="top_mid ">
+                    <img src="images/top_trophy.png" alt="" class="tilt">
+                </div>
+                <div class="top_right">
+                    <p>Wednesday 4 November</p>
+                    <ul>
+                        <!-- 01 -->
+                        <li v-for="item in items">
+                            <div class="group">
+                                <p v-text="item.群組"></p>
+                            </div>
+                            <div class="team">
+                                <p v-text="item.左logo"></p>
+                                <img :src="item.左球隊" alt="">
+                            </div>
+                            <div class="score" v-text="item.比分"></div>
+                            <div class="team">
+                                <img :src="item.右球隊" alt="">
+                                <p v-text="item.右logo"></p>
+                            </div>
+                            <div class="play">
+                                <a href=""><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                            </div>
+                        </li>
+
+                    </ul>
+                    <div class="more_btn">
+                        <a href="" class="">更多賽程結果</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- 最新消息 -->
+        <section class="news m_90">
+            <div class="title">
+                <h2>
+                    <p>NEWS</p>
+                </h2>
+                <p>/最新消息</p>
+
+            </div>
+            <div class="container">
+                <div class="news_img">
+                    <div class="news_img_box slick">
+                        <div class="item">
+                            <a href="">
+                                <div class="news_pic">
+                                    <img src="images/news_img01.jpg" alt="">
+                                </div>
+
+                                <p class="news_date">November 30, 2020</p>
+                                <p class="news_title">
+                                    <span>拜仁</span>和<span>曼城</span>進入<br>
+                                    歐洲冠軍聯賽<span>第16輪</span>
+                                </p>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="">
+                                <div class="news_pic">
+                                    <img src="images/news_img02.jpg" alt="">
+                                </div>
+
+                                <p class="news_date">November 30, 2020</p>
+                                <p class="news_title">
+                                    歐冠<span>最佳射手</span>：<br>
+                                    <span>哈蘭德</span>獨進六球
+                                </p>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="">
+                                <div class="news_pic">
+                                    <img src="images/news_img03.jpg" alt="">
+                                </div>
+                                <p class="news_date">November 30, 2020</p>
+                                <p class="news_title">
+                                    <span>曼聯</span>5-0萊比錫<br>
+                                    <span>拉什福德</span>上演<span>帽子戲法</span>
+
+                                </p>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="">
+                                <div class="news_pic">
+                                    <img src="images/news_img04.jpg" alt="">
+                                </div>
+                                <p class="news_date">November 30, 2020</p>
+                                <p class="news_title">
+                                    <span>尤文</span>2-1費倫茨城<br>
+                                    <span>C羅</span>破門<span>莫拉塔</span>絕殺
+                                </p>
+                            </a>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <div class="bg_02">
+            <!-- 積分榜 -->
+            <section class="standings m_90">
+                <div class="title">
+                    <h2>
+                        <p>STANDINGS</p>
+                    </h2>
+                    <p>/積分榜</p>
+
+                </div>
+                <div class="container">
+                    <div class="standings_main">
+                        <ul class="slick">
+                            <!-- A -->
+                            <li>
+                                <p>Group A</p>
+                                <table>
+                                    <tr>
+                                        <th class="standings_name"></th>
+                                        <th class="standings_played">P</th>
+                                        <th class="standings_goal_diff">+/-</th>
+                                        <th class="standings_points">Pts</th>
+                                    </tr>
+                                    <tr>
+                                        <td class="standings_name">
+                                            <img
+                                                src="https://img.uefa.com/imgml/TP/teams/logos/70x70/50037.png?imwidth=36">
+                                            <span>Bayern</span>
+                                        </td>
+                                        <td class="standings_played">6</td>
+                                        <td class="standings_goal_diff">13</td>
+                                        <td class="standings_points">16</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="standings_name">
+                                            <img
+                                                src="https://img.uefa.com/imgml/TP/teams/logos/70x70/50124.png?imwidth=36">
+                                            <span>Atlético</span>
+                                        </td>
+                                        <td class="standings_played">6</td>
+                                        <td class="standings_goal_diff">-1</td>
+                                        <td class="standings_points">9</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="standings_name">
+                                            <img
+                                                src="https://img.uefa.com/imgml/TP/teams/logos/70x70/50030.png?imwidth=36">
+                                            <span>Bayern</span>
+                                        </td>
+                                        <td class="standings_played">6</td>
+                                        <td class="standings_goal_diff">-7</td>
+                                        <td class="standings_points">4</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="standings_name">
+                                            <img
+                                                src="https://img.uefa.com/imgml/TP/teams/logos/70x70/53065.png?imwidth=36">
+                                            <span>Bayern</span>
+                                        </td>
+                                        <td class="standings_played">6</td>
+                                        <td class="standings_goal_diff">-5</td>
+                                        <td class="standings_points">3</td>
+                                    </tr>
+
+                                </table>
+
+                            </li>
+                            <!-- B -->
+                            <li>
+                                <p>Group B</p>
+                                <table>
+                                    <tr>
+                                        <th class="standings_name"></th>
+                                        <th class="standings_played">P</th>
+                                        <th class="standings_goal_diff">+/-</th>
+                                        <th class="standings_points">Pts</th>
+                                    </tr>
+                                    <tr>
+                                        <td class="standings_name">
+                                            <img
+                                                src="https://img.uefa.com/imgml/TP/teams/logos/70x70/50051.png?imwidth=36">
+                                            <span>Real Madrid</span>
+                                        </td>
+                                        <td class="standings_played">6</td>
+                                        <td class="standings_goal_diff">2</td>
+                                        <td class="standings_points">10</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="standings_name">
+                                            <img
+                                                src="https://img.uefa.com/imgml/TP/teams/logos/70x70/52757.png?imwidth=36">
+                                            <span>Mönchengladbach</span>
+                                        </td>
+                                        <td class="standings_played">6</td>
+                                        <td class="standings_goal_diff">7</td>
+                                        <td class="standings_points">8</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="standings_name">
+                                            <img
+                                                src="https://img.uefa.com/imgml/TP/teams/logos/70x70/52707.png?imwidth=36">
+                                            <span>Shakhtar Donetsk</span>
+                                        </td>
+                                        <td class="standings_played">6</td>
+                                        <td class="standings_goal_diff">-7</td>
+                                        <td class="standings_points">8</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="standings_name">
+                                            <img
+                                                src="https://img.uefa.com/imgml/TP/teams/logos/70x70/50138.png?imwidth=36">
+                                            <span>Internazionale</span>
+                                        </td>
+                                        <td class="standings_played">6</td>
+                                        <td class="standings_goal_diff">-2</td>
+                                        <td class="standings_points">6</td>
+                                    </tr>
+
+                                </table>
+
+                            </li>
+                            <!-- C -->
+                            <li>
+                                <p>Group C</p>
+                                <table>
+                                    <tr>
+                                        <th class="standings_name"></th>
+                                        <th class="standings_played">P</th>
+                                        <th class="standings_goal_diff">+/-</th>
+                                        <th class="standings_points">Pts</th>
+                                    </tr>
+                                    <tr>
+                                        <td class="standings_name">
+                                            <img
+                                                src="https://img.uefa.com/imgml/TP/teams/logos/70x70/52919.png?imwidth=36">
+                                            <span>Man. City</span>
+                                        </td>
+                                        <td class="standings_played">6</td>
+                                        <td class="standings_goal_diff">12</td>
+                                        <td class="standings_points">16</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="standings_name">
+                                            <img
+                                                src="https://img.uefa.com/imgml/TP/teams/logos/70x70/50064.png?imwidth=36">
+                                            <span>Porto</span>
+                                        </td>
+                                        <td class="standings_played">6</td>
+                                        <td class="standings_goal_diff">7</td>
+                                        <td class="standings_points">13</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="standings_name">
+                                            <img
+                                                src="https://img.uefa.com/imgml/TP/teams/logos/70x70/2610.png?imwidth=36">
+                                            <span>Olympiacos</span>
+                                        </td>
+                                        <td class="standings_played">6</td>
+                                        <td class="standings_goal_diff">-8</td>
+                                        <td class="standings_points">3</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="standings_name">
+                                            <img
+                                                src="https://img.uefa.com/imgml/TP/teams/logos/70x70/52748.png?imwidth=36">
+                                            <span>Marseille</span>
+                                        </td>
+                                        <td class="standings_played">6</td>
+                                        <td class="standings_goal_diff">-11</td>
+                                        <td class="standings_points">3</td>
+                                    </tr>
+
+                                </table>
+
+                            </li>
+                            <!-- D -->
+                            <li>
+                                <p>Group D</p>
+                                <table>
+                                    <tr>
+                                        <th class="standings_name"></th>
+                                        <th class="standings_played">P</th>
+                                        <th class="standings_goal_diff">+/-</th>
+                                        <th class="standings_points">Pts</th>
+                                    </tr>
+                                    <tr>
+                                        <td class="standings_name">
+                                            <img
+                                                src="https://img.uefa.com/imgml/TP/teams/logos/70x70/7889.png?imwidth=36">
+                                            <span>Liverpool</span>
+                                        </td>
+                                        <td class="standings_played">6</td>
+                                        <td class="standings_goal_diff">12</td>
+                                        <td class="standings_points">16</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="standings_name">
+                                            <img
+                                                src="https://img.uefa.com/imgml/TP/teams/logos/70x70/52816.png?imwidth=36">
+                                            <span>Atalanta</span>
+                                        </td>
+                                        <td class="standings_played">6</td>
+                                        <td class="standings_goal_diff">2</td>
+                                        <td class="standings_points">11</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="standings_name">
+                                            <img
+                                                src="https://img.uefa.com/imgml/TP/teams/logos/70x70/50143.png?imwidth=36">
+                                            <span>Ajax</span>
+                                        </td>
+                                        <td class="standings_played">6</td>
+                                        <td class="standings_goal_diff">0</td>
+                                        <td class="standings_points">7</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="standings_name">
+                                            <img
+                                                src="https://img.uefa.com/imgml/TP/teams/logos/70x70/75795.png?imwidth=36">
+                                            <span>Midtjylland</span>
+                                        </td>
+                                        <td class="standings_played">6</td>
+                                        <td class="standings_goal_diff">-9</td>
+                                        <td class="standings_points">3</td>
+                                    </tr>
+
+                                </table>
+
+                            </li>
+                            <!-- E -->
+                            <li>
+                                <p>Group E</p>
+                                <table>
+                                    <tr>
+                                        <th class="standings_name"></th>
+                                        <th class="standings_played">P</th>
+                                        <th class="standings_goal_diff">+/-</th>
+                                        <th class="standings_points">Pts</th>
+                                    </tr>
+                                    <tr>
+                                        <td class="standings_name">
+                                            <img
+                                                src="https://img.uefa.com/imgml/TP/teams/logos/70x70/52914.png?imwidth=36">
+                                            <span>Chelsea</span>
+                                        </td>
+                                        <td class="standings_played">6</td>
+                                        <td class="standings_goal_diff">12</td>
+                                        <td class="standings_points">14</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="standings_name">
+                                            <img
+                                                src="https://img.uefa.com/imgml/TP/teams/logos/70x70/52714.png?imwidth=36">
+                                            <span>Sevilla</span>
+                                        </td>
+                                        <td class="standings_played">6</td>
+                                        <td class="standings_goal_diff">1</td>
+                                        <td class="standings_points">13</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="standings_name">
+                                            <img
+                                                src="https://img.uefa.com/imgml/TP/teams/logos/70x70/2601038.png?imwidth=36">
+                                            <span>Krasnodar</span>
+                                        </td>
+                                        <td class="standings_played">6</td>
+                                        <td class="standings_goal_diff">-5</td>
+                                        <td class="standings_points">5</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="standings_name">
+                                            <img
+                                                src="https://img.uefa.com/imgml/TP/teams/logos/70x70/55031.png?imwidth=36">
+                                            <span>Rennes</span>
+                                        </td>
+                                        <td class="standings_played">6</td>
+                                        <td class="standings_goal_diff">-8</td>
+                                        <td class="standings_points">1</td>
+                                    </tr>
+
+                                </table>
+
+                            </li>
+                            <!-- F -->
+                            <li>
+                                <p>Group F</p>
+                                <table>
+                                    <tr>
+                                        <th class="standings_name"></th>
+                                        <th class="standings_played">P</th>
+                                        <th class="standings_goal_diff">+/-</th>
+                                        <th class="standings_points">Pts</th>
+                                    </tr>
+                                    <tr>
+                                        <td class="standings_name">
+                                            <img
+                                                src="https://img.uefa.com/imgml/TP/teams/logos/70x70/52758.png?imwidth=36">
+                                            <span>Dortmund</span>
+                                        </td>
+                                        <td class="standings_played">6</td>
+                                        <td class="standings_goal_diff">7</td>
+                                        <td class="standings_points">13</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="standings_name">
+                                            <img
+                                                src="https://img.uefa.com/imgml/TP/teams/logos/70x70/52973.png?imwidth=36">
+                                            <span>Lazio</span>
+                                        </td>
+                                        <td class="standings_played">6</td>
+                                        <td class="standings_goal_diff">4</td>
+                                        <td class="standings_points">10</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="standings_name">
+                                            <img
+                                                src="https://img.uefa.com/imgml/TP/teams/logos/70x70/50043.png?imwidth=36">
+                                            <span>Club Brugge</span>
+                                        </td>
+                                        <td class="standings_played">6</td>
+                                        <td class="standings_goal_diff">-2</td>
+                                        <td class="standings_points">8</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="standings_name">
+                                            <img
+                                                src="https://img.uefa.com/imgml/TP/teams/logos/70x70/52826.png?imwidth=36">
+                                            <span>Zenit</span>
+                                        </td>
+                                        <td class="standings_played">6</td>
+                                        <td class="standings_goal_diff">-9</td>
+                                        <td class="standings_points">1</td>
+                                    </tr>
+
+                                </table>
+
+                            </li>
+                            <!-- G -->
+                            <li>
+                                <p>Group G</p>
+                                <table>
+                                    <tr>
+                                        <th class="standings_name"></th>
+                                        <th class="standings_played">P</th>
+                                        <th class="standings_goal_diff">+/-</th>
+                                        <th class="standings_points">Pts</th>
+                                    </tr>
+                                    <tr>
+                                        <td class="standings_name">
+                                            <img
+                                                src="https://img.uefa.com/imgml/TP/teams/logos/70x70/50139.png?imwidth=36">
+                                            <span>Juventus</span>
+                                        </td>
+                                        <td class="standings_played">6</td>
+                                        <td class="standings_goal_diff">10</td>
+                                        <td class="standings_points">15</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="standings_name">
+                                            <img
+                                                src="https://img.uefa.com/imgml/TP/teams/logos/70x70/50080.png?imwidth=36">
+                                            <span>Barcelona</span>
+                                        </td>
+                                        <td class="standings_played">6</td>
+                                        <td class="standings_goal_diff">11</td>
+                                        <td class="standings_points">15</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="standings_name">
+                                            <img
+                                                src="https://img.uefa.com/imgml/TP/teams/logos/70x70/52723.png?imwidth=36">
+                                            <span>Dynamo Kyiv</span>
+                                        </td>
+                                        <td class="standings_played">6</td>
+                                        <td class="standings_goal_diff">-9</td>
+                                        <td class="standings_points">4</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="standings_name">
+                                            <img
+                                                src="https://img.uefa.com/imgml/TP/teams/logos/70x70/52298.png?imwidth=36">
+                                            <span>Ferencváros</span>
+                                        </td>
+                                        <td class="standings_played">6</td>
+                                        <td class="standings_goal_diff">-12</td>
+                                        <td class="standings_points">1</td>
+                                    </tr>
+
+                                </table>
+
+                            </li>
+                            <!-- H -->
+                            <li>
+                                <p>Group H</p>
+                                <table>
+                                    <tr>
+                                        <th class="standings_name"></th>
+                                        <th class="standings_played">P</th>
+                                        <th class="standings_goal_diff">+/-</th>
+                                        <th class="standings_points">Pts</th>
+                                    </tr>
+                                    <tr>
+                                        <td class="standings_name">
+                                            <img
+                                                src="https://img.uefa.com/imgml/TP/teams/logos/70x70/52747.png?imwidth=36">
+                                            <span>Paris</span>
+                                        </td>
+                                        <td class="standings_played">6</td>
+                                        <td class="standings_goal_diff">7</td>
+                                        <td class="standings_points">12</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="standings_name">
+                                            <img
+                                                src="https://img.uefa.com/imgml/TP/teams/logos/70x70/2603790.png?imwidth=36">
+                                            <span>Leipzig</span>
+                                        </td>
+                                        <td class="standings_played">6</td>
+                                        <td class="standings_goal_diff">-1</td>
+                                        <td class="standings_points">12</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="standings_name">
+                                            <img
+                                                src="https://img.uefa.com/imgml/TP/teams/logos/70x70/52682.png?imwidth=36">
+                                            <span>Man. United</span>
+                                        </td>
+                                        <td class="standings_played">6</td>
+                                        <td class="standings_goal_diff">5</td>
+                                        <td class="standings_points">9</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="standings_name">
+                                            <img
+                                                src="https://img.uefa.com/imgml/TP/teams/logos/70x70/2600288.png?imwidth=36">
+                                            <span>İstanbul Başakşehir</span>
+                                        </td>
+                                        <td class="standings_played">6</td>
+                                        <td class="standings_goal_diff">-11</td>
+                                        <td class="standings_points">3</td>
+                                    </tr>
+
+                                </table>
+
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </section>
+            <!-- 比賽統計 -->
+            <section class="stats m_50">
+                <div class="title">
+                    <h2>
+                        <p>STATS</p>
+                    </h2>
+                    <p>/比賽統計</p>
+
+                </div>
+                <div class="container">
+                    <ul>
+                        <li>
+                            <div class="stats_main">
+                                <div class="stats_team">
+                                    <img src="https://img.uefa.com/imgml/TP/teams/logos/70x70/52758.png?imwidth=36"
+                                        alt="">
+                                    <span>多特</span>
+                                </div>
+                                <div class="stats_name">
+                                    哈蘭德
+                                </div>
+                                <div class="stats_item">
+                                    <span>最多進球</span>
+                                    <strong>6</strong>
+                                </div>
+                            </div>
+
+                        </li>
+                        <li>
+                            <div class="stats_main">
+                                <div class="stats_team">
+                                    <img src="https://img.uefa.com/imgml/TP/teams/logos/70x70/52919.png?imwidth=36"
+                                        alt="">
+                                    <span>曼城</span>
+                                </div>
+                                <div class="stats_name">
+                                    德布勞內
+                                </div>
+                                <div class="stats_item">
+                                    <span>最多助攻</span>
+                                    <strong>4</strong>
+                                </div>
+                            </div>
+
+                        </li>
+                        <li>
+                            <div class="stats_main">
+                                <div class="stats_team">
+                                    <img src="https://img.uefa.com/imgml/TP/teams/logos/70x70/50139.png?imwidth=140"
+                                        alt="">
+                                    <span>尤文圖斯</span>
+                                </div>
+                                <div class="stats_name">
+                                    莫拉塔
+                                </div>
+                                <div class="stats_item">
+                                    <span>參加比賽</span>
+                                    <strong>4</strong>
+                                </div>
+                            </div>
+
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+        <!-- 最新影片 -->
+        <section class="news video m_90">
+            <div class="title">
+                <h2>
+                    <p>VIDEOS</p>
+                </h2>
+                <p>/最新影片</p>
+            </div>
+            <div class="container">
+                <div class="news_img video_img">
+                    <div class="news_img_box slick">
+                        <div class="item">
+                            <a href="https://www.youtube.com/embed/SNZwxZU7k0g" data-lity>
+                                <div class="news_pic">
+                                    <img src="images/videos_img01.jpg" alt="">
+                                </div>
+
+                                <p class="news_date">
+                                    <i class="fa fa-play" aria-hidden="true"></i>
+                                    <span>02:00</span>
+                                </p>
+                                <p class="news_title">
+                                    巴黎在H組取得獲勝<br>
+                                    歐洲冠軍聯賽第16輪。
+                                </p>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="https://www.youtube.com/embed/ystkY9RfcUM" data-lity>
+                                <div class="news_pic">
+                                    <img src="images/videos_img02.jpg" alt="">
+                                </div>
+
+                                <p class="news_date">
+                                    <i class="fa fa-play" aria-hidden="true"></i>
+                                    <span>02:00</span>
+                                </p>
+                                <p class="news_title">
+                                    巴塞羅那如何保持不敗<br>
+                                    與尤文圖斯的決勝盤。
+                                </p>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="https://www.youtube.com/embed/cLfSpFg6Pxg" data-lity>
+                                <div class="news_pic">
+                                    <img src="images/videos_img03.jpg" alt="">
+                                </div>
+                                <p class="news_date">
+                                    <i class="fa fa-play" aria-hidden="true"></i>
+                                    <span>02:00</span>
+                                </p>
+                                <p class="news_title">
+                                    C羅和莫拉塔的進球<br>
+                                    幫助尤文圖斯取得勝利。
+
+                                </p>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="https://www.youtube.com/embed/5-VDO-Y0O7Y" data-lity>
+                                <div class="news_pic">
+                                    <img src="images/videos_img04.jpg" alt="">
+                                </div>
+                                <p class="news_date">
+                                    <i class="fa fa-play" aria-hidden="true"></i>
+                                    <span>02:00</span>
+                                </p>
+                                <p class="news_title">
+                                    曼城3-0馬賽<br>
+                                    C組冠軍勝利中保持不敗
+                                </p>
+                            </a>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="footer_main">
+                <div class="footer_top">
+                    <div class="footer_line"></div>
+                    <div class="footer_logo">
+                        <img src="images/logo.png" alt="">
+                    </div>
+                    <div class="footer_line"></div>
+                </div>
+                <div class="footer_bottom">
+                    <ul>
+                        <li class="ma">
+                            <a href="javascript:;">
+                                <p>TOP</p>
+                                <strong>首頁</strong>
+                            </a>
+                        </li>
+                        <li class="mb">
+                            <a href="javascript:;">
+                                <p>LATEST NEWS</p>
+                                <strong>最新消息</strong>
+                            </a>
+                        </li>
+                        <li class="mc">
+                            <a href="javascript:;">
+                                <p>STANDINGS</p>
+                                <strong>積分榜</strong>
+                            </a>
+                        </li>
+                        <li class="md">
+                            <a href="javascript:;">
+                                <p>ALL STATS</p>
+                                <strong>比賽統計</strong>
+                            </a>
+                        </li>
+                        <li class="me">
+                            <a href="javascript:;">
+                                <p>LATEST VIDEOS</p>
+                                <strong>最新影片</strong>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+</body>
+
+</html>
