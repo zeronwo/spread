@@ -1484,7 +1484,7 @@ nav .container .nav_menu ul li a:after {
 }
 
 .affim {
-  background: #f2f2f2;
+  background: url(../images/affim_bg.png) center/cover no-repeat;
 }
 .affim .container {
   display: grid;
