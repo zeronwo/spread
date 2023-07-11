@@ -1,0 +1,96 @@
++<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="images/favicon.ico">
+    <title>日本航空 - JAL corporate </title>
+    <link href="css/font-awesome.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link href="css/style.css" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <!-- swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/infiniteslidev2/infiniteslidev2.min.js"></script>
+    <script src="js/scripts.js"></script>
+</head>
+<body>
+  <section class="affim">
+    <div class="container">
+        <div class="title">
+            <div class="tt">各界肯定</div>
+        </div>
+        <div class="affim_img">
+            <picture class="active">
+                <img src="images/affim_img01.jpg" alt="">
+            </picture>
+        </div>
+        <!-- Swiper -->
+        <div class="swiper vertical">
+            <div class="swiper-wrapper">
+                <!-- 01 -->
+                <div class="swiper-slide">
+                    <div class="icon"></div>
+                    <p>友達為台灣證券交易所公司治理評鑑前5%企業</p>
+                </div>
+                <!-- 01 -->
+                <div class="swiper-slide">
+                    <div class="icon"></div>
+                    <p>友達為台灣證券交易所公司治理評鑑前5%企業</p>
+                </div>
+                <!-- 01 -->
+                <div class="swiper-slide">
+                    <div class="icon"></div>
+                    <p>友達為台灣證券交易所公司治理評鑑前5%企業</p>
+                </div>
+                <!-- 01 -->
+                <div class="swiper-slide">
+                    <div class="icon"></div>
+                    <p>友達為台灣證券交易所公司治理評鑑前5%企業</p>
+                </div>
+            </div>
+
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </div>
+</section>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".vertical", {
+      direction: "vertical",
+      slidesPerView: 3,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+
+
+    $('.swiper-button-prev').click(function (e) {
+      $(".item.active").removeClass("active").prev().addClass("active");
+  });
+
+    $('.swiper-button-next').click(function (e) {
+      $(".item.active").removeClass("active").next().addClass("active");
+  });
+  </script>
+</body>
+
+</html>
