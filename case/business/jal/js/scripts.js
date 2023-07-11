@@ -2,31 +2,60 @@
 $(document).ready(function () {
 
 
-    //手機 上方 右側拉出選單
-    $(" .menu_rwd").click(function () {
-      $(this).toggleClass("active");
-      $(".mob_menu").toggleClass("active");
-      $(".menu_main").toggleClass("active");
-      $("body").toggleClass("hidden");
+  //LOAD
+  $("#element").introLoader({
+
+    animation: {
+      name: 'simpleLoader',
+      options: {
+        exitFx: 'slideUp',
+        ease: "easeOutSine",
+        style: 'fluoYellow',
+        delayBefore: 1000, //delay time in milliseconds
+        exitTime: 500,
+        onBefore: function () {
+          $('#onAfterExample').hide();
+        },
+        onAfter: function () {
+          $('#onAfterExample').fadeIn();
+        }
+      }
+    },
+    spinJs: {
+      lines: 10, // The number of lines to draw
+      length: 5, // The length of each line
+      radius: 10, // The radius of the inner circle
+      width: 4, // The line thickness
+      color: '#fff', // #rgb or #rrggbb or array of colors
+    }
+
   });
 
-    //滑下出現選單
-    var new_scroll_position = 0;
-    var last_scroll_position;
-    var header = document.getElementById("header");
-    window.addEventListener('scroll', function(e) {
-      last_scroll_position = window.scrollY;
-      // Scrolling down
-      if (new_scroll_position < last_scroll_position && last_scroll_position > 80) {
-        // header.removeClass('slideDown').addClass('slideUp');
-        header.classList.add("slideUp");
-        // Scrolling up
-      } else if (new_scroll_position > last_scroll_position) {
-        // header.removeClass('slideUp').addClass('slideDown');
-        header.classList.remove("slideUp");
-      }
-      new_scroll_position = last_scroll_position;
-    });
+  //手機 上方 右側拉出選單
+  $(" .menu_rwd").click(function () {
+    $(this).toggleClass("active");
+    $(".mob_menu").toggleClass("active");
+    $(".menu_main").toggleClass("active");
+    $("body").toggleClass("hidden");
+  });
+
+  //滑下出現選單
+  var new_scroll_position = 0;
+  var last_scroll_position;
+  var header = document.getElementById("header");
+  window.addEventListener('scroll', function (e) {
+    last_scroll_position = window.scrollY;
+    // Scrolling down
+    if (new_scroll_position < last_scroll_position && last_scroll_position > 80) {
+      // header.removeClass('slideDown').addClass('slideUp');
+      header.classList.add("slideUp");
+      // Scrolling up
+    } else if (new_scroll_position > last_scroll_position) {
+      // header.removeClass('slideUp').addClass('slideDown');
+      header.classList.remove("slideUp");
+    }
+    new_scroll_position = last_scroll_position;
+  });
 
 
 
@@ -124,7 +153,7 @@ $(document).ready(function () {
     watchSlidesVisibility: true,
     watchSlidesProgress: true,
     direction: 'vertical',
-     loop: true,
+    loop: true,
 
   });
 
@@ -133,7 +162,7 @@ $(document).ready(function () {
     watchSlidesVisibility: true,
     watchSlidesProgress: true,
     preventInteractionOnTransition: true,
-     loop: true,
+    loop: true,
 
     navigation: {
       nextEl: '.swiper-button-next',
