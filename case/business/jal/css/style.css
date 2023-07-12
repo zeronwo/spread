@@ -1028,7 +1028,7 @@ body.hidden {
     display: none;
   }
   .top .top_list li .logo {
-    top: 86px;
+    display: none;
   }
   .top .top_list li .package {
     display: flex;
@@ -1355,13 +1355,12 @@ nav .container .nav_menu ul li a:after {
   }
   .info .swiper .swiper-button-prev {
     left: 25px;
-    /* right: 65px; */
-    top: 54vh;
+    top: 56vh;
     transform: inherit;
   }
   .info .swiper .swiper-button-next {
     left: 85px;
-    top: 54vh;
+    top: 56vh;
     transform: inherit;
   }
 }

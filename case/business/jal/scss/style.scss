@@ -201,7 +201,7 @@ body {
       }
       .top_list li {
         .logo{
-          top: 86px;
+         display: none;
         }
         .package{
           display: flex;
@@ -553,13 +553,12 @@ nav {
       }
       .swiper-button-prev {
         left: 25px;
-        /* right: 65px; */
-        top: 54vh;
+        top: 56vh;
         transform: inherit;
       }
       .swiper-button-next {
         left: 85px;
-        top: 54vh;
+        top: 56vh;
         transform: inherit;
       }
     }
