@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="images/favicon.ico">
+    <title>東京大學</title>
+    <link href="css/font-awesome.css" rel="stylesheet" type="text/css">
+    <link href="css/hover.css" rel="stylesheet" type="text/css">
+    <!-- swiper -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css'>
+    <link rel="stylesheet" href="https://www.swiper.com.cn/package/swiper-bundle.min.css" />
+    <link href="css/style.css" rel="stylesheet">
+    <!-- 輪播-->
+    <!--slick-->
+    <link rel="stylesheet" href="https://www.anpec.com.tw/public/js/slick-slider/slick-theme.css">
+    <link rel="stylesheet" href="https://www.anpec.com.tw/public/js/slick-slider/slick.css">
+    <script src="https://www.anpec.com.tw/public/js/slick-slider/slick.min.js"></script>
+
+    <!-- swiper -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/js/swiper.min.js'></script>
+    <script src="https://www.swiper.com.cn/package/swiper-bundle.min.js"></script>
+
+
+    <script src="js/jquery.min.js"></script>
+
+
+    <!-- 輪播-->
+    <script src="js/slick/slick.js"></script>
+    <script src="js/scripts.js"></script>
+</head>
+
+<body>
+
+    <div class="menu_rwd">
+        <div class="menu_rwd__main">
+            <div class="nav_logo">
+                <img src="images/logo.png" alt="東京大學">
+            </div>
+
+            <div class="right">
+                <div class="utility">
+                    <ul class="">
+                        <li>
+                            <a href="javascript:;" class="normal">
+                                <img src="images/icon-access.svg" alt="">
+                                <p>地圖</p>
+                            </a>
+                        </li>
+                        <li class="search btn">
+                            <a href="javascript:;" class="normal">
+                                <img src="images/icon-search.svg" alt="">
+                                <p>搜尋</p>
+                            </a>
+                            <a href="javascript:;" class="close">
+                                <img src="https://img.icons8.com/ios/ffffff/100/delete-sign--v1.png" alt="">
+                                <p>關閉</p>
+                            </a>
+                            <div class="sub search">
+                                <div class="search_box">
+                                    <form action="">
+                                        <input type="text">
+                                        <button>
+                                            <img src="https://img.icons8.com/ios-filled/2a4198/50/search--v1.png"
+                                                alt="search--v1" />
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <button class="menu_button">
+                    <span class="menuicon"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="mob_menu ">
+        <div class="mob_menu_main">
+            <ul class="menu">
+                <!--01-->
+                <li>
+                    <a href="javascript:;">
+                        <p>最新消息</p>
+                    </a>
+                </li>
+                <!--02-->
+                <li>
+                    <a href="javascript:;">
+                        <p>入學資訊</p>
+                    </a>
+
+                </li>
+                <!--03-->
+                <li>
+                    <a href="javascript:;">
+                        <p>社會合作</p>
+                    </a>
+
+                </li>
+                <!--04-->
+                <li>
+                    <a href="javascript:;">
+                        <p>學院介紹</p>
+                    </a>
+
+                </li>
+
+            </ul>
+            <ul class="list">
+                <li>
+                    <a href="">
+                        <img src="https://img.icons8.com/android/24/000000/news.png" alt="news"/>
+                        <p>新聞</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="https://img.icons8.com/windows/32/000000/calendar.png" alt="calendar"/>
+                        <p>活動</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="https://img.icons8.com/material-outlined/24/000000/filled-like.png" alt="filled-like"/>
+                        <p>捐款</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="https://img.icons8.com/material-outlined/24/000000/filled-message.png" alt="filled-message"/>
+                        <p>信箱</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="https://img.icons8.com/ios-glyphs/30/000000/address.png" alt="address"/>
+                        <p>地址</p>
+                    </a>
+                </li>
+            </ul>
+            <ul class="language">
+                <li><a href="">日本語</a></li>
+                <li><a href="">EN</a></li>
+                <li><a href="">한국어</a></li>
+                <li class="active"><a href="" >中文</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="luxy">
+        <!-- Swiper -->
+        <header>
+            <div class="menu">
+                <div class="main">
+                    <div class="logo">
+                        <img src="images/logo.png" alt="">
+                    </div>
+                    <div class="list">
+                        <ul>
+                            <li>
+                                <a href="">最新消息</a>
+                            </li>
+                            <li>
+                                <a href="">入學資訊</a>
+                            </li>
+                            <li>
+                                <a href="">社會合作</a>
+                            </li>
+                            <li>
+                                <a href="">學院介紹</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="utility">
+                        <ul class="">
+                            <li>
+                                <a href="javascript:;" class="normal">
+                                    <img src="images/icon-access.svg" alt="">
+                                    <p>地圖</p>
+                                </a>
+                            </li>
+                            <li class="language btn">
+                                <a href="javascript:;" class="normal">
+                                    <img src="images/icon-language.svg" alt=javascript:;>
+                                    <p>語言</p>
+                                </a>
+                                <a href="javascript:;" class="close">
+                                    <img src="https://img.icons8.com/ios/000000/100/delete-sign--v1.png" alt="">
+                                    <p>關閉</p>
+                                </a>
+                                <div class="sub">
+                                    <ul class="language_box">
+                                        <li><a href="">日本語</a></li>
+                                        <li><a href="">EN</a></li>
+                                        <li><a href="">한국어</a></li>
+                                        <li><a href="">中文</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="search btn">
+                                <a href="javascript:;" class="normal">
+                                    <img src="images/icon-search.svg" alt="">
+                                    <p>搜尋</p>
+                                </a>
+                                <a href="javascript:;" class="close">
+                                    <img src="https://img.icons8.com/ios/000000/100/delete-sign--v1.png" alt="">
+                                    <p>關閉</p>
+                                </a>
+                                <div class="sub search">
+                                    <div class="search_box">
+                                        <form action="">
+                                            <input type="text">
+                                            <button>
+                                                <img src="https://img.icons8.com/ios-filled/2a4198/50/search--v1.png"
+                                                    alt="search--v1" />
+                                            </button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="banner">
+                <div class="content">
+                    <div class="inner">
+                        <h1>
+                            <div class="tt">
+                                <strong>UTOKYO FOCUD</strong>
+                            </div>
+                            <div class="tt">
+                                <strong>all of utokyo all in one place</strong>
+                            </div>
+                        </h1>
+                        <p>
+                            有關東京大學的訊息，包括熱門文章和活動。
+                        </p>
+
+                    </div>
+                </div>
+                <div class="top_banner">
+                    <div class="swiper-wrapper">
+                        <picture class="swiper-slide">
+                            <img src="images/banner01.jpg" alt="">
+                        </picture>
+                        <picture class="swiper-slide">
+                            <img src="images/banner02.jpg" alt="">
+                        </picture>
+                        <picture class="swiper-slide">
+                            <img src="images/banner03.jpg" alt="">
+                        </picture>
+                        <picture class="swiper-slide">
+                            <img src="images/banner04.jpg" alt="">
+                        </picture>
+                    </div>
+                </div>
+            </div>
+
+
+        </header>
+        <main>
+            <section class="news">
+                <div class="container">
+                    <div class="title">
+                        <p>NEWS</p>
+                        <span>最新消息</span>
+                    </div>
+                    <!-- Swiper -->
+                    <div class="new_main">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <!-- 01 -->
+                                <div class="swiper-slide">
+                                    <a href="">
+                                        <div class="top">
+                                            <div class="date">
+                                                2023/09/26
+                                            </div>
+                                            <div class="tt">
+                                                東京大學2020年秋畢業典禮
+                                            </div>
+
+                                        </div>
+                                        <div class="bottom">
+                                            <img src="images/banner01.jpg" alt="">
+                                        </div>
+                                    </a>
+
+                                </div>
+                                <!-- 01 -->
+                                <div class="swiper-slide">
+                                    <a href="">
+                                        <div class="top">
+                                            <div class="date">
+                                                2023/08/29
+                                            </div>
+                                            <div class="tt">
+                                                東京大學榮獲七大馬術比賽亞軍！
+                                            </div>
+
+                                        </div>
+                                        <div class="bottom">
+                                            <img src="images/img_news01.jpg" alt="">
+                                        </div>
+                                    </a>
+                                </div>
+                                <!-- 01 -->
+                                <div class="swiper-slide">
+                                    <a href="">
+                                        <div class="top">
+                                            <div class="date">
+                                                2023/08/25
+                                            </div>
+                                            <div class="tt">
+                                                白台國際村，學生和研究人員共同居住
+                                            </div>
+
+                                        </div>
+                                        <div class="bottom">
+                                            <img src="images/img_news02.jpg" alt="">
+                                        </div>
+                                    </a>
+                                </div>
+                                <!-- 01 -->
+                                <div class="swiper-slide">
+                                    <a href="">
+                                        <div class="top">
+                                            <div class="date">
+                                                2023/08/25
+                                            </div>
+                                            <div class="tt">
+                                                田徑協會馬術俱樂部的訓練場
+                                            </div>
+
+                                        </div>
+                                        <div class="bottom">
+                                            <img src="images/img_news03.jpg" alt="">
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </section>
+            <section class="about">
+                <div class="about_txt">
+                    <div class="title">
+                        <p>ADMISSON</p>
+                        <span>入學資訊</span>
+                    </div>
+                    <div class="box">
+                        <strong>東京大學以學術自由為基礎</strong>
+                        <p>
+                            東京大學向所有具備東京大學學習所需的素質，具有廣闊的視野和高水平的專業知識、理解力、洞察力、實踐能力、同時，我們的目標是培養具有國際視野和開拓精神的各個領域的領軍人物。為此，東京大學將追求世界最高水平的教育，同時尊重學生的個性和學習權利。
+                        </p>
+                        <a href="#" class="hvr-sweep-to-bottom">查看更多</a>
+                    </div>
+                </div>
+                <!-- 環形 -->
+                <div class="about_round">
+                    <ul>
+                        <li>
+                            <div class="item">
+                                <div class="box">
+                                    <picture>
+                                        <img src="images/about_icon_01.png" alt="">
+                                    </picture>
+                                    <p>課程目錄</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item">
+                                <div class="box">
+                                    <picture>
+                                        <img src="images/about_icon_02.png" alt="">
+                                    </picture>
+                                    <p>教育活動</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item">
+                                <div class="box">
+                                    <picture>
+                                        <img src="images/about_icon_03.png" alt="">
+                                    </picture>
+                                    <p>實習計劃</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item">
+                                <div class="box">
+                                    <picture>
+                                        <img src="images/about_icon_04.png" alt="">
+                                    </picture>
+                                    <p>學費繳納</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item">
+                                <div class="box">
+                                    <picture>
+                                        <img src="images/about_icon_05.png" alt="">
+                                    </picture>
+                                    <p>諮詢中心</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="advantage">
+                <div class="container">
+                    <div class="title">
+                        <p>SOCIETY</p>
+                        <span>社會合作</span>
+                    </div>
+                    <ul class="advantage_list">
+                        <!-- 01 -->
+                        <li>
+                            <a href="">
+                                <div class="round">
+                                    <div class="bg"></div>
+                                    <picture>
+                                        <img src="images/img_advantage_list01.png" alt="">
+                                    </picture>
+                                    <div class="icon">
+                                        <div class="item">
+                                            <div class="bg"></div>
+                                            <picture>
+                                                <img src="images/icon_advantage_list01.png" alt="">
+                                            </picture>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="txt">
+                                    <strong>沉浸歷史校園 研究創造未來</strong>
+                                    <p>本鄉校區所在的大部分地區曾經是江戶時代的加賀藩主官邸。此外，現今東京大學醫學部附屬醫院所在地曾是江戶時代富山蕃和大聖寺的屬地，而彌生和淺野地區則是水戶藩的屬地。
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <!-- 02 -->
+                        <li>
+                            <a href="">
+                                <div class="round">
+                                    <div class="bg"></div>
+                                    <picture>
+                                        <img src="images/img_advantage_list02.png" alt="">
+                                    </picture>
+                                    <div class="icon">
+                                        <div class="item">
+                                            <div class="bg"></div>
+                                            <picture>
+                                                <img src="images/icon_advantage_list01.png" alt="">
+                                            </picture>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="txt">
+                                    <strong>專業教育 通識教育</strong>
+                                    <p>東京大學強調駒場校區開設的前期通識課程的重要性，從而學生可以利用他們在這兩年內培養的廣闊視野和紮實基本功在隨後的專業教育裡進一步提升自己。這個基本教育方針被稱為“後期專業教育”。
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <!-- 03 -->
+                        <li>
+                            <a href="">
+                                <div class="round">
+                                    <div class="bg"></div>
+                                    <picture>
+                                        <img src="images/img_advantage_list03.png" alt="">
+                                    </picture>
+                                    <div class="icon">
+                                        <div class="item">
+                                            <div class="bg"></div>
+                                            <picture>
+                                                <img src="images/icon_advantage_list01.png" alt="">
+                                            </picture>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="txt">
+                                    <strong>更深入地感受日本</strong>
+                                    <p>學習了一些課程之後，我發現我其實對人與人之間的關係和互相溝通、組織的運行和改善這些方面非常感興趣。</p>
+                                </div>
+                            </a>
+                        </li>
+                        <!-- 04 -->
+                        <li>
+                            <a href="">
+                                <div class="round">
+                                    <div class="bg"></div>
+                                    <picture>
+                                        <img src="images/img_advantage_list04.png" alt="">
+                                    </picture>
+                                    <div class="icon">
+                                        <div class="item">
+                                            <div class="bg"></div>
+                                            <picture>
+                                                <img src="images/icon_advantage_list01.png" alt="">
+                                            </picture>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="txt">
+                                    <strong>智能城市 釋放科學和創新力</strong>
+                                    <p>目前的柏校區坐落著一些世界上最先進的實驗室和研究中心，以及東大新領域創成科學研究生院、工學院、部分科學院，但它的歷史還相對較短。</p>
+                                </div>
+                            </a>
+                        </li>
+                        <!-- 05 -->
+                        <li>
+                            <a href="">
+                                <div class="round">
+                                    <div class="bg"></div>
+                                    <picture>
+                                        <img src="images/img_advantage_list05.png" alt="">
+                                    </picture>
+                                    <div class="icon">
+                                        <div class="item">
+                                            <div class="bg"></div>
+                                            <picture>
+                                                <img src="images/icon_advantage_list01.png" alt="">
+                                            </picture>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="txt">
+                                    <strong>學習小鎮 豐富的文化資產</strong>
+                                    <p>對建築學有興趣的人們也可以仔細觀察博物館大樓的設計。
+                                        自江戶時代以來，上野公園一直是日本最有名的賞櫻地點之一。</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="student">
+                <div class="title">
+                    <p>COLLEGE</p>
+                    <span>學院介紹</span>
+                </div>
+                <div class="container">
+
+                    <!-- // -->
+                    <div class="student_main ">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <!-- 01 -->
+                                <div class="item swiper-slide">
+                                    <div class="box">
+                                        <div class="txt">
+                                            <div class="tt">
+                                                <p>法學政治研究科</p>
+                                                <div class="page">
+                                                    <span class="current">1</span>
+                                                    <span class="len">8</span>
+                                                </div>
+                                            </div>
+                                            <p>法學院的起源可以追溯到1872年（明治5年）法務省設立的“法學院”和1873年文部省設立的“開成法學院”發揮學術研究中心的作用，
+                                                並通過以此為後盾的先進教育，培養了大批優秀人才
+                                            </p>
+                                            <a href="">詳細內容</a>
+                                        </div>
+                                        <picture class="img">
+                                            <img src="images/img_student01.jpg" alt="">
+                                        </picture>
+                                    </div>
+                                </div>
+                                <!-- 02 -->
+                                <div class="item swiper-slide">
+                                    <div class="box">
+                                        <div class="txt">
+                                            <div class="tt">
+                                                <p>醫學系研究科</p>
+                                                <div class="page">
+                                                    <span class="current">2</span>
+                                                    <span class="len">8</span>
+                                                </div>
+                                            </div>
+                                            <p>醫學院和醫學研究生院開展醫學和普通健康科學方面的教育和研究，旨在培養在各自領域引領未來的國際化領導者，是一所具有悠久傳統的醫科大學院系。
+                                            </p>
+                                            <a href="">詳細內容</a>
+                                        </div>
+                                        <picture class="img">
+                                            <img src="images/img_student02.jpg" alt="">
+                                        </picture>
+                                    </div>
+                                </div>
+                                <!-- 03 -->
+                                <div class="item swiper-slide">
+                                    <div class="box">
+                                        <div class="txt">
+                                            <div class="tt">
+                                                <p>工學系研究科</p>
+                                                <div class="page">
+                                                    <span class="current">3</span>
+                                                    <span class="len">8</span>
+                                                </div>
+                                            </div>
+                                            <p>工程學是一個為人類的幸福、健康、安全和安全創造新事物和事物的學術體系。工程學涵蓋廣泛的領域，包括追求基礎科學的領域、引領通過研究獲得的知識社會化的領域以及開發新的融合領域的領域。
+                                            </p>
+                                            <a href="">詳細內容</a>
+                                        </div>
+                                        <picture class="img">
+                                            <img src="images/img_student03.jpg" alt="">
+                                        </picture>
+                                    </div>
+                                </div>
+                                <!-- 04 -->
+                                <div class="item swiper-slide">
+                                    <div class="box">
+                                        <div class="txt">
+                                            <div class="tt">
+                                                <p>人文社會系研究科</p>
+                                                <div class="page">
+                                                    <span class="current">4</span>
+                                                    <span class="len">8</span>
+                                                </div>
+                                            </div>
+                                            <p>文學院的哲學是用自由的思想和方法，從哲學、宗教、歷史、語言、文學、藝術，甚至心理學和社會學等多種角度來探索人類及其社會。從哲學史和文學史可以看出，自古以來，儘管時代和社會發生了變化，人類始終保持著這種探究精神。文
+                                            </p>
+                                            <a href="">詳細內容</a>
+                                        </div>
+                                        <picture class="img">
+                                            <img src="images/img_student04.jpg" alt="">
+                                        </picture>
+                                    </div>
+                                </div>
+                                <!-- 05 -->
+                                <div class="item swiper-slide">
+                                    <div class="box">
+                                        <div class="txt">
+                                            <div class="tt">
+                                                <p>理學系研究科</p>
+                                                <div class="page">
+                                                    <span class="current">5</span>
+                                                    <span class="len">8</span>
+                                                </div>
+                                            </div>
+                                            <p>科學的目的是觀察自然，加深我們對它如何運作的理解，並探索其背後的普遍規律。這項研究基於不同研究人員的求知精神，由此產生的對自然的深刻理解和認識加深了我們對自然和宇宙的看法。
+                                            </p>
+                                            <a href="">詳細內容</a>
+                                        </div>
+                                        <picture class="img">
+                                            <img src="images/img_student05.jpg" alt="">
+                                        </picture>
+                                    </div>
+                                </div>
+                                <!-- 06 -->
+                                <div class="item swiper-slide">
+                                    <div class="box">
+                                        <div class="txt">
+                                            <div class="tt">
+                                                <p>農業生命科學研究生院</p>
+                                                <div class="page">
+                                                    <span class="current">6</span>
+                                                    <span class="len">8</span>
+                                                </div>
+                                            </div>
+                                            <p>農業生命科學涵蓋的研究領域極其廣泛。生物圈，包括森林、耕地和海洋，以及生活在其中的動物、植物和微生物都是研究對象，特別是提供食物等有用生物資源的植物、動物和微生物。重要的研究課題。
+                                            </p>
+                                            <a href="">詳細內容</a>
+                                        </div>
+                                        <picture class="img">
+                                            <img src="images/img_student06.jpg" alt="">
+                                        </picture>
+                                    </div>
+                                </div>
+                                <!-- 07 -->
+                                <div class="item swiper-slide">
+                                    <div class="box">
+                                        <div class="txt">
+                                            <div class="tt">
+                                                <p>經濟學研究科</p>
+                                                <div class="page">
+                                                    <span class="current">7</span>
+                                                    <span class="len">8</span>
+                                                </div>
+                                            </div>
+                                            <p>經濟學院成立於1919年，將經濟與商業係從法大學分離出來。此後，來自各個領域的研究人員繼續研究與現代經濟和管理相關的問題，繼承了多年來培養的傳統。多年來，我們一邊進行前沿研究，一邊充分利用它。
+                                            </p>
+                                            <a href="">詳細內容</a>
+                                        </div>
+                                        <picture class="img">
+                                            <img src="images/img_student07.jpg" alt="">
+                                        </picture>
+                                    </div>
+                                </div>
+                                <!-- 08 -->
+                                <div class="item swiper-slide">
+                                    <div class="box">
+                                        <div class="txt">
+                                            <div class="tt">
+                                                <p>総合文化研究科</p>
+                                                <div class="page">
+                                                    <span class="current">8</span>
+                                                    <span class="len">8</span>
+                                                </div>
+                                            </div>
+                                            <p>文學院於1949年5月31日與新東京大學同時成立。雖然全國各地的大學都有所謂的“文學院”，但正如其名稱所示，這是一個獨立的學院。20世紀90年代，隨著全國高校文科院系的撤銷，文學院對課程設置進行了根本性改革
+                                            </p>
+                                            <a href="">詳細內容</a>
+                                        </div>
+                                        <picture class="img">
+                                            <img src="images/img_student08.jpg" alt="">
+                                        </picture>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btn">
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+                        </div>
+                    </div>
+                    <!-- // -->
+                    <div class="student_list">
+                        <!-- Add Arrows -->
+
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="item swiper-slide">
+                                    <picture>
+                                        <img src="https://img.icons8.com/ios-filled/50/law.png" alt="law" />
+                                        <img src="https://img.icons8.com/ios-filled/ffffff/50/law.png" alt="law" />
+                                    </picture>
+                                    <p>法學部</p>
+                                </div>
+                                <div class="item swiper-slide">
+                                    <picture>
+                                        <img src="https://img.icons8.com/glyph-neue/64/caduceus.png" alt="">
+                                        <img src="https://img.icons8.com/glyph-neue/ffffff/64/caduceus.png" alt="">
+                                    </picture>
+                                    <p>醫學部</p>
+                                </div>
+                                <div class="item swiper-slide">
+                                    <picture>
+                                        <img src="https://img.icons8.com/ios-filled/50/engineering.png"
+                                            alt="engineering" />
+                                        <img src="https://img.icons8.com/ios-filled/ffffff/50/engineering.png"
+                                            alt="engineering" />
+                                    </picture>
+                                    <p>工學部</p>
+                                </div>
+                                <div class="item swiper-slide">
+                                    <picture>
+                                        <img src="https://img.icons8.com/ios-filled/50/literature--v1.png"
+                                            alt="literature--v1" />
+                                        <img src="https://img.icons8.com/ios-filled/ffffff/50/literature--v1.png"
+                                            alt="literature--v1" />
+                                    </picture>
+                                    <p>文學部</p>
+                                </div>
+                                <div class="item swiper-slide">
+                                    <picture>
+                                        <img src="https://img.icons8.com/external-yogi-aprelliyanto-glyph-yogi-aprelliyanto/32/external-science-online-education-yogi-aprelliyanto-glyph-yogi-aprelliyanto.png"
+                                            alt="external-science-online-education-yogi-aprelliyanto-glyph-yogi-aprelliyanto" />
+                                        <img src="https://img.icons8.com/external-yogi-aprelliyanto-glyph-yogi-aprelliyanto/ffffff/32/external-science-online-education-yogi-aprelliyanto-glyph-yogi-aprelliyanto.png"
+                                            alt="external-science-online-education-yogi-aprelliyanto-glyph-yogi-aprelliyanto" />
+                                    </picture>
+                                    <p>理學部</p>
+                                </div>
+                                <div class="item swiper-slide">
+                                    <picture>
+                                        <img src="https://img.icons8.com/ios-filled/50/hand-planting.png"
+                                            alt="hand-planting" />
+                                        <img src="https://img.icons8.com/ios-filled/ffffff/50/hand-planting.png"
+                                            alt="hand-planting" />
+                                    </picture>
+                                    <p>農學部</p>
+                                </div>
+                                <div class="item swiper-slide">
+                                    <picture>
+                                        <img src="https://img.icons8.com/ios-filled/50/bank-building.png"
+                                            alt="bank-building" />
+                                        <img src="https://img.icons8.com/ios-filled/ffffff/50/bank-building.png"
+                                            alt="bank-building" />
+                                    </picture>
+                                    <p>經濟學院</p>
+                                </div>
+                                <div class="item swiper-slide">
+                                    <picture>
+                                        <img src="https://img.icons8.com/ios-filled/50/teaching.png" alt="teaching" />
+                                        <img src="https://img.icons8.com/ios-filled/ffffff/50/teaching.png"
+                                            alt="teaching" />
+                                    </picture>
+                                    <p>教養学部</p>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+
+
+
+
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="container">
+                <div class="main">
+                    <div class="left">
+                        <img src="images/logo.png" alt="">
+                    </div>
+                    <div class="right">
+                        <ul>
+                            <li>
+                                <a href="">最新消息</a>
+                            </li>
+                            <li>
+                                <a href="">入學資訊</a>
+                            </li>
+                            <li>
+                                <a href="">社會合作</a>
+                            </li>
+                            <li>
+                                <a href="">學院介紹</a>
+                            </li>
+                        </ul>
+                        <div class="copyright">
+                            © The University of Tokyo
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+
+</body>
+
+
+</html>
