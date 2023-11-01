@@ -745,6 +745,49 @@ button {
   padding: 0;
 }
 
+.loadingArea {
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 9999;
+  transition: all 0.4s;
+}
+
+.loadingArea .loadLogo {
+  width: 260px;
+}
+
+.loadingArea .loadLogo img {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 1s ease;
+  width: 100%;
+  display: block;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.loadingArea.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.loadingArea.show .loadLogo img {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.loadingArea.hide {
+  opacity: 0;
+}
+
 .gotop {
   position: fixed;
   bottom: 10%;

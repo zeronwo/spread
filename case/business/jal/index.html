@@ -8,9 +8,7 @@
     <title>日本航空 - JAL corporate </title>
     <link href="css/font-awesome.css" rel="stylesheet" type="text/css">
     <link rel='stylesheet' href='https://unpkg.com/swiper/swiper-bundle.min.css'>
-    <!-- LOAD-->
-    <link href="js/jqueryIntroLoader/introLoader.min.css" rel="stylesheet" type="text/css">
-    <link href="css/style.css" rel="stylesheet" type="text/css">
+
     <link href="css/style.css" rel="stylesheet">
     <script src="js/jquery.min.js"></script>
 
@@ -19,16 +17,20 @@
     <!-- swiper -->
     <script src='https://unpkg.com/swiper/swiper-bundle.min.js'></script>
     <script src="https://cdn.jsdelivr.net/npm/infiniteslidev2/infiniteslidev2.min.js"></script>
-    <!-- LOAD-->
-    <script src="js/jqueryIntroLoader/jquery.easing.1.3.js"></script>
-    <script src="js/jqueryIntroLoader/spin.min.js"></script>
-    <script src="js/jqueryIntroLoader/jquery.introLoader.min.js"></script>
     <script src="js/scripts.js"></script>
 </head>
 
 <body>
-    <!-- LOAD -->
-    <div id="element" class="introLoading"></div>
+    <!--loading-->
+    <!-- loadingArea -->
+    <div class="loadingArea">
+        <div class="loadLogo">
+            <img src="images/logo.svg" alt="JAPAN AIRLINES">
+        </div>
+    </div>
+    <!-- loadingArea end -->
+
+
     <div class="menu_rwd">
         <div class="menu_rwd__main">
             <div class="nav_logo">
@@ -101,14 +103,14 @@
                     </li>
                     <li>
                         <a data-slide-index="1">
-    
+
                             <span class="no pc-only">02</span>
                             <span class="txt pc-only">Okinawa</span>
                         </a>
                     </li>
                     <li>
                         <a data-slide-index="2">
-    
+
                             <span class="no pc-only">03</span>
                             <span class="txt pc-only">Osaka</span>
                         </a>
@@ -204,13 +206,14 @@
                             </li>
                         </ul>
                     </div>
-    
+
                 </div>
-    
+
             </nav>
             <section class="news">
                 <div class="news_main">
-                    <div class="news_bg" style="background: url(images/news_bg.jpg) center center / cover no-repeat;"></div>
+                    <div class="news_bg" style="background: url(images/news_bg.jpg) center center / cover no-repeat;">
+                    </div>
                     <div class="title">
                         <div class="tt">最新消息</div>
                         <a href="">了解更多</a>
@@ -281,7 +284,8 @@
                                             <div class="text">
                                                 <div class="date">2023.05.02</div>
                                                 <h3>推出新商業模式13年來首架貨機</h3>
-                                                <p>日航決定引進三架波音767-300ER貨機（以下簡稱貨機）。這是我們 13 年來首次運營自己的貨機，我們將從 2023 財年末開始分階段運營。
+                                                <p>日航決定引進三架波音767-300ER貨機（以下簡稱貨機）。這是我們 13 年來首次運營自己的貨機，我們將從 2023
+                                                    財年末開始分階段運營。
                                                 </p>
                                                 <div class="more"><i class="i-arrow2"></i></div>
                                             </div>
@@ -293,11 +297,11 @@
                                 <div class="swiper-button-prev item"></div>
                                 <div class="swiper-button-next item"></div>
                             </div>
-    
+
                         </div>
                     </div>
                 </div>
-    
+
             </section>
             <section class="info">
                 <!-- Slider main container -->
@@ -359,7 +363,7 @@
                                 <p>日航集團以向所有客戶提供最好的服務為目標，適當提供產品和服務信息，認真對待客戶反饋，不斷開發和改進更好的產品和服務而努力。
                                 </p>
                             </div>
-    
+
                             <div class="swiper_panel">
                                 <ul>
                                     <li>
@@ -404,7 +408,7 @@
                                 <p>通過履行我們作為公共交通系統的使命，我們將以切實的方式回報這種感激之情。
                                 </p>
                             </div>
-    
+
                             <div class="swiper_panel">
                                 <ul>
                                     <li>
@@ -439,12 +443,12 @@
                             </div>
                         </div>
                     </div>
-    
+
                     <!-- If we need navigation buttons -->
                     <div class="swiper-button-prev"></div>
                     <div class="swiper-button-next"></div>
-    
-    
+
+
                 </div>
             </section>
             <section class="about">
@@ -453,7 +457,7 @@
                         <div class="tt">公司治理</div>
                     </div>
                     <div class="about_main">
-    
+
                         <ul>
                             <!-- 01 -->
                             <li>
@@ -465,7 +469,8 @@
                                         </div>
                                         <div class="mb-10 m:mb-100 arrow" data-v-37b93e18="">
                                             <svg width="31" height="31" viewBox="0 0 31 31" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg" class="for-mobile" data-v-37b93e18="">
+                                                xmlns="http://www.w3.org/2000/svg" class="for-mobile"
+                                                data-v-37b93e18="">
                                                 <circle cx="15.5" cy="15.5" r="15.5" data-v-37b93e18=""></circle>
                                                 <path fill-rule="evenodd" clip-rule="evenodd"
                                                     d="M9.38612 14.8737L18.7021 14.8737L15.7586 11.9302C15.5118 11.6833 15.7886 11.5425 16.0461 11.285C16.3037 11.0274 16.4445 10.7506 16.6913 10.9974L20.7138 15.0199C20.9607 15.2668 20.952 15.6757 20.6944 15.9332L16.497 20.1306C16.2394 20.3882 16.0515 20.0583 15.8635 19.8703C15.6755 19.6823 15.3456 19.4943 15.6031 19.2367L18.6746 16.1653L9.35863 16.1653L9.38612 14.8737Z"
@@ -474,7 +479,7 @@
                                         </div>
                                     </div>
                                 </div>
-    
+
                             </li>
                             <!-- 02 -->
                             <li>
@@ -486,7 +491,8 @@
                                         </div>
                                         <div class="mb-10 m:mb-100 arrow" data-v-37b93e18="">
                                             <svg width="31" height="31" viewBox="0 0 31 31" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg" class="for-mobile" data-v-37b93e18="">
+                                                xmlns="http://www.w3.org/2000/svg" class="for-mobile"
+                                                data-v-37b93e18="">
                                                 <circle cx="15.5" cy="15.5" r="15.5" data-v-37b93e18=""></circle>
                                                 <path fill-rule="evenodd" clip-rule="evenodd"
                                                     d="M9.38612 14.8737L18.7021 14.8737L15.7586 11.9302C15.5118 11.6833 15.7886 11.5425 16.0461 11.285C16.3037 11.0274 16.4445 10.7506 16.6913 10.9974L20.7138 15.0199C20.9607 15.2668 20.952 15.6757 20.6944 15.9332L16.497 20.1306C16.2394 20.3882 16.0515 20.0583 15.8635 19.8703C15.6755 19.6823 15.3456 19.4943 15.6031 19.2367L18.6746 16.1653L9.35863 16.1653L9.38612 14.8737Z"
@@ -495,7 +501,7 @@
                                         </div>
                                     </div>
                                 </div>
-    
+
                             </li>
                             <!-- 03 -->
                             <li>
@@ -507,7 +513,8 @@
                                         </div>
                                         <div class="mb-10 m:mb-100 arrow" data-v-37b93e18="">
                                             <svg width="31" height="31" viewBox="0 0 31 31" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg" class="for-mobile" data-v-37b93e18="">
+                                                xmlns="http://www.w3.org/2000/svg" class="for-mobile"
+                                                data-v-37b93e18="">
                                                 <circle cx="15.5" cy="15.5" r="15.5" data-v-37b93e18=""></circle>
                                                 <path fill-rule="evenodd" clip-rule="evenodd"
                                                     d="M9.38612 14.8737L18.7021 14.8737L15.7586 11.9302C15.5118 11.6833 15.7886 11.5425 16.0461 11.285C16.3037 11.0274 16.4445 10.7506 16.6913 10.9974L20.7138 15.0199C20.9607 15.2668 20.952 15.6757 20.6944 15.9332L16.497 20.1306C16.2394 20.3882 16.0515 20.0583 15.8635 19.8703C15.6755 19.6823 15.3456 19.4943 15.6031 19.2367L18.6746 16.1653L9.35863 16.1653L9.38612 14.8737Z"
@@ -516,7 +523,7 @@
                                         </div>
                                     </div>
                                 </div>
-    
+
                             </li>
                             <!-- 04 -->
                             <li>
@@ -528,7 +535,8 @@
                                         </div>
                                         <div class="mb-10 m:mb-100 arrow" data-v-37b93e18="">
                                             <svg width="31" height="31" viewBox="0 0 31 31" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg" class="for-mobile" data-v-37b93e18="">
+                                                xmlns="http://www.w3.org/2000/svg" class="for-mobile"
+                                                data-v-37b93e18="">
                                                 <circle cx="15.5" cy="15.5" r="15.5" data-v-37b93e18=""></circle>
                                                 <path fill-rule="evenodd" clip-rule="evenodd"
                                                     d="M9.38612 14.8737L18.7021 14.8737L15.7586 11.9302C15.5118 11.6833 15.7886 11.5425 16.0461 11.285C16.3037 11.0274 16.4445 10.7506 16.6913 10.9974L20.7138 15.0199C20.9607 15.2668 20.952 15.6757 20.6944 15.9332L16.497 20.1306C16.2394 20.3882 16.0515 20.0583 15.8635 19.8703C15.6755 19.6823 15.3456 19.4943 15.6031 19.2367L18.6746 16.1653L9.35863 16.1653L9.38612 14.8737Z"
@@ -537,7 +545,7 @@
                                         </div>
                                     </div>
                                 </div>
-    
+
                             </li>
                             <!-- 05 -->
                             <li>
@@ -549,7 +557,8 @@
                                         </div>
                                         <div class="mb-10 m:mb-100 arrow" data-v-37b93e18="">
                                             <svg width="31" height="31" viewBox="0 0 31 31" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg" class="for-mobile" data-v-37b93e18="">
+                                                xmlns="http://www.w3.org/2000/svg" class="for-mobile"
+                                                data-v-37b93e18="">
                                                 <circle cx="15.5" cy="15.5" r="15.5" data-v-37b93e18=""></circle>
                                                 <path fill-rule="evenodd" clip-rule="evenodd"
                                                     d="M9.38612 14.8737L18.7021 14.8737L15.7586 11.9302C15.5118 11.6833 15.7886 11.5425 16.0461 11.285C16.3037 11.0274 16.4445 10.7506 16.6913 10.9974L20.7138 15.0199C20.9607 15.2668 20.952 15.6757 20.6944 15.9332L16.497 20.1306C16.2394 20.3882 16.0515 20.0583 15.8635 19.8703C15.6755 19.6823 15.3456 19.4943 15.6031 19.2367L18.6746 16.1653L9.35863 16.1653L9.38612 14.8737Z"
@@ -558,7 +567,7 @@
                                         </div>
                                     </div>
                                 </div>
-    
+
                             </li>
                             <!-- 06 -->
                             <li>
@@ -570,7 +579,8 @@
                                         </div>
                                         <div class="mb-10 m:mb-100 arrow" data-v-37b93e18="">
                                             <svg width="31" height="31" viewBox="0 0 31 31" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg" class="for-mobile" data-v-37b93e18="">
+                                                xmlns="http://www.w3.org/2000/svg" class="for-mobile"
+                                                data-v-37b93e18="">
                                                 <circle cx="15.5" cy="15.5" r="15.5" data-v-37b93e18=""></circle>
                                                 <path fill-rule="evenodd" clip-rule="evenodd"
                                                     d="M9.38612 14.8737L18.7021 14.8737L15.7586 11.9302C15.5118 11.6833 15.7886 11.5425 16.0461 11.285C16.3037 11.0274 16.4445 10.7506 16.6913 10.9974L20.7138 15.0199C20.9607 15.2668 20.952 15.6757 20.6944 15.9332L16.497 20.1306C16.2394 20.3882 16.0515 20.0583 15.8635 19.8703C15.6755 19.6823 15.3456 19.4943 15.6031 19.2367L18.6746 16.1653L9.35863 16.1653L9.38612 14.8737Z"
@@ -579,13 +589,13 @@
                                         </div>
                                     </div>
                                 </div>
-    
+
                             </li>
                         </ul>
                     </div>
                 </div>
-    
-    
+
+
             </section>
             <section class="affim">
                 <div class="container">
@@ -627,7 +637,7 @@
                                     <img src="images/affim_img10.jpg" alt="Slide 01">
                                 </div>
                             </div>
-    
+
                         </div>
                     </div>
                     <div class="navigation">
@@ -680,13 +690,13 @@
                                 </div>
                             </div>
                         </div>
-    
+
                     </div>
                 </div>
             </section>
-    
+
         </main>
-    
+
         <footer>
             <div class="container">
                 <div class="footer_top">
@@ -747,7 +757,7 @@
                         </ul>
                     </div>
                 </div>
-    
+
             </div>
             <div class="footer_bottom">
                 <p> © 日本航空</p>

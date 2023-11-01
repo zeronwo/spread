@@ -1,35 +1,41 @@
 
 $(document).ready(function () {
+//loading
+  if (navigator.cookieEnabled) {
+    var loadingData = sessionStorage.getItem('loading');
+    (function () {
+        $('body').addClass('loadingOverflow');
 
+        setTimeout(function () {
+            $('.loadingArea').addClass('show');
+        }, 500);
 
-  //LOAD
-  $("#element").introLoader({
+        if (loadingData !== 'ok') {
+            sessionStorage.setItem('loading', 'ok');
 
-    animation: {
-      name: 'simpleLoader',
-      options: {
-        exitFx: 'slideUp',
-        ease: "easeOutSine",
-        style: 'fluoYellow',
-        delayBefore: 1000, //delay time in milliseconds
-        exitTime: 500,
-        onBefore: function () {
-          $('#onAfterExample').hide();
-        },
-        onAfter: function () {
-          $('#onAfterExample').fadeIn();
+            setTimeout(function () {
+                $('.loadingArea').addClass('hide');
+            }, 2500);
+
+            setTimeout(function () {
+                $('.loadingArea').remove();
+                $('body').removeClass('loadingOverflow');
+                $('.bannerArea').addClass('show');
+            }, 3000);
+
+        } else {
+            $('.loadingArea').addClass('hide').remove();
+            $('body').removeClass('loadingOverflow');
+            $('.bannerArea').addClass('show');
         }
-      }
-    },
-    spinJs: {
-      lines: 10, // The number of lines to draw
-      length: 5, // The length of each line
-      radius: 10, // The radius of the inner circle
-      width: 4, // The line thickness
-      color: '#fff', // #rgb or #rrggbb or array of colors
-    }
-
-  });
+    })();
+} else {
+    (function () {
+        $('.loadingArea').addClass('hide').remove();
+        $('body').removeClass('loadingOverflow');
+        $('.bannerArea').addClass('show');
+    })();
+}
 
   //手機 上方 右側拉出選單
   $(" .menu_rwd").click(function () {
