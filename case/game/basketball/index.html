@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="images/favicon.ico">
+    <title>籃球遊戲</title>
+    <link href="css/loading.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
+</head>
+
+<body>
+    <!--彈窗 遊戲-踢球結束-獲獎結果 -->
+    <div class="open_auto open_play-get ">
+        <div class="open_auto_main">
+            <div class="open_auto_top">
+                <!-- <a class="btn_close" href="javascript:;"></a> -->
+            </div>
+            <div class="open_auto_bg">
+                <div class="open_auto_box">
+                    <div class="tt founder_block m_10">時間結束</div>
+                    <div class="game_result_main">
+                        <div class="title founder_block border-bottom">獲得射门點數!</div>
+
+                        <div class="game_result_main_box">
+                            <div class="tt founder_block">共获得 點數</div>
+                            <div class="information">
+                                <img src="images/icon_money02.png" alt="">
+                                <span class="fraction_number">0</span>
+                                <p class="founder_block">點</p>
+                            </div>
+                        </div>
+                        <a href="javascript:;" class="btn_pop m_30 btn_close">
+                            <img src="images/btn_confirm.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="open_accept_award_process">
+                    <p>统一于隔日下午6点后领取；</p>
+
+                </div>
+            </div>
+        </div>
+        <div class="bg_play-get">
+            <ul>
+                <li>
+                    <img src="images/bg_play-get_ball.png" alt="">
+                </li>
+                <li>
+                    <img src="images/bg_play-get_coin1.png" alt="">
+                </li>
+                <li>
+                    <img src="images/bg_play-get_coin2.png" alt="">
+                </li>
+            </ul>
+        </div>
+        <div class="mob-menu_overlay close_overlay"></div>
+    </div>
+
+    <main>
+        <div class="machine">
+            <div class="machine_top">
+                <img src="images/bg_machine-top.png" alt="">
+            </div>
+            <div class="machine_main">
+                <section class="stage">
+                    <div class="flash">
+                        <div class="flash_point type1"></div>
+                        <div class="flash_point type2"></div>
+                        <div class="flash_point type3"></div>
+                        <div class="flash_point type4"></div>
+                        <div class="flash_point type5"></div>
+                        <div class="flash_point type6"></div>
+                    </div>
+
+                    <div class="menu">
+                        <div class="shot_in type">
+                            <div class="tt">frequency</div>
+                            <p class="shot_in_number number">00</p>
+                        </div>
+                        <!-- 時間 -->
+                        <div class="time">
+                            <p>0:30</p>
+                        </div>
+                        <div class="fraction type">
+                            <div class="increase">+2</div>
+                            <div class="tt">Fraction</div>
+                            <p class="fraction_number number">00</p>
+                        </div>
+                    </div>
+                    <div class="result">
+                        <picture class="goal">
+                            <img src="images/goal.png" alt="">
+                        </picture>
+
+                        <picture class="fail">
+                            <img src="images/fail.png" alt="">
+                        </picture>
+
+                    </div>
+                    <!-- 球員 -->
+                    <div class="player">
+                        <div class="player_dribble">
+                            <!-- 人 -->
+                            <picture class="man">
+                                <img src="images/player.png" alt="">
+                            </picture>
+                            <!-- 籃球 -->
+                            <picture class="ball ldx ldx-bounce">
+                                <img src="images/ball.png" alt="">
+                            </picture>
+                            <!-- 手 -->
+                            <picture class="hand ldx ldx-wander-v">
+                                <img src="images/hand.png" alt="">
+                            </picture>
+                        </div>
+                        <!-- 射中 -->
+                        <div class="player_shoot shoot">
+                            <picture class="man">
+                                <img src="images/player2.png" alt="">
+                            </picture>
+                            <picture class="ball">
+                                <img src="images/ball.png" alt="">
+                            </picture>
+                        </div>
+                        <!-- 沒進 -->
+                        <div class="player_shoot missed">
+                            <picture class="man">
+                                <img src="images/player2.png" alt="">
+                            </picture>
+                            <picture class="ball">
+                                <img src="images/ball.png" alt="">
+                            </picture>
+                        </div>
+                    </div>
+                    <!-- 籃網 -->
+                    <div class="nets">
+                        <img src="images/nets.png" alt="">
+                    </div>
+                    <!-- 金幣 -->
+                    <div class="coin">
+                        <div class="coin_main">
+                            <picture class="type1">
+                                <img src="images/coin1.png">
+                                <img src="images/coin2.png">
+                                <img src="images/coin3.png">
+                            </picture>
+                            <picture class="type2">
+                                <img src="images/coin2.png">
+                                <img src="images/coin1.png">
+                            </picture>
+                            <picture class="type3">
+                                <img src="images/coin3.png">
+                                <img src="images/coin2.png">
+                            </picture>
+                            <picture class="type4">
+                                <img src="images/coin4.png">
+                                <img src="images/coin1.png">
+                                <img src="images/coin3.png">
+                            </picture>
+
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="machine_bottom">
+                <button class="btn-shot"></button>
+            </div>
+        </div>
+
+    </main>
+
+
+</body>
+
+</html>

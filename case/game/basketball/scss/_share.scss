@@ -1,0 +1,135 @@
+//投籃
+@keyframes move {
+  0% {
+    offset-distance: 0%;
+    transform: rotate(0);
+  }
+  100% {
+    offset-distance: 100%;
+    transform: rotate(3turn);
+  }
+}
+
+//運球
+@keyframes ldx-bounce {
+  0% {
+    animation-timing-function: cubic-bezier(0.138, 0.2541, 0.2177, 0.8747);
+    transform: translate(0, 0) scaleY(1);
+  }
+
+  37% {
+    animation-timing-function: cubic-bezier(0.7679, 0.1817, 0.8401, 0.7167);
+    transform: translate(0, -89.96%) scaleY(1);
+  }
+
+  72.2% {
+    animation-timing-function: cubic-bezier(0.1045, 0.2026, 0.2224, 0.9608);
+    transform: translate(0, 0) scaleY(1);
+  }
+
+  87.2% {
+    animation-timing-function: cubic-bezier(0.7463, 0.2314, 0.8159, 0.6941);
+    transform: translate(0, 46.85%) scaleY(0.603);
+  }
+
+  100% {
+    transform: translate(0, 0) scaleY(1);
+  }
+}
+
+
+//coin-fly1
+@keyframes coin-fly1-1 {
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-80px, -150px) scale(0.2) rotate(300deg);
+  }
+}
+@keyframes coin-fly1-2 {
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-100px, -80px) scale(0.3) rotate(200deg);
+  }
+}
+@keyframes coin-fly1-3 {
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-100px, -150px) scale(0.6) rotate(310deg);
+  }
+}
+//coin-fly2
+@keyframes coin-fly2-1 {
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-171px, 90px) scale(0.2) rotate(150deg);
+  }
+}
+@keyframes coin-fly2-2 {
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-100px, 150px) scale(0.8) rotate(180deg);
+  }
+}
+//coin-fly3
+@keyframes coin-fly3-1 {
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(171px, -120px) scale(0.4) rotate(200deg);
+  }
+}
+@keyframes coin-fly3-2 {
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(130px, -80px) scale(0.3) rotate(310deg);
+  }
+}
+
+//coin-fly4
+@keyframes coin-fly4-1 {
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(171px, 120px) scale(0.6) rotate(200deg);
+  }
+}
+@keyframes coin-fly4-2 {
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(130px, 80px) scale(0.3) rotate(250deg);
+  }
+}
+@keyframes coin-fly4-3 {
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(140px, 180px) scale(0.2) rotate(300deg);
+  }
+}
