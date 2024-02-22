@@ -16,10 +16,6 @@ body, div, dl, dt, dd, ul, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, le
   padding: 0;
 }
 
-ol {
-  margin: 0;
-}
-
 iframe {
   width: 100%;
 }
@@ -47,6 +43,7 @@ ul {
 }
 
 * {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -57,4 +54,5 @@ a {
 table {
   border-spacing: 0;
   border-collapse: collapse;
-}/*# sourceMappingURL=reset.css.map */ss.map */
+}
+/*# sourceMappingURL=reset.css.map */

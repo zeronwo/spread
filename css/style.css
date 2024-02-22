@@ -1031,6 +1031,7 @@ header .menu_mob .menu_mob_box ul li a {
   font-size: 0.9em;
   position: absolute;
   margin: auto;
+  white-space: pre-line;
 }
 
 .skill_list_first li:nth-of-type(1) {
