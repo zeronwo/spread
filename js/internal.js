@@ -193,6 +193,12 @@ $(document).ready(function () {
           {
             boxItems: [
               {
+                title: '老虎機',
+                link: 'case/game/slot_machine/index.html',
+                imageSrc: 'images/web_design/01-10.jpg',
+                backgroundColor: 'rgba(75,37,25,0.95)',
+              },
+              {
                 title: '籃球遊戲',
                 link: 'case/game/basketball/index.html',
                 imageSrc: 'images/web_design/01-9.jpg',

@@ -1,0 +1,35 @@
+/* CSS */
+.container {
+  display: flex;
+  background: #656565;
+}
+
+.circles {
+  display: flex;
+  justify-content: center;
+  margin-right: 50px;
+}
+
+.circle_item {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: black;
+  margin: 10px 0;
+}
+
+.content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  grid-gap: 20px;
+}
+
+.section {
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  background: #ccc;
+}

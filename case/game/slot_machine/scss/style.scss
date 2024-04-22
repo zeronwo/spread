@@ -1,0 +1,142 @@
+@import "_reset";
+@import "_basic";
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #f4f4f4;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.reels-container {
+  max-width: 646px;
+  width: 100%;
+  border: 13px #feae1d solid;
+  background: #6d1e32;
+  border-radius: 30px;
+  padding: 15px;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  grid-gap: 10px;
+  margin-bottom: 30px;
+  position: relative;
+  .outer_column {
+    background-image: linear-gradient(to bottom, #efc68f -10%, #ffffff 50%, #efc68f 110%);
+    border: 5px #442613 solid;
+    border-radius: 20px;
+    flex: 1;
+    overflow: hidden;
+    .column {
+      height: 440px;
+      display: flex;
+      flex-direction: column;
+      transition: transform 3s ease-in-out;
+      grid-gap: 20px;
+      padding: 20px 0;
+      .reel {
+        min-height: 120px; /* 調整每個水果的高度以符合列的高度 */
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+          max-height: 80px;
+        }
+        &.bingo {
+          animation: ld-breath 1s infinite linear;
+          img {
+            animation: brightnessAnimation 1s ease-in-out infinite;
+          }
+        }
+      }
+    }
+  }
+  &.active .outer_column {
+    .column {
+      animation: scroll 3s cubic-bezier(0.5, 0, 0.5, 1) 1, blur 3s cubic-bezier(0.5, 0, 0.5, 1) 1;
+      animation-fill-mode: forwards; /* 動畫停止在結束狀態 */
+    }
+    &:nth-of-type(2) .column {
+      animation-delay: 0.1s;
+    }
+    &:nth-of-type(3) .column {
+      animation-delay: 0.2s;
+    }
+  }
+  &:before,
+  &:after {
+    content: "";
+    width: 53px;
+    height: 69px;
+    background: url(../images/img_arrow.png);
+    display: block;
+    position: absolute;
+    left: -4px;
+    top: 50%;
+    transform: translate(0, -50%);
+    z-index: 3;
+  }
+  &:after {
+    left: inherit;
+    right: -4px;
+    transform: scaleX(-1) translate(0, -50%);
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(calc(-100% * 8 + -260px));
+  }
+}
+@keyframes blur {
+  0% {
+    filter: blur(0);
+  }
+  10% {
+    filter: blur(0);
+  }
+  30% {
+    filter: blur(6px);
+  }
+  60% {
+    filter: blur(6px);
+  }
+  80% {
+    filter: blur(0);
+  }
+}
+
+@keyframes brightnessAnimation {
+  0% {
+    filter: brightness(100%);
+  }
+  50% {
+    filter: brightness(200%);
+  }
+  100% {
+    filter: brightness(100%);
+  }
+}
+
+#spin_button {
+  background: linear-gradient(to bottom, #ff5e5e, #ff0000);
+  color: white;
+  font-size: 24px;
+  text-align: center;
+  padding: 10px 20px;
+  border: 2px solid #ff8c00;
+  border-radius: 5px;
+}
