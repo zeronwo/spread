@@ -82,16 +82,16 @@ spinButton.addEventListener('click', () => {
   outer_column[1].querySelector('.column').children[28].innerHTML = `<img src="${imageFileName}" alt="Fruit Image">`;
   outer_column[2].querySelector('.column').children[28].innerHTML = `<img src="${imageFileName}" alt="Fruit Image">`;
 
+  setTimeout(() => {
+    //中獎載入bingo
+    const imageNumber1 = outer_column[0].querySelector('.column').children[28].querySelector('img').getAttribute('src');
+    const imageNumber2 = outer_column[1].querySelector('.column').children[28].querySelector('img').getAttribute('src');
+    const imageNumber3 = outer_column[2].querySelector('.column').children[28].querySelector('img').getAttribute('src');
 
-  //中獎載入bingo
-  const imageNumber1 = outer_column[0].querySelector('.column').children[28].querySelector('img').getAttribute('src');
-  const imageNumber2 = outer_column[1].querySelector('.column').children[28].querySelector('img').getAttribute('src');
-  const imageNumber3 = outer_column[2].querySelector('.column').children[28].querySelector('img').getAttribute('src');
-  
-  if (imageNumber1 === imageNumber2 && imageNumber2 === imageNumber3) {
-    outer_column[0].querySelector('.column').children[28].classList.add('bingo');
-    outer_column[1].querySelector('.column').children[28].classList.add('bingo');
-    outer_column[2].querySelector('.column').children[28].classList.add('bingo');
-  }
-
+    if (imageNumber1 === imageNumber2 && imageNumber2 === imageNumber3) {
+      outer_column[0].querySelector('.column').children[28].classList.add('bingo');
+      outer_column[1].querySelector('.column').children[28].classList.add('bingo');
+      outer_column[2].querySelector('.column').children[28].classList.add('bingo');
+    }
+  }, 3199); // 5000 毫秒 = 5 秒
 });
