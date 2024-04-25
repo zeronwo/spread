@@ -38,11 +38,11 @@
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-JYVPW64W01"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  gtag('config', 'G-JYVPW64W01');
+    gtag('config', 'G-JYVPW64W01');
 </script>
 
 <body>
@@ -228,7 +228,34 @@
                         </li>
 
 
-            
+
+                    </ul>
+                </div>
+            </section>
+            <section class="web m_70" data-aos="fade-up">
+                <div class="container">
+                    <div class="title t-align-center m_30">
+                        <span>Visual Design</span>
+                        <h2>視覺設計</h2>
+                    </div>
+
+
+
+                    <ul class="web_list">
+
+                        <!--視覺體育-->
+                        <li v-for="(visuaBox, index) in visualItems" :key="index"
+                            :class="{ 'active': index === activeCategory }">
+                            <div class="slider-single">
+                                <div v-for="(item, boxindex) in visuaBox.boxItems" :key="`image-${boxindex}`"
+                                    class="image-wrapper">
+                                    <img :src="item.imageSrc" :alt="item.title">
+                                </div>
+                            </div>
+                        </li>
+
+
+
                     </ul>
                 </div>
             </section>

@@ -123,7 +123,7 @@ $(document).ready(function () {
                 backgroundColor: 'rgba(68,52,36,0.95)',
               },
             ]
-            
+
           },
           {
             boxItems: [
@@ -188,7 +188,7 @@ $(document).ready(function () {
                 backgroundColor: 'rgba(151,134,114,0.95)',
               }
             ]
-            
+
           },
           {
             boxItems: [
@@ -217,11 +217,31 @@ $(document).ready(function () {
                 backgroundColor: 'rgba(21,19,30,0.95)',
               }
             ]
-            
-          }
-          
-        ]
 
+          }
+
+        ],
+        visualItems: [
+          {
+            boxItems: [
+              {
+                imageSrc: 'images/visual_design/102.jpg',
+              },
+              {
+                imageSrc: 'images/visual_design/116.jpg',
+            },
+            {
+                imageSrc: 'images/visual_design/120.jpg',
+            },
+            {
+                imageSrc: 'images/visual_design/136.jpg',
+            },
+            {
+                imageSrc: 'images/visual_design/138.jpg',
+            },
+            ]
+          },
+        ]
       };
     },
     computed: {
