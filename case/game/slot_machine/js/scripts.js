@@ -42,6 +42,14 @@ updateColumns(Array.from(columns, () => generateRandomFruits(30)));
 
 // 為按鈕添加點擊事件監聽器
 spinButton.addEventListener('click', () => {
+
+// 載入音效
+const audio = new Audio('images/sound.mp3');
+
+// 播放音效
+audio.play();
+
+
   reelsContainer.classList.add('active');
   // 先移除所有具有 'bingo' 類別的 .reel 元素
   const bingoReels = document.querySelectorAll('.reel.bingo');
