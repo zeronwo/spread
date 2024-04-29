@@ -99,7 +99,7 @@
                                     <span>About</span>
                                     <h2>前端網頁設計師</h2>
                                 </div>
-                                <p>{{description}}</p>
+                                <p v-html="description"></p>
                                 <ul class="about_txt_icon">
                                     <li v-for="(item, index) in aboutItems" :key="index">
                                         <img :src="item.imagePath">

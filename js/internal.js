@@ -5,7 +5,7 @@ $(document).ready(function () {
     data() {
       return {
         jobTitle: '',
-        description: '前端要了解更多元性與完整性，喜歡瞭解原因，常思考如何能夠做得更好。對於每一項任務，會全心投入鑽研與執行，規劃出符合使用者期望的體驗設計，規劃設計未能以符合使用者預期的流程、動線、互動方式。',
+        description: '我深深了解多元性與完整性的重要,探索如何不斷優化和完善設計。<br>工作中,全心投入研究和執行,規劃出符合使用者需求與期望的體驗設計。',
         aboutItems: [
           { imagePath: 'images/about_icon01.png', text: 'ALAN' },
           { imagePath: 'images/about_icon02.png', text: 'MAIL', email: 'zeronwo7@hotmail.com' },
@@ -37,17 +37,18 @@ $(document).ready(function () {
           }
         ],
         skillItems1: [
-          '網頁\n動態互動',
-          'HTML5\nSCSS',
-          'RWD\nCSS框架',
-          'jQuery\n應用撰寫',
+          '動態網頁\n互動設計',
+          '網頁前端\n優化頁面',
+          '響應式網頁\n前端框架',
+          'jQuery\n函式庫開發'
         ],
         skillItems2: [
-          'UI/UX\n設計',
-          '中大型\n網站專案',
-          '網頁活動\n專頁設計',
-          '開發\n模組化',
+          '遊戲開發\n規劃設計',
+          '中大型網站\n專案開發',
+          '活動專題\n網站設計',
+          '模組化\n系統開發'
         ],
+       
         activeCategory: 0, // 默认第一个
         caseItems: [
           {
