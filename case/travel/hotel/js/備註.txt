@@ -1,0 +1,2 @@
+判斷捲軸事件
+jquery.scroll-direction.js

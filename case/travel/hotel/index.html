@@ -16,18 +16,18 @@
 
     <link href="js/jquery-ui/jquery-ui.min.css" rel="stylesheet" type="text/css">
     <!-- LOAD-->
-    <link href="../../../js/jqueryIntroLoader/introLoader.min.css" rel="stylesheet" type="text/css">
+    <link href="js/jqueryIntroLoader/introLoader.min.css" rel="stylesheet" type="text/css">
 
     <!-- 彈窗-->
-    <link href="../../../js/lity/lity.css" rel="stylesheet" type="text/css">
+    <link href="js/lity/lity.css" rel="stylesheet" type="text/css">
 
 
-    <script src="../../../js/jquery.min.js"></script>
-    <script src="../../../js/lity/lity.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/lity/lity.js"></script>
 
-    <link href="../../../js/owlCarousel/owl.carousel.css" rel="stylesheet" type="text/css">
-    <link href="../../../js/owlCarousel/owl.theme.default.css" rel="stylesheet" type="text/css">
-    <script src="../../../js/owlCarousel/owl.carousel.js"></script>
+    <link href="js/owlCarousel/owl.carousel.css" rel="stylesheet" type="text/css">
+    <link href="js/owlCarousel/owl.theme.default.css" rel="stylesheet" type="text/css">
+    <script src="js/owlCarousel/owl.carousel.js"></script>
 
     <link href="css/style.css" rel="stylesheet">
     <link href="css/max.css" rel="stylesheet" type="text/css" />
@@ -39,20 +39,20 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
     <script src="js/jquery.easing.1.3.js"></script>
     <!-- LOAD-->
-    <script src="../../../js/jqueryIntroLoader/jquery.easing.1.3.js"></script>
-    <script src="../../../js/jqueryIntroLoader/spin.min.js"></script>
-    <script src="../../../js/jqueryIntroLoader/jquery.introLoader.min.js"></script>
+    <script src="js/jqueryIntroLoader/jquery.easing.1.3.js"></script>
+    <script src="js/jqueryIntroLoader/spin.min.js"></script>
+    <script src="js/jqueryIntroLoader/jquery.introLoader.min.js"></script>
     <!-- 視差-->
-    <script src="../../../js/parallax-scroll/jquery.easing.1.3.js"></script>
-    <script src="../../../js/parallax-scroll/jquery.parallax-scroll.js"></script>
+    <script src="js/parallax-scroll/jquery.easing.1.3.js"></script>
+    <script src="js/parallax-scroll/jquery.parallax-scroll.js"></script>
 
     <script src="js/scripts.js"></script>
 
 </head>
 
 <body>
-     <!-- LOAD -->
-     <div id="element" class="introLoading"></div>
+    <!-- LOAD -->
+    <div id="element" class="introLoading"></div>
     <!-- 彈窗 活動玩法 -->
     <div id="m_search" class="lity-hide">
         <div class="searchInputBox">
@@ -446,15 +446,32 @@
                 <div class="reservation_form">
                     <div class="reservation_tt">
                         <h2>BEST RATE</h2>
-                        <p>從官方網站預訂是最划算的</p>
+                      
                     </div>
                     <form action="">
                         <div class="reservation_search">
                             <div class="outer_date box">
-                                <label>ARRIVAL</label>
-                                <input type="text" class="datepicker" name="dt"
-                                    class="js-checkinn flatpickr flatpickr-input" value="2021/07/22"
-                                    readonly="readonly">
+                                <div class="date-picker">
+                                    <div class="date-display">
+                                        <div class="item">
+                                            <p>入住日期</p>
+                                            <span id="checkIn" class="date-input"></span>
+                                        </div>
+                                        <div class="item">
+                                            <p>退房日期</p>
+                                            <span id="checkOut" class="date-input"></span>
+                                        </div>
+                                    </div>
+                                    <div class="calendar" id="calendar">
+                                        <div class="calendar-header">
+                                            <button id="prevMonth" type="button">&lt;</button>
+                                            <span id="currentMonth"></span>
+                                            <button id="nextMonth" type="button">&gt;</button>
+                                        </div>
+                                        <div class="calendar-grid" id="calendarGrid"></div>
+                                    </div>
+                                </div>
+
                             </div>
 
                             <div class="outer_people box">
@@ -510,13 +527,13 @@
 
         </div>
 
-        <section  class="texts m_60" data-scroll-container>
+        <section class="texts m_60" data-scroll-container>
             <div class="container">
                 <div class="row">
                     <div class="img" data-parallax='{"y":20}'>
                         <img src="images/texts-01.jpg" alt="">
                     </div>
-                    <div class="txt" >
+                    <div class="txt">
                         <h2>到采爾馬特的神奇之地</h2>
                         <p>米拉博酒店坐落在寧靜的地方，離采爾馬特主火車站<br>
                             和著名的Gornergrat車站只有幾分鐘的步行路程。</p>
@@ -571,37 +588,37 @@
                         </a>
                     </div>
                     <div class="galleria__item">
-                         <a href="images/galleria-02.jpg" class="galleria__item-inner" data-lity>
+                        <a href="images/galleria-02.jpg" class="galleria__item-inner" data-lity>
                             <img src="images/galleria-02.jpg" alt="">
                         </a>
                     </div>
                     <div class="galleria__item">
-                         <a href="images/galleria-03.jpg" class="galleria__item-inner" data-lity>
+                        <a href="images/galleria-03.jpg" class="galleria__item-inner" data-lity>
                             <img src="images/galleria-03.jpg" alt="">
                         </a>
                     </div>
                     <div class="galleria__item">
-                         <a href="images/galleria-04.jpg" class="galleria__item-inner" data-lity>
+                        <a href="images/galleria-04.jpg" class="galleria__item-inner" data-lity>
                             <img src="images/galleria-04.jpg" alt="">
                         </a>
                     </div>
                     <div class="galleria__item">
-                         <a href="images/galleria-05.jpg" class="galleria__item-inner" data-lity>
+                        <a href="images/galleria-05.jpg" class="galleria__item-inner" data-lity>
                             <img src="images/galleria-05.jpg" alt="">
                         </a>
                     </div>
                     <div class="galleria__item">
-                         <a href="images/galleria-06.jpg" class="galleria__item-inner" data-lity>
+                        <a href="images/galleria-06.jpg" class="galleria__item-inner" data-lity>
                             <img src="images/galleria-06.jpg" alt="">
                         </a>
                     </div>
                     <div class="galleria__item">
-                         <a href="images/galleria-07.jpg" class="galleria__item-inner" data-lity>
+                        <a href="images/galleria-07.jpg" class="galleria__item-inner" data-lity>
                             <img src="images/galleria-07.jpg" alt="">
                         </a>
                     </div>
                     <div class="galleria__item">
-                         <a href="images/galleria-08.jpg" class="galleria__item-inner" data-lity>
+                        <a href="images/galleria-08.jpg" class="galleria__item-inner" data-lity>
                             <img src="images/galleria-08.jpg" alt="">
                         </a>
                     </div>

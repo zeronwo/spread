@@ -47,7 +47,6 @@ ul {
 }
 
 * {
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -58,5 +57,4 @@ a {
 table {
   border-spacing: 0;
   border-collapse: collapse;
-}
-/*# sourceMappingURL=reset.css.map */
+}/*# sourceMappingURL=reset.css.map */
