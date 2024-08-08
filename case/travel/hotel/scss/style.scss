@@ -1014,7 +1014,7 @@ main {
 
 //reservation
 .reservation {
-  max-width: 1016px;
+  max-width: 870px;
   position: relative;
   z-index: 9;
   margin: -102px auto 110px;
@@ -1075,12 +1075,13 @@ html.has-scroll-smooth {
   display: flex;
   justify-content: center;
   align-items: center;
-
+  padding: 15px 0;
+  grid-gap: 30px;
   form {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1em 1.5em;
+    grid-gap: 15px;
     label {
       font-size: 12px;
       padding: 0 0.53vw 2px 0;
@@ -1088,22 +1089,22 @@ html.has-scroll-smooth {
     .reservation_search {
       display: flex;
       align-items: center;
+      gap: 15px;
       .box {
-        padding: 0 33px 0 0;
         display: flex;
         align-items: flex-end;
       }
       .outer_date {
         // 變量
-        $primary-color: #007bff;
+        $primary-color: #b79b7e;
         $hover-color: #f0f0f0;
-        $range-color: #cce5ff;
+        $range-color: #b79b7e;
         $border-color: #ccc;
 
         .date-picker {
           font-family: Arial, sans-serif;
           width: 300px;
-position: relative;
+          position: relative;
           .date-display {
             display: flex;
             justify-content: space-between;
@@ -1160,6 +1161,7 @@ position: relative;
 
             &.in-range {
               background-color: $range-color;
+              color: white;
             }
           }
         }
@@ -1178,9 +1180,7 @@ position: relative;
             border: 0 none;
             background-color: transparent;
           }
-          &:first-of-type {
-            margin-right: 2em;
-          }
+       
         }
       }
     }
@@ -1764,7 +1764,6 @@ footer {
   .menu_main > ul,
   .menu_top .menu_top_main .menu_top_right .menu_btn span,
   .sidemenu .main > .menu,
-  .reservation,
   .footer_go-top {
     display: none;
   }
@@ -1936,19 +1935,26 @@ footer {
     }
   }
 
-  .reservation_form form {
-    flex-direction: column;
-    .reservation_search {
-      width: 100%;
-    }
-    .reservation_btn {
-      border-radius: 5px;
-      width: 100%;
-      max-width: 320px;
-      margin: 15px auto;
-      padding: 15px;
+  .reservation{
+    margin: -102px auto 20px;
+    .reservation_form{
+      flex-direction: column;
+      form {
+        flex-direction: column;
+        .reservation_search {
+          width: 100%;
+        }
+        .reservation_btn {
+          border-radius: 5px;
+          width: 100%;
+          max-width: 150px;
+          padding: 15px;
+        }
+      }
     }
   }
+
+
   .billboard .billboard_list {
     flex-direction: column;
     justify-content: center;
@@ -2058,7 +2064,7 @@ footer {
       .box {
         width: 100%;
         padding: 0;
-        margin-bottom: 15px;
+        justify-content: center;
       }
     }
   }

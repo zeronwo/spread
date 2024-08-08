@@ -1388,7 +1388,7 @@ main {
 }
 
 .reservation {
-  max-width: 1016px;
+  max-width: 870px;
   position: relative;
   z-index: 9;
   margin: -102px auto 110px;
@@ -1449,12 +1449,14 @@ html.has-scroll-smooth {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 15px 0;
+  grid-gap: 30px;
 }
 .reservation_form form {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1em 1.5em;
+  grid-gap: 15px;
 }
 .reservation_form form label {
   font-size: 12px;
@@ -1463,9 +1465,9 @@ html.has-scroll-smooth {
 .reservation_form form .reservation_search {
   display: flex;
   align-items: center;
+  gap: 15px;
 }
 .reservation_form form .reservation_search .box {
-  padding: 0 33px 0 0;
   display: flex;
   align-items: flex-end;
 }
@@ -1519,11 +1521,12 @@ html.has-scroll-smooth {
   background-color: #f0f0f0;
 }
 .reservation_form form .reservation_search .outer_date .date-picker .day.selected {
-  background-color: #007bff;
+  background-color: #b79b7e;
   color: white;
 }
 .reservation_form form .reservation_search .outer_date .date-picker .day.in-range {
-  background-color: #cce5ff;
+  background-color: #b79b7e;
+  color: white;
 }
 .reservation_form form .reservation_search .outer_people {
   display: flex;
@@ -1539,9 +1542,6 @@ html.has-scroll-smooth {
   cursor: pointer;
   border: 0 none;
   background-color: transparent;
-}
-.reservation_form form .reservation_search .outer_people .item:first-of-type {
-  margin-right: 2em;
 }
 .reservation_form form .reservation_btn {
   border: 1px #b79b7e solid;
@@ -2095,7 +2095,6 @@ footer .logo a svg path:not(:nth-child(2)) {
   .menu_main > ul,
   .menu_top .menu_top_main .menu_top_right .menu_btn span,
   .sidemenu .main > .menu,
-  .reservation,
   .footer_go-top {
     display: none;
   }
@@ -2236,17 +2235,22 @@ footer .logo a svg path:not(:nth-child(2)) {
     border-radius: 2em;
     text-align: center;
   }
-  .reservation_form form {
+  .reservation {
+    margin: -102px auto 20px;
+  }
+  .reservation .reservation_form {
     flex-direction: column;
   }
-  .reservation_form form .reservation_search {
+  .reservation .reservation_form form {
+    flex-direction: column;
+  }
+  .reservation .reservation_form form .reservation_search {
     width: 100%;
   }
-  .reservation_form form .reservation_btn {
+  .reservation .reservation_form form .reservation_btn {
     border-radius: 5px;
     width: 100%;
-    max-width: 320px;
-    margin: 15px auto;
+    max-width: 150px;
     padding: 15px;
   }
   .billboard .billboard_list {
@@ -2339,7 +2343,7 @@ footer .logo a svg path:not(:nth-child(2)) {
   .reservation_form form .reservation_search .box {
     width: 100%;
     padding: 0;
-    margin-bottom: 15px;
+    justify-content: center;
   }
   .reservation_link li {
     width: 50%;
