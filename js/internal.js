@@ -194,6 +194,12 @@ $(document).ready(function () {
           {
             boxItems: [
               {
+                title: '賽車',
+                link: 'case/game/racing/index.html',
+                imageSrc: 'images/web_design/01-11.jpg',
+                backgroundColor: 'rgba(75,37,25,0.95)',
+              },
+              {
                 title: '老虎機',
                 link: 'case/game/slot_machine/index.html',
                 imageSrc: 'images/web_design/01-10.jpg',

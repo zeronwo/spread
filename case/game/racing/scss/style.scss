@@ -1,0 +1,123 @@
+@charset "utf-8";
+
+@import "_reset";
+@import "_basic";
+
+// 變數
+$bg-color: black;
+$text-color: white;
+$border-color: #e3c98a; // 邊框顏色
+$button-bg-color: #e3c98a; // 按鈕背景顏色
+$button-text-color: black; // 按鈕文字顏色
+
+// 引入外部樣式
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;300;400;500;700;900&display=swap");
+
+// Mixin 定義
+@mixin box-shadow($color: rgba(0, 0, 0, 0.1)) {
+  box-shadow: 0 5px 5px $color;
+}
+
+@mixin filter($brightness) {
+  filter: brightness($brightness);
+}
+
+@mixin font-arial {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: black;
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+main {
+  max-width: 475px;
+  width: 100%;
+  margin: auto;
+  position: relative;
+  overflow: hidden; /* 防止滾動時超出範圍 */
+}
+
+/* 利用偽元素來處理背景滾動 */
+main::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200%; /* 兩倍高度以涵蓋連續滾動 */
+  background: url("../images/bg_road.png") repeat-y center;
+  background-size: contain;
+  animation: scrollBG 6s linear infinite;
+  will-change: transform; /* 提示瀏覽器做硬體加速 */
+  z-index: -1;
+}
+
+@keyframes scrollBG {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%); /* 負方向移動半個偽元素高度 */
+  }
+}
+
+
+.game-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(30, 1fr);
+  gap: 2px;
+  padding: 10px;
+}
+
+.cell {
+  padding-bottom: 100%;
+}
+
+
+
+.controls {
+  position: fixed;
+  bottom: 20px;
+  left: 0; /* 確保元素從左邊開始 */
+  width: 100%; /* 佔滿整個螢幕寬度 */
+  display: flex; /* 使用Flexbox佈局 */
+  justify-content: center; /* 水平置中 */
+  button {
+    background: #ccc;
+    padding: 10px;
+  }
+}
+
+
+/* 獎品顏色 */
+.prize {
+  background-image: url("../images/item.png");
+  background-size: contain; /* 確保圖片完整顯示在格子中 */
+  background-repeat: no-repeat;
+  background-position: center;
+}
+/* 飛機顏色 */
+.plane {
+  background: url(../images/img_plane.png) no-repeat center;
+  background-size: contain;
+}
+
+.score{
+  position: fixed;
+  bottom: 0;
+  background: #ccc;
+  padding: 10px;
+}
+
+
+
+
+
+.obstacle {
+  background-color: red; /* 障礙物顏色 */
+}

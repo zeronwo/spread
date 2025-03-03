@@ -1,0 +1,168 @@
+.gotop {
+  position: fixed;
+  bottom: 100px;
+  right: 10px;
+  z-index: 9;
+  display: none;
+  a {
+    position: relative;
+    transition: all 0s;
+    img:last-of-type {
+      display: none;
+    }
+    &:hover {
+      color: $green;
+      img:first-of-type {
+        display: none;
+      }
+      img:last-of-type {
+        display: block;
+      }
+    }
+  }
+  @media (max-width: 500px) {
+    &{
+      img{
+        max-width: 50px;
+      }
+    }
+  }
+}
+
+//大標題
+h2 {
+  width: 100%;
+  margin-bottom: 25px;
+  .h2_box {
+    position: relative;
+    font-family: "ZaoZi";
+    font-size: clamp(30px, 3vw, 47px);
+    font-weight: lighter;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    grid-gap: 2%;
+    &:before,
+    &:after {
+      content: "";
+      width: 220px;
+      height: 19px;
+      background: url(../images/img_slash.png);
+      display: block;
+    }
+  }
+  .slogan {
+    color: $green;
+    font-size: clamp(16px, 3vw, 22px);
+    text-align: center;
+    letter-spacing: 2px;
+    &.update{
+      font-size: 14px;
+      font-weight: normal;
+      letter-spacing: 0;
+    }
+  }
+  @media (max-width: 1200px) {
+    .h2_box {
+      &:before,
+      &:after {
+        width: 75px;
+        height: 13px;
+        background: url(../images/img_slash-mob.png);
+      }
+    }
+  }
+  @media (max-width: 500px) {
+    .h2_box{
+      justify-content: space-around;
+    }
+  }
+}
+
+header {
+  background: url(../images/bg_header.jpg) center/cover no-repeat;
+  height: 114px;
+  padding-top: 35px;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .logo {
+      img {
+        max-height: 53px;
+      }
+    }
+    .menu {
+      padding-right: 60px;
+      ul {
+        display: flex;
+        grid-gap: 110px;
+        align-items: flex-end;
+      }
+    }
+  }
+  @media (max-width: 1200px) {
+    & {
+      height: 70px;
+      padding-top: 20px;
+      .container .logo img {
+        max-height: 40px;
+      }
+    }
+  }
+}
+
+.menu {
+  li {
+    a {
+      img:last-of-type {
+        display: none;
+      }
+      &:hover {
+        color: $green;
+        img:first-of-type {
+          display: none;
+        }
+        img:last-of-type {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+
+
+  footer {
+    background: #343434;
+    color: #b5b5b5;
+    font-size: clamp(14px, 3vw, 18px);
+    text-align: center;
+    padding: 15px;
+  }
+
+
+
+
+
+.end_menu {
+  display: none;
+  ul {
+    background: black;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    z-index: 10;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1px;
+    li {
+      background: #393a3c;
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+      align-items: flex-end;
+    }
+  }
+}

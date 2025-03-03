@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>會員名單</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            overflow: hidden;
+            perspective: 1000px;
+        }
+        .container {
+            position: relative;
+            width: 80vw;
+            height: 80vh;
+        }
+        .member {
+            position: absolute;
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 16px;
+            font-weight: bold;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transform: translateY(100px);
+            transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+        }
+        .member.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .button {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            z-index: 1000;
+        }
+        .popup h2 {
+            margin-bottom: 20px;
+        }
+        .popup p {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container"></div>
+    <button class="button" onclick="startAnimation()">開始分發</button>
+    <div class="popup" id="popup">
+        <h2>抽獎結果</h2>
+        <p id="result"></p>
+        <button onclick="closePopup()">關閉</button>
+    </div>
+    <script>
+        const container = document.querySelector('.container');
+        const containerWidth = container.clientWidth;
+        const containerHeight = container.clientHeight;
+        let cols = 10;
+        let rows = 5;
+        let index = 0;
+        const members = [];
+
+        for (let i = 0; i < rows; i++) {
+            for (let j = 0; j < cols; j++) {
+                let div = document.createElement('div');
+                div.className = 'member';
+                div.textContent = `會員 ${index + 1}`;
+                div.style.left = `${containerWidth / 2 - div.clientWidth / 2}px`;
+                div.style.top = `${containerHeight - 50}px`;
+                container.appendChild(div);
+                members.push(div);
+                index++;
+            }
+        }
+
+        function startAnimation() {
+            let currentIndex = 0;
+            function showNextMember() {
+                if (currentIndex < members.length) {
+                    let member = members[currentIndex];
+                    member.classList.add('visible');
+                    let col = currentIndex % cols;
+                    let row = Math.floor(currentIndex / cols);
+                    member.style.left = `${(col / cols) * containerWidth}px`;
+                    member.style.top = `${(row / rows) * containerHeight}px`;
+                    currentIndex++;
+                    setTimeout(showNextMember, 100);
+                } else {
+                    startLottery();
+                }
+            }
+            showNextMember();
+        }
+
+        function startLottery() {
+            const popup = document.getElementById('popup');
+            const result = document.getElementById('result');
+            const voucherWinners = getRandomMembers(10);
+            const hotelWinners = getRandomMembers(3, voucherWinners);
+
+            let displayResults = [];
+            voucherWinners.forEach(winner => displayResults.push(`500禮卷: ${winner}`));
+            hotelWinners.forEach(winner => displayResults.push(`飯店招待: ${winner}`));
+
+            let currentIndex = 0;
+            function showNextResult() {
+                if (currentIndex < displayResults.length) {
+                    result.textContent = displayResults[currentIndex];
+                    currentIndex++;
+                    setTimeout(showNextResult, 1000);
+                } else {
+                    result.textContent = `所有中獎者：\n500禮卷: ${voucherWinners.join(', ')}\n飯店招待: ${hotelWinners.join(', ')}`;
+                }
+            }
+
+            popup.style.display = 'block';
+            showNextResult();
+        }
+
+        function getRandomMembers(count, exclude = []) {
+            const availableMembers = members.filter(member => !exclude.includes(member.textContent));
+            const shuffled = availableMembers.sort(() => 0.5 - Math.random());
+            return shuffled.slice(0, count).map(member => member.textContent);
+        }
+
+        function closePopup() {
+            const popup = document.getElementById('popup');
+            popup.style.display = 'none';
+        }
+    </script>
+</body>
+</html>
